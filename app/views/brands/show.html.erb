@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @brand.name %>
+</p>
+
+<p>
+  <b>Origin:</b>
+  <%= strip_tags(@brand.origin) %>
+</p>
+
+<p>
+  <b>Logo url:</b>
+  <%= @brand.logo_url %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @brand.rating %>
+</p>
+
+
+<%= link_to 'Edit', edit_brand_path(@brand) %> |
+<%= link_to 'Back', brands_path %>

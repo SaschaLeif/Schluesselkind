@@ -1,0 +1,27 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>unsere Hersteller</h1>
+
+<%= button_to 'sort' %>
+
+<% @brands.each do |brand| %>
+
+  <div class="entry">
+ 
+    <%= image_tag(brand.logo_url) %>
+ 
+    <h3><%= brand.name %></h3>
+ 
+    <span class="origin">
+    	Herkunft: <%= strip_tags(brand.origin) %>
+    </span>
+ 
+    <div class="rating_line">
+    	<span class="rating">FairTrade-Raitng: <%= brand.rating %></span>
+ 		<%= button_to 'Info', products_path(:brand_id => brand) %>
+   		<br /><br />
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<div id="brand_list">
+	
+	<h1>unsere Marken</h1>
+
+	<table>
+ 	<% @brands.each do |brand| %>
+
+		<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+    		<td>
+    			<center>
+    			<%= image_tag(brand.logo_url, :class => 'list_image') %>
+    			</center>
+    		</td>
+    		
+    		<td class="list_description">	
+    			<dl>
+    				<dt><%= brand.name %></dt>
+    				<br />
+    				<dd><u>Herkunft</u>: <%= (strip_tags(brand.origin)) %></dd>
+    				<dd><u>FairTrade-Rating</u>: <%= brand.rating %></dd>
+    			</dl>
+  			</td>
+  			
+    		<td class="list_actions">
+    			<%= link_to 'Show', brand %><br />
+   				<%= link_to 'Edit', edit_brand_path(brand) %><br />
+    			<%= link_to 'Destroy', brand, confirm: 'Are you sure?', 
+    				method: :delete %>
+    		</td>
+  		</tr>
+  		
+	<% end %>
+
+		<td class="list_actions">
+			<br />
+			<%= link_to 'neue Marke hinzufügen', new_brand_path %>
+		</td>
+	</table>
+</div>

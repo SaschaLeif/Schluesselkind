@@ -1,15 +1,20 @@
-<% if notice %>
+<<% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
 
 <h1>unsere Hersteller</h1>
-
-<%= button_to 'sort' %>
+	 <div class="entry">
+	<%= button_to 'sortieren nach Name', store_path(@brands = Brand.find(:all, :order => 'name')) %>
+	<%= button_to 'sortieren nach Rating', store_path(@brands = Brand.find(:all, :order => 'rating DESC')) %>
+	<%= button_to 'sortieren nach Rating', store_path(@brands.sort { |b,a| a.rating<=> b.rating}) %>
+	<%= button_to 'sortieren nach Name', store_path(@brands.sort { |a,b| a.name<=> b.name}) %>
+  </div>
 
 <% @brands.each do |brand| %>
 
   <div class="entry">
- 
+
+ <br />
     <%= image_tag(brand.logo_url) %>
  
     <h3><%= brand.name %></h3>
@@ -17,11 +22,19 @@
     <span class="origin">
     	Herkunft: <%= strip_tags(brand.origin) %>
     </span>
- 
-    <div class="rating_line">
-    	<span class="rating">FairTrade-Raitng: <%= brand.rating %></span>
- 		<%= button_to 'Info', products_path(:brand_id => brand) %>
-   		<br /><br />
+    
+   <div class="rating_line">
+   	<span class="rating">
+    	FairTrade-Raitng: <%= brand.rating %>
+    </span> 	
     </div>
+    
+    <br />
+    
+     <span class="infotext">
+    	<%= brand.info_text %>
+    </span>
+		    
+    <br /><br />
   </div>
 <% end %>

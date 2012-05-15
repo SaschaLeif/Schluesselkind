@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+
 <p>
   <b>Name:</b>
   <%= @brand.name %>
 </p>
 
 <p>
-  <b>Origin:</b>
+  <b>Herkunft:</b>
   <%= strip_tags(@brand.origin) %>
 </p>
 
@@ -20,6 +21,10 @@
   <%= @brand.rating %>
 </p>
 
+<p>
+  <b>Information:</b>
+  <%= @brand.info_text %>
+</p>
 
 <%= link_to 'Edit', edit_brand_path(@brand) %> |
 <%= link_to 'Back', brands_path %>

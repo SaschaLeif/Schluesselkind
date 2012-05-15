@@ -1,7 +1,8 @@
 class Brand < ActiveRecord::Base
   attr_accessible :logo_url, :name, :origin, :rating, :info_text
 
-  default_scope :order => 'name'
+ #default_scope :order => 'name'
+  
   has_many :products
   
   before_destroy :ensure_not_referenced_by_any_product
@@ -16,4 +17,7 @@ class Brand < ActiveRecord::Base
       return false
     end
   end
-end
+  
+  # damit die Felder ausgefüllt sind
+   validates_presence_of :logo_url, :name, :origin, :rating, :info_text, :message => "darf nicht leer sein." 
+   end

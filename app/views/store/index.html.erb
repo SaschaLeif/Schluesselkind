@@ -1,14 +1,13 @@
-<<% if notice %>
+<% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
 
 <h1>unsere Hersteller</h1>
+	
 	 <div class="entry">
-	<%= button_to 'sortieren nach Name', store_path(@brands = Brand.find(:all, :order => 'name')) %>
-	<%= button_to 'sortieren nach Rating', store_path(@brands = Brand.find(:all, :order => 'rating DESC')) %>
-	<%= button_to 'sortieren nach Rating', store_path(@brands.sort { |b,a| a.rating<=> b.rating}) %>
-	<%= button_to 'sortieren nach Name', store_path(@brands.sort { |a,b| a.name<=> b.name}) %>
-  </div>
+	 	<%= button_to 'nach Rating sortieren', store_path(@brands_for_select) %>
+	 	
+	 </div>
 
 <% @brands.each do |brand| %>
 
@@ -31,7 +30,7 @@
     
     <br />
     
-     <span class="infotext">
+    <span class="infotext">
     	<%= brand.info_text %>
     </span>
 		    

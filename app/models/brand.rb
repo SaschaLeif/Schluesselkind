@@ -1,9 +1,9 @@
 class Brand < ActiveRecord::Base
   attr_accessible :logo_url, :name, :origin, :rating, :info_text
-
- #default_scope :order => 'name'
   
   has_many :products
+  
+  default_scope :order => 'name'
   
   before_destroy :ensure_not_referenced_by_any_product
 
@@ -19,5 +19,7 @@ class Brand < ActiveRecord::Base
   end
   
   # damit die Felder ausgefüllt sind
-   validates_presence_of :logo_url, :name, :origin, :rating, :info_text, :message => "darf nicht leer sein." 
-   end
+  validates_presence_of :logo_url, :name, :origin, :rating, :info_text, :message => "darf nicht leer sein." 
+  validates_uniqueness_of :name, :message => ": Marke gibt es bereits"
+  validates_format_of :logo_url, :with => %r{\.(gif|jpg|jpeg|png)$}i, :message => 'muss gif/jpg/jpeg/png sein'
+  end

@@ -3,9 +3,7 @@ require 'spec_helper'
 describe "products/show" do
   before(:each) do
     @product = assign(:product, stub_model(Product,
-      :brand_id => 1,
-      :info_id => 2,
-      :info_text => "MyText"
+      :brand_id => 1
     ))
   end
 
@@ -13,7 +11,5 @@ describe "products/show" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/1/)
-    rendered.should match(/2/)
-    rendered.should match(/MyText/)
   end
 end

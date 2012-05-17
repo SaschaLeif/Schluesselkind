@@ -1,5 +1,6 @@
 class CreateBrands < ActiveRecord::Migration
-  def change
+  
+  def self.up
     create_table :brands do |t|
       t.string :name
       t.string :origin
@@ -8,7 +9,12 @@ class CreateBrands < ActiveRecord::Migration
       t.text :info_text
 
       # Der Befehl timestamps erzeugt die Felder created_at und updated_at.
-      t.timestamps
+      t.timestamps 
     end
   end
+  
+  def self.down
+    drop_table :brands
+  end
+  
 end

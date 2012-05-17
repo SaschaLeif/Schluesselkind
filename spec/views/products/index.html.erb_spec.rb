@@ -7,9 +7,7 @@ describe "products/index" do
         :brand_id => 1
       ),
       stub_model(Product,
-        :brand_id => 1#,
-        #:info_id => 2,
-        #:info_text => "MyText"
+        :brand_id => 1
       )
     ])
   end

@@ -1,185 +1,185 @@
 /* Global styles */
 
 #store #notice {
-    color: #fff;
-    border: 2px solid red;
-    padding: 1em;
-    margin-bottom: 2em;
-    background-color: #000;
-    font: bold smaller Verdana;
+	color: #fff;
+	border: 2px solid red;
+	padding: 1em;
+	margin-bottom: 2em;
+	background-color: #000;
+	font: bold smaller Verdana;
 }
 
 #store h1 {
-  font-family: Verdana;        
-    color: black;
-    border-bottom: 0px dotted black;
+	font-family: Verdana;
+	color: black;
+	border-bottom: 0px dotted black;
 }
 
 /* Styles for app/views/brands/index.html.erb */
 
-#brand_list h1 {  
-  font-family: Verdana;    
-    color: black;
-    border-bottom: 0px dotted black;
+#brand_list h1 {
+	font-family: Verdana;
+	color: black;
+	border-bottom: 0px dotted black;
 }
 
 #brand_list table {
-  font-family: Verdana;
-    border-collapse: collapse;
+	font-family: Verdana;
+	border-collapse: collapse;
 }
 
 #brand_list table tr td {
-    padding: 5px;
-    vertical-align: top;
+	padding: 5px;
+	vertical-align: top;
 }
 
 #brand_list .list_image {
-  width: 150px;
-  height: 70px;
+	width: 150px;
+	height: 70px;
 }
 
 #brand_list .list_description {
-  font-family: Verdana;
-  width: 50%;
+	font-family: Verdana;
+	width: 50%;
 }
 
 #brand_list .list_description dl {
-  margin: 0;
+	margin: 0;
 }
 
 #brand_list .list_description dt {
-  color: black;
-  font-weight: bold;
-  font-size: 100%;
+	color: black;
+	font-weight: bold;
+	font-size: 100%;
 }
 
 #brand_list .list_description dd {
-  font-size: 80%;
-  margin: 0;
+	font-size: 80%;
+	margin: 0;
 }
 
 #brand_list .list_actions {
-  font-family: Verdana;
-    font-size:    80%;
-    text-align:   right;
-    padding-left: 1em;
+	font-family: Verdana;
+	font-size: 80%;
+	text-align: right;
+	padding-left: 1em;
 }
 
 #brand_list .list_line_even {
-  background:   red;
+	background: red;
 }
 
 #brand_list .list_line_odd {
-  background:   white;
+	background: white;
 }
 
 /* An entry in the store catalog */
 
 #store  .entry {
-  font-family: Verdana;
-  overflow: auto;
-  margin-top: 1em;
+	font-family: Verdana;
+	overflow: auto;
+	margin-top: 1em;
 }
 
 #store  .title {
-  font-size: 100%;
-  font-family: Verdana;
+	font-size: 100%;
+	font-family: Verdana;
 }
 
 #store .entry img {
-  width: 150px;
-  height: 70px;
-  margin-right: 5px;
-  margin-bottom: 5px;
+	width: 150px;
+	height: 70px;
+	margin-right: 5px;
+	margin-bottom: 5px;
 }
 
 #store .entry h3 {
-  font-family: Verdana;
-  margin-top: 0;
-  margin-bottom: 2px;
-  color: black;
+	font-family: Verdana;
+	margin-top: 0;
+	margin-bottom: 2px;
+	color: black;
 }
 
 #store .entry p {
-  margin-top: 0.5em; 
-  margin-bottom: 0.8em; 
+	margin-top: 0.5em;
+	margin-bottom: 0.8em;
 }
 
 #store .entry .rating_line {
-  clear: both;
-  margin-bottom: 0.5em;
+	clear: both;
+	margin-bottom: 0.5em;
 }
 
 #store .entry .add_to_cart {
-  position: relative;
+	position: relative;
 }
 
 #store .entry  .origin {
-  color: black;
-  font-size: 80%;
-  font-weight: bold;
-  margin-right: 2em;
+	color: black;
+	font-size: 80%;
+	font-weight: bold;
+	margin-right: 2em;
 }
 
 #store .entry  .infotext {
-  color: black;
-  font-size: 80%;
-  margin-right: 2em;
+	color: black;
+	font-size: 80%;
+	margin-right: 2em;
 }
 
 #store .entry  .rating {
-  color: red;
-  font-size: 80%;
-  font-weight: bold;
-  margin-right: 2em;
+	color: red;
+	font-size: 80%;
+	font-weight: bold;
+	margin-right: 2em;
 }
 
 #store .entry form, #store .entry form div {
-  
-  display: inline;
+
+	display: inline;
 }
 
 /*Styles for main page*/
 #banner {
-  background: black;
-  padding-top: 15px;
-  padding-left: 0px;
-  padding-bottom: 0px;
-  /*border-bottom: 0px solid;
-  color: black;*/
+	background: black;
+	padding-top: 15px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	/*border-bottom: 0px solid;
+	 color: black;*/
 }
 
 #foot {
-  background: black;
-  font-family: Verdana;
-  color: white;
-  padding-top: 10px;
-  padding-left: 0px;
-  padding-bottom: 10px;
+	background: black;
+	font-family: Verdana;
+	color: white;
+	padding-top: 10px;
+	padding-left: 0px;
+	padding-bottom: 10px;
 }
 
 #main {
-  margin-left: 10em;
-  padding-top: 0px;
-  padding-left: 20px;
-  background: white;
+	margin-left: 10em;
+	padding-top: 0px;
+	padding-left: 20px;
+	background: white;
 }
 
 /*
-#columns {
-  background: black;
-}*/
+ #columns {
+ background: black;
+ }*/
 
 #menu {
-  font-family: Verdana;
-  font-size: 110%;
-  padding-top: 20px;
-  padding-left: 0px;
-  padding-bottom: 10px;
-  background: black;
+	font-family: Verdana;
+	font-size: 110%;
+	padding-top: 20px;
+	padding-left: 0px;
+	padding-bottom: 10px;
+	background: black;
 }
 
 #menu a {
-  color: white;
-  text-decoration: none;  
+	color: white;
+	text-decoration: none;
 }

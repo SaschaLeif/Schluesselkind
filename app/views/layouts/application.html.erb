@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Schluesselkind</title>
+	<head>
+		<title>Schluesselkind</title>
 
-  <%= stylesheet_link_tag 'brand' %>
-  <%= javascript_include_tag 'brands' %>
-  <%= csrf_meta_tags %>
-</head>
+		<%= stylesheet_link_tag 'brand' %>
+		<%= javascript_include_tag 'brands' %>
+		<%= csrf_meta_tags %>
+	</head>
 
-<body id="store">
-	
-  <div id="banner", align="center">
-  	<%= image_tag("sk_logo.jpg") %>  
-  </div>
-  
-    <div id="menu", align="center">
-    	<a href="http://www....">Start&nbsp;&nbsp;</a>	
-      	<a href="http://www....">Mädels&nbsp;&nbsp;  </a>
-      	<a href="http://www....">Jungs&nbsp;&nbsp;  </a>
-      	<a href="http://www....">Accessoires&nbsp;&nbsp;  </a>
-       	<a href="http://www....">Druck&nbsp;&nbsp;  </a>
-        <a href="http://www....">Marken&nbsp;&nbsp;  </a>
-        <a href="http://www....">Impressum&nbsp;&nbsp;</a><br />
-    </div>
-    <br />
-    
-    <div id="main">
-      <%= yield %>
-    </div>
-    <br />
-    
-    <div id="foot", align="center">
-    	FAIR TRADE & TEXTILDRUCK SEIT 2007   
-  	</div>
-</body>
+	<body id="store">
+
+		<div id="banner", align="center">
+			<%= image_tag("sk_logo.jpg") %>
+		</div>
+
+		<div id="menu", align="center">
+			<a href="http://www....">Start&nbsp;&nbsp;</a>
+			<a href="http://www....">Mädels&nbsp;&nbsp; </a>
+			<a href="http://www....">Jungs&nbsp;&nbsp; </a>
+			<a href="http://www....">Accessoires&nbsp;&nbsp; </a>
+			<a href="http://www....">Druck&nbsp;&nbsp; </a>
+			<a href="http://www....">Marken&nbsp;&nbsp; </a>
+			<a href="http://www....">Impressum&nbsp;&nbsp;</a>
+			<br />
+		</div>
+		<br />
+
+		<div id="main">
+			<%= yield %>
+		</div>
+		<br />
+
+		<div id="foot", align="center">
+			FAIR TRADE & TEXTILDRUCK SEIT 2007
+		</div>
+	</body>
 </html>

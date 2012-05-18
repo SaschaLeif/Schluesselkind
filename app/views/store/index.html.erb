@@ -1,36 +1,31 @@
 <% if notice %>
-<p id="notice"><%= notice %></p>
+
 <% end %>
 
 <h1>unsere Hersteller</h1>
-	
-<%= button_to 'nach Rating sortieren', store_path(@brands_for_select) %>
+
+<%= link_to 'absteigend nach Rating sortieren', store_path( @brands_rating_sortieren ) %>
 
 <% @brands.each do |brand| %>
 
-  <div class="entry">
+<div class="entry">
 
- <br />
-    <%= image_tag(brand.logo_url) %>
- 
-    <h3><%= brand.name %></h3>
- 
-    <span class="origin">
-    	Herkunft: <%= strip_tags(brand.origin) %>
-    </span>
-    
-   <div class="rating_line">
-   	<span class="rating">
-    	FairTrade-Raitng: <%= brand.rating %>
-    </span> 	
-    </div>
-    
-    <br />
-    
-    <span class="infotext">
-    	<%= brand.info_text %>
-    </span>
-		    
-    <br /><br />
-  </div>
+	<br />
+	<%= image_tag(brand.logo_url) %>
+
+	<h3><%= brand.name %></h3>
+
+	<span class="origin"> Herkunft: <%= strip_tags(brand.origin) %> </span>
+
+	<div class="rating_line">
+		<span class="rating"> FairTrade-Raitng: <%= brand.rating %> </span>
+	</div>
+
+	<br />
+
+	<span class="infotext"> <%= brand.info_text %> </span>
+
+	<br />
+	<br />
+</div>
 <% end %>

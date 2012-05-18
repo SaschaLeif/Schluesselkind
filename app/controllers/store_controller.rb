@@ -1,15 +1,14 @@
 class StoreController < ApplicationController
-  
+  def index
 
-  
-   def index
-    @brands = Brand.all
-   #  @brands = Brand.find(:all, :order => "name, origin, rating")
-     @brands_for_select = @brands.sort { |b,a| a.rating<=> b.rating}
-       respond_to do |format|
-       format.html # index.html.erb
-       format.json { render json: @brands }
-       end
-     end
-     
+    @brands = Brand.find(:all, :order => "name")
+    # @brands = Brand.find(:all, :order => "name, origin, rating")
+    # @brands = @brands.sort { |a,b| a.name<=> b.name}
+    @brands_rating_sortieren = Brand.find(:all, :order => "rating DESC")
+  end
+
+  def update
+    # @brands_rating_sortieren = Brand.find(:all, :order => "rating DESC")
+  end
+
 end

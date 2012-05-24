@@ -1,4 +1,12 @@
 Schluesselkind::Application.routes.draw do
+  resources :articles
+
+  resources :prints
+
+  resources :colors
+
+  resources :sizes
+
   resources :products
 
   resources :infos

@@ -2,13 +2,21 @@
 	<%= notice %>
 </p>
 
-<h2>Information</h2>
+<div id="brand_list">
 
-<p>
-	<br />
-	<b>Brand:</b>
-	<%= @product.brand_id %>
-</p>
+	<h1>Produkt Information (show.html.erb)</h1>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+	<p class="list_description">
+		<b>Brand:</b>
+		<%= @product.brand.name %>
+		<br />
+		<b>Artikel:</b>
+		<%= @product.article.name %>
+		<br />
+		<b>Druck:</b>
+		<%= @product.print.name %>
+	</p>
+
+	<%= link_to 'editiere', edit_product_path(@product) %> |
+	<%= link_to 'zurück', products_path %>
+</div>

@@ -15,6 +15,8 @@ class StoreController < ApplicationController
   def sort_rating
 
     @brands_rating_sortieren = Brand.find(:all, :order => "rating DESC")
-    render 'ore/index'
+    respond_to do |format|
+        format.html # show.html.erb
+      end
   end
 end

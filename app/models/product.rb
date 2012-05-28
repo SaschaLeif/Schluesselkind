@@ -1,6 +1,7 @@
 class Product < ActiveRecord::Base
-  attr_accessible :brand_id, :info_id, :info_text
+  attr_accessible :brand_id, :article_id, :print_id
+
   belongs_to :brand
-  has_many :articles
-  has_many :prints
+  belongs_to :article
+  belongs_to :print
 end

@@ -1,26 +1,28 @@
-<h1>Produkte der Hersteller</h1>
+<div id="brand_list">
+	<h1>Produkte der Hersteller (index.html.erb)</h1>
 
-<table>
-	<tr>
-		<th>Brand</th>
-		<th>Info</th>
+	<table>
 
-		<th></th>
-		<th></th>
-		<th></th>
-	</tr>
+		<% @products.each do |product| %>
+		<td class="list_description">
 
-	<% @products.each do |product| %>
-	<tr>
-		<td><%= product.brand_id %></td>
+			<b>Marke:</b> <%= product.brand.name%>
+			<br />
+			<b>Artikel:</b> <%= product.article.name %>
+			<br />
+			<b>Druck:</b> <%= product.print.name %></td>
 
-		<td><%= link_to 'Show', product %></td>
-		<td><%= link_to 'Edit', edit_product_path(product) %></td>
-		<td><%= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete %></td>
-	</tr>
-	<% end %>
-</table>
+			<td class="list_actions"> <%= link_to 'zeige', product %>
+			<br />
+			<%= link_to 'editiere', edit_product_path(product) %>
+			<br />
+			<%= link_to 'lösche', product, confirm: 'Are you sure?', method: :delete %></td>
+		</tr>
 
-<br />
+		<% end %>
+	</table>
 
-<%= link_to 'New Product', new_product_path %>
+	<br />
+
+	<%= link_to 'Neues Produkt', new_product_path %>
+</div>

@@ -4,7 +4,7 @@ Brand.delete_all
 Brand.create(
 :name => 'Continental',
 :origin => %{<p>Grossbritanien</p>},
-:logo_url =>   '/images/continental.gif',
+:logo_url =>   '/images/brands/continental.gif',
 :rating => 6.66,
 :info_text =>
 'CONTINENTAL has been designing, manufacturing and selling wholesale to the imprintables industry since 1994.
@@ -18,7 +18,7 @@ Brand.create(
 Brand.create(
 :name => 'Armed Angels & Friend',
 :origin => %{<p>Deutschland</p>},
-:logo_url => '/images/armedangels.png',
+:logo_url => '/images/brands/armedangels.png',
 :rating => 9.50,
 :info_text =>
 'Gestartet sind wir 2007 mit sechs verschiedenen Shirts. Leider war damals nicht nur die Auswahl bescheiden,
@@ -30,7 +30,7 @@ Brand.create(
 Brand.create(
 :name => 'Epona Clothing',
 :origin => %{<p>Grossbritanien</p>},
-:logo_url => '/images/epona.jpg',
+:logo_url => '/images/brands/epona.jpg',
 :rating => 8.00,
 :info_text =>
 'Epona was set up by Tom Andrews in 2002. To find out how it all started, here is an article on the early days.
@@ -43,7 +43,7 @@ Brand.create(
 Brand.create(
 :name => 'Wombat Clothing',
 :origin => %{<p>Grossbritanien</p>},
-:logo_url => '/images/wombat.gif',
+:logo_url => '/images/brands/wombat.gif',
 :rating => 4.00,
 :info_text =>
 'We were first set up in 2004 as an online store with a small range of mens adventure clothing. This proved pretty popular,
@@ -56,7 +56,7 @@ Brand.create(
 Brand.create(
 :name => 'Earth Posivite Apparel',
 :origin => %{<p>Grossbritanien</p>},
-:logo_url => '/images/Earth_positive.gif',
+:logo_url => '/images/brands/Earth_positive.gif',
 :rating => 7.00,
 :info_text =>
 'EarthPositive is a green revolution in promotional apparel: Climate Neutral T-shirts. Organic and ethically made, but crucially, manufactured
@@ -69,7 +69,7 @@ Brand.create(
 Brand.create(
 :name => 'Living Crafts',
 :origin => %{<p>Deutschland</p>},
-:logo_url => '/images/LivingCrafts.gif',
+:logo_url => '/images/brands/LivingCrafts.gif',
 :rating => 7.00,
 :info_text =>
 'LIVING CRAFTS began as a sole-trader-business in a garage. Persuasion and stamina have turned it into an eco-friendly company which has
@@ -81,7 +81,7 @@ Brand.create(
 Brand.create(
 :name => 'Pants To Poverty',
 :origin => %{<p>Grossbritanien</p>},
-:logo_url => '/images/pants_to_poverty.jpg',
+:logo_url => '/images/brands/pants_to_poverty.jpg',
 :rating => 5.50,
 :info_text =>
 'We are a new type of underwear brand. Not simply content to make some of the most comfortable and stylish pants on the planet, we work with thousands of
@@ -94,7 +94,7 @@ Brand.create(
 Brand.create(
 :name => 'Recolution',
 :origin => %{<p>Deutschland</p>},
-:logo_url => '/images/recolution.png',
+:logo_url => '/images/brands/recolution.png',
 :rating => 5.50,
 :info_text =>
 'Nach &uuml;ber einem Jahr Vorbereitung haben die drei Nordlichter Jan, Nikolaus und Robert im Jahr 2010 das Modelabel recolution gegr&uuml;ndet.
@@ -109,7 +109,7 @@ Brand.create(
 Brand.create(
 :name => 'Tee Jays',
 :origin => %{<p>D&auml;nemark</p>},
-:logo_url => '/images/TeeJays.png',
+:logo_url => '/images/brands/TeeJays.png',
 :rating => 7.50,
 :info_text =>
 'It began in 1976 with a passion to create the best quality T-Shirts and the first production started in Florence, Alabama.
@@ -182,4 +182,39 @@ Color.create(
 
 Color.create(
 :name => 'weiss'
+)
+
+Article .delete_all
+
+# Artikel 1
+Article.create(
+:name => 'T-Shirt Freizeit',
+:color_id => 2,
+:article_url => '/images/shirt_color/gelb.jpg',
+:size_id => 4 # S
+)
+
+# Artikel 2
+Article.create(
+:name => 'T-Shirt Arbeit',
+:color_id => 5,
+:article_url => '/images/shirt_color/schwarz.jpg',
+:size_id => 8 #XXL
+)
+
+Print.delete_all
+
+# Druck 1
+Print.create(
+:name => 'Schluesselkind',
+:print_url => '/images/prints/sk_logo.jpg'
+)
+
+Product.delete_all
+
+# Produkt 1
+Product.create(
+:brand_id => 1,
+:article_id => 1,
+:print_id => 1
 )

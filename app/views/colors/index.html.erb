@@ -1,0 +1,21 @@
+<div id="brand_list">
+	<h1>verfügbare Farben</h1>
+
+	<table>
+
+		<% @colors.each do |color| %>
+		<tr>
+			<td class="list_description"> <%= color.name %></td>
+			<td class="list_actions"><%= link_to 'zeige', color %>
+			<br />
+			<%= link_to 'editiere', edit_color_path(color) %>
+			<br />
+			<%= link_to 'lösche', color, confirm: 'Are you sure?', method: :delete %></td>
+		</tr>
+		<% end %>
+	</table>
+
+	<br />
+	<%= link_to 'Neue Farbe anlegen', new_color_path %>
+
+</div>

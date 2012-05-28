@@ -1,0 +1,29 @@
+<div id="brand_list">
+	<h1>verfügbare Drucke</h1>
+
+	<table>
+
+		<% @prints.each do |print| %>
+		<tr>
+			<td> <%= image_tag(print.print_url, :class => 'list_image') %> </td>
+
+			<td class="list_description">
+			<dl>
+				<dt>
+					<%= print.name %>
+				</dt>
+			</dl></td>
+
+			<td class="list_actions"><%= link_to 'zeige', print %>
+			<br />
+			<%= link_to 'editiere', edit_print_path(print) %>
+			<br />
+			<%= link_to 'lösche', print, confirm: 'Are you sure?', method: :delete %></td>
+		</tr>
+		<% end %>
+	</table>
+
+	<br />
+
+	<%= link_to 'neuer Druck', new_print_path %>
+</div>

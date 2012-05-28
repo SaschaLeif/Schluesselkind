@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <b>Bild:</b>
+  <%= @article.article_url %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @article.name %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @article.sizes.name %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%= @article.colors.name %>
+</p>
+
+
+<%= link_to 'editiere', edit_article_path(@article) %> |
+<%= link_to 'zurück', articles_path %>

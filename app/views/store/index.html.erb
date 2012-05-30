@@ -3,9 +3,12 @@
 <% end %>
 
 <h1>unsere Hersteller</h1>
-
-<%= link_to 'absteigend nach Rating sortieren', store_path( @brands_rating_sortieren)%>
-
+<div class="entry">
+	sortiert nach:
+	<%= link_to 'Ranking', store_path(:sort_by => 'rating DESC') %>
+	<%= link_to 'Marke', store_path(:sort_by => 'name') %>
+	<%= link_to 'Herkunft', store_path(:sort_by => 'origin') %>
+</div>
 <% @brands.each do |brand| %>
 
 <div class="entry">
@@ -18,12 +21,15 @@
 	<span class="origin"> Herkunft: <%= strip_tags(brand.origin) %> </span>
 
 	<div class="rating_line">
-		<span class="rating"> FairTrade-Raitng: <%= brand.rating %> </span>
+		<span class="rating"> FairTrade-Rating: <%= brand.rating %> </span>
 	</div>
 
 	<br />
 
-	<span class="infotext"> <%= brand.info_text %> </span>
+	<span class="infotext"> <%= brand.info_text %>
+		<br />
+		<br />
+		<%= link_to "alle Produkte zeigen", :controller => :article, :action => :index %></span>
 
 	<br />
 	<br />

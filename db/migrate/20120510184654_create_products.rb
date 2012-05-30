@@ -3,7 +3,6 @@ class CreateProducts < ActiveRecord::Migration
     create_table :products do |t|
       t.integer :brand_id #Fremdschluessel
       t.integer :article_id
-      t.integer :print_id
 
       t.timestamps
     end

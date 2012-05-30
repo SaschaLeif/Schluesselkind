@@ -216,5 +216,13 @@ Product.delete_all
 Product.create(
 :brand_id => 1,
 :article_id => 1,
+#:print_id => 1
+)
+
+CustomProduct.delete_all
+
+# Endprodukt (Druck + Produkt) 1
+CustomProduct.create(
+:product_id => 1,
 :print_id => 1
 )

@@ -6,11 +6,10 @@
 		<% @products.each do |product| %>
 		<td class="list_description">
 
-			<b>Marke:</b> <%= product.brand.name%>
+			<b>Marke:</b> <%= product.brand.name %>
 			<br />
 			<b>Artikel:</b> <%= product.article.name %>
-			<br />
-			<b>Druck:</b> <%= product.print.name %></td>
+			</td>
 
 			<td class="list_actions"> <%= link_to 'zeige', product %>
 			<br />

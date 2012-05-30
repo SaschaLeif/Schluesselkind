@@ -65,6 +65,13 @@
 	padding-left: 1em;
 }
 
+#brand_list .custom_products {
+	font-family: Verdana;
+	font-size: 80%;
+	text-align: left;
+	padding-left: 1em;
+}
+
 #brand_list .list_line_even {
 	background: red;
 }

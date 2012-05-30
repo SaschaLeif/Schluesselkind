@@ -1,4 +1,6 @@
 Schluesselkind::Application.routes.draw do
+  resources :custom_products
+
   resources :articles
 
   resources :prints

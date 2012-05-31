@@ -8,7 +8,11 @@
 
 			<b>Marke:</b> <%= product.brand.name %>
 			<br />
-			<b>Artikel:</b> <%= product.article.name %>
+			<b>Artikel:</b> <%= product.article.name %> 
+			<br />
+			<b>Größe:</b> <%= product.article.size.name %>
+			<br />
+			<b>Farbe:</b> <%= product.article.color.name %>
 			</td>
 
 			<td class="list_actions"> <%= link_to 'zeige', product %>

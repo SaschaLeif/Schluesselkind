@@ -27,5 +27,7 @@
 	<%= @brand.info_text %>
 </p>
 
+<% if admin? %>
 <%= link_to 'editiere', edit_brand_path(@brand) %> |
+<% end %>
 <%= link_to 'zurück', brands_path %>

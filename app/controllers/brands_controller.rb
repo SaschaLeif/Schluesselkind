@@ -1,4 +1,8 @@
 class BrandsController < ApplicationController
+  
+  # Adminbereich, alles außer index und show
+  before_filter :authorize, :except => [:index, :show ]
+  
   # GET /brands
   # GET /brands.json
   def index

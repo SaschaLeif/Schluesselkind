@@ -1,4 +1,4 @@
 class Color < ActiveRecord::Base
   attr_accessible :name
-  has_one :article
+  has_many :articles
 end

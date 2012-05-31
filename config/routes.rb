@@ -1,4 +1,10 @@
 Schluesselkind::Application.routes.draw do
+  get "sessions/new"
+
+  get "sessions/create"
+
+  get "sessions/destroy"
+
   resources :custom_products
 
   resources :articles
@@ -16,6 +22,20 @@ Schluesselkind::Application.routes.draw do
   get "store/index"
 
   resources :brands
+
+  resources :sessions do
+
+      get :login
+     post :logout
+  end
+  
+   match '/login', :to => 'sessions#new', :as => "login"
+    match '/logout' => 'sessions#destroy', :as => :logout
+
+  #http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/
+  # map.resources :sessions
+  # map.login '/login', :controller => 'sessions', :action => 'new'
+  # map.logout '/logout', :controller => 'sessions', :action => 'destroy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

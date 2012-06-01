@@ -5,10 +5,11 @@
 <h1>unsere Hersteller</h1>
 <div class="entry">
 	sortiert nach:
-	<%= link_to 'Ranking', store_path(:sort_by => 'rating DESC') %>
-	<%= link_to 'Marke', store_path(:sort_by => 'name') %>
-	<%= link_to 'Herkunft', store_path(:sort_by => 'origin') %>
+	<%= button_to 'Ranking', store_path(:sort_by => 'rating DESC') %>
+	<%= button_to 'Marke', store_path(:sort_by => 'name') %>
+	<%= button_to 'Herkunft', store_path(:sort_by => 'origin') %>
 </div>
+
 <% @brands.each do |brand| %>
 
 <div class="entry">

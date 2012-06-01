@@ -23,14 +23,28 @@ Schluesselkind::Application.routes.draw do
 
   resources :brands
 
-  resources :sessions do
-
-      get :login
-     post :logout
-  end
+ # Sample resource route with options:
+  #   resources :products do
+  #     member do
+  #       get 'short'
+  #       post 'toggle'
+  #     end
+  #
+  #     collection do
+  #       get 'sold'
+  #     end
+  #   end
   
-   match '/login', :to => 'sessions#new', :as => "login"
-    match '/logout' => 'sessions#destroy', :as => :logout
+  # login/logout
+  resources :sessions do
+    member do
+    get 'login'
+    post 'logout'
+    end
+  end
+
+  match '/login', :to => 'sessions#new', :as => "login"
+  match '/logout', :to => 'sessions#destroy', :as => "logout"
 
   #http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/
   # map.resources :sessions

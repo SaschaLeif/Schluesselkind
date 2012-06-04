@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
 
+  before_filter :authorize
   protect_from_forgery
   helper :all # include all helpers, all the time
 
@@ -12,27 +13,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
-# für den Admin Bereich 
-  helper_method :admin?    
-  protected  
-  def admin?  
-    false  
-  end
-  
-  # passwort setzen
-  def admin?  
-     session[:password] == "schluesselkind"  
-  end
-  
-  #authoisierung, nachricht, falls jemand auf die Adminfelder klickt
-  def authorize  
-    unless admin?  
-      flash[:notice] = "Zugriff auf die Administration erfordert Berechtigung!" 
-      # TODO :error wäre besser als :notice, aber die Error-Anzeige auf der home seite fehlt noch
-      # flash[:error] = "Zugriff auf die Administration erfordert Berechtigung!"   
-      redirect_to brand_path  
-      false  
-    end  
-  end
+  protected
 
+  def authorize
+    unless User.find_by_id(session[:user_id])
+      redirect_to login_url, :notice => "Bitte einloggen"
+    end
+  end
 end

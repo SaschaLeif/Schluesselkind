@@ -1,9 +1,13 @@
 class SizesController < ApplicationController
+
+  skip_before_filter :authorize, :only => [:show]
+  before_filter :authorize, :except => [:index, :show ]
+  
   # GET /sizes
   # GET /sizes.json
   def index
-#    @sizes = Size.all
-@sizes = Size.find(:all, :order => "id")
+    #    @sizes = Size.all
+    @sizes = Size.find(:all, :order => "id")
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @sizes }

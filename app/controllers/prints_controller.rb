@@ -1,4 +1,7 @@
 class PrintsController < ApplicationController
+ 
+  before_filter :authorize, :except => [:index, :show ]
+ 
   # GET /prints
   # GET /prints.json
   def index

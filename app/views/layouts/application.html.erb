@@ -2,7 +2,6 @@
 <html>
 	<head>
 		<title>Schlüsselkind</title>
-
 		<%= stylesheet_link_tag 'brand' %>
 		<%= javascript_include_tag 'brands' %>
 		<%= csrf_meta_tags %>
@@ -22,7 +21,14 @@
 			<a href="http://www....">Druck&nbsp;&nbsp; </a>
 			<a href="http://www....">Marken&nbsp;&nbsp; </a>
 			<a href="http://www....">Impressum&nbsp;&nbsp;</a>
-			<br />
+
+		</div>
+		<div align="right">
+			<% if session[:user_id] %>
+			<%= button_to 'Logout', logout_path, :method => :delete %>
+			<% else %>
+			<%= button_to 'Login', login_path, :method => :create %>
+			<% end %>
 		</div>
 		<br />
 

@@ -28,19 +28,16 @@
 
 			<td class="list_actions"> <%= link_to 'zeige', brand %>
 			<br />
-			<% if admin? %>
 			<%= link_to 'editiere', edit_brand_path(brand) %>
 			<br />
 			<%= link_to 'lösche', brand, :confirm => 'Are you sure?',
 			:method => :delete %> </td>
 		</tr>
-		<% end %>
+
 		<% end %>
 
 		<td class="list_actions">
 		<br />
-		<% if admin? %>
-		<%= link_to 'neue Marke hinzufügen', new_brand_path %>
-		<% end %></td>
+		<%= link_to 'neue Marke hinzufügen', new_brand_path %> </td>
 	</table>
 </div>

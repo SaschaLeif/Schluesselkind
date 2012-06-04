@@ -3,7 +3,6 @@
 	<h1>Artikel</h1>
 
 	<table>
-
 		<% @articles.each do |article| %>
 		<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
 			<td><%= image_tag(article.article_url, :class => 'list_image') %></td>

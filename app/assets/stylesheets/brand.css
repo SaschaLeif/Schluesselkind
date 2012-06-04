@@ -61,8 +61,8 @@
 #brand_list .list_actions {
 	font-family: Verdana;
 	font-size: 80%;
-	text-align: right;
-	padding-left: 1em;
+	text-align: left;
+	padding-left: 0em;
 }
 
 #brand_list .custom_products {

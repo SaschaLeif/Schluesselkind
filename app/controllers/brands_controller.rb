@@ -1,5 +1,7 @@
 class BrandsController < ApplicationController
   
+  #skip_before_filter :authorize, :only => [:show]
+  
   # Adminbereich, alles außer index und show
   before_filter :authorize, :except => [:index, :show ]
   

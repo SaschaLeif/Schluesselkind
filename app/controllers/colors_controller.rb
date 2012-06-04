@@ -1,4 +1,6 @@
 class ColorsController < ApplicationController
+
+  before_filter :authorize, :except => [:index, :show ]
   # GET /colors
   # GET /colors.json
   def index

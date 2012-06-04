@@ -1,4 +1,16 @@
 Schluesselkind::Application.routes.draw do
+  get "admin/index"
+
+  get 'admin' => 'admin#index'
+
+  controller :sessions do
+    get  'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+
+  resources :users
+
   get "sessions/new"
 
   get "sessions/create"
@@ -22,34 +34,6 @@ Schluesselkind::Application.routes.draw do
   get "store/index"
 
   resources :brands
-
- # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-  
-  # login/logout
-  resources :sessions do
-    member do
-    get 'login'
-    post 'logout'
-    end
-  end
-
-  match '/login', :to => 'sessions#new', :as => "login"
-  match '/logout', :to => 'sessions#destroy', :as => "logout"
-
-  #http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/
-  # map.resources :sessions
-  # map.login '/login', :controller => 'sessions', :action => 'new'
-  # map.logout '/logout', :controller => 'sessions', :action => 'destroy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

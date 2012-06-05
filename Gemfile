@@ -13,6 +13,9 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
+gem 'cucumber'
+gem 'database_cleaner'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -27,8 +30,8 @@ end
 
 gem 'jquery-rails'
 
-#gem 'activeadmin'
-#gem "meta_search",    '>= 1.1.0.pre'
+gem 'activeadmin'
+gem "meta_search",    '>= 1.1.0.pre'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -1,9 +1,0 @@
---- 
-cursor_positions: 
-  - :path: app/views/store/index.html.erb
-    :cursor_offset: 205
-    :timestamp: 2012-05-08 21:26:10.647000 +02:00
-  - :path: app/models/brand.rb
-    :cursor_offset: 0
-    :timestamp: 2012-05-08 21:11:17.973000 +02:00
-files_to_retain: 0

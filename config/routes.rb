@@ -1,4 +1,5 @@
 Schluesselkind::Application.routes.draw do
+ 
   get "admin/index"
 
   get 'admin' => 'admin#index'

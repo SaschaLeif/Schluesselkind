@@ -1,0 +1,40 @@
+<div id="brand_list">
+	<h1>Ausgewählte Ware</h1>
+
+	<table>
+		<tr>
+			<th>Artikelbild</th>
+			<th>Eckdaten</th>
+			<th>Aufdruck</th>
+		</tr>
+
+		<% @custom_products.each do |custom_product| %>
+
+		<tr class="custom_products">
+			<td > <%= image_tag(custom_product.product.article.article_url, :class => 'list_image') %> </td>
+
+			<td >Marke: <%= custom_product.product.brand.name %>
+			<br />
+			Grösse: <%= custom_product.product.article.size.name %>
+			<br />
+			Farbe: <%= custom_product.product.article.color.name %> </td>
+
+			<td>
+			<center>
+				<%= image_tag(custom_product.print.print_url, :class => 'list_image') %>
+			</center>Motiv: <%= custom_product.print.name %></td>
+
+			<td class="list_actions"><%= link_to 'zeige', custom_product %>
+			<br />
+			<%= link_to 'editiere', edit_custom_product_path(custom_product) %>
+			<br />
+			<%= link_to 'lösche', custom_product, confirm: 'Are you sure?', method: :delete %></td>
+		</tr>
+		<% end %>
+	</table>
+
+	<br />
+	<p class="custom_products">
+		<%= link_to 'Neues Produkt auswählen', new_custom_product_path %>
+	</p>
+</div>

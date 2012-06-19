@@ -1,7 +1,3 @@
-<% if notice %>
-
-<% end %>
-
 <h1>unsere Hersteller</h1>
 <div class="entry">
 	sortiert nach:
@@ -16,22 +12,15 @@
 
 	<br />
 	<%= image_tag(brand.logo_url) %>
-
 	<h3><%= brand.name %></h3>
-
 	<span class="origin"> Herkunft: <%= strip_tags(brand.origin) %> </span>
-
-	<div class="rating_line">
-		<span class="rating"> FairTrade-Rating: <%= brand.rating %> </span>
-	</div>
-
 	<br />
-
+	<span class="rating"> FairTrade-Rating: <%= brand.rating %> </span>
+	<br />
 	<span class="infotext"> <%= brand.info_text %>
 		<br />
 		<br />
-		<%= link_to "alle Produkte zeigen", :conditions => "name = 'Tee Jays'"%></span>
-
+		<%= link_to "alle Produkte zeigen", products_path(:brand_id => brand) %></span>
 	<br />
 	<br />
 </div>

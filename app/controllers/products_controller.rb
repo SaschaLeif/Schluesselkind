@@ -1,13 +1,13 @@
 class ProductsController < ApplicationController
 
- skip_before_filter :authorize, :only => [:show]
- # Adminbereich, alles außer index und show
+  skip_before_filter :authorize, :only => [:show]
+  # Adminbereich, alles außer index und show
   before_filter :authorize, :except => [:index, :show ]
-  
   # GET /products
   # GET /products.json
   def index
     @products = Product.all
+    @cart = current_cart
 
     respond_to do |format|
       format.html # index.html.erb
@@ -19,7 +19,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @product = Product.find(params[:id])
-
+    @cart = current_cart
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @product }
@@ -30,7 +30,7 @@ class ProductsController < ApplicationController
   # GET /products/new.json
   def new
     @product = Product.new
-
+@cart = current_cart
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @product }
@@ -40,6 +40,7 @@ class ProductsController < ApplicationController
   # GET /products/1/edit
   def edit
     @product = Product.find(params[:id])
+    @cart = current_cart
   end
 
   # POST /products

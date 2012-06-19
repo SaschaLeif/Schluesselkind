@@ -5,7 +5,7 @@ class CustomProductsController < ApplicationController
   # GET /custom_products.json
   def index
     @custom_products = CustomProduct.all
-
+    @cart = current_cart
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @custom_products }
@@ -16,7 +16,7 @@ class CustomProductsController < ApplicationController
   # GET /custom_products/1.json
   def show
     @custom_product = CustomProduct.find(params[:id])
-
+    @cart = current_cart
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @custom_product }
@@ -27,7 +27,7 @@ class CustomProductsController < ApplicationController
   # GET /custom_products/new.json
   def new
     @custom_product = CustomProduct.new
-
+    @cart = current_cart
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @custom_product }
@@ -37,13 +37,14 @@ class CustomProductsController < ApplicationController
   # GET /custom_products/1/edit
   def edit
     @custom_product = CustomProduct.find(params[:id])
+    @cart = current_cart
   end
 
   # POST /custom_products
   # POST /custom_products.json
   def create
     @custom_product = CustomProduct.new(params[:custom_product])
-
+    @cart = current_cart
     respond_to do |format|
       if @custom_product.save
         format.html { redirect_to @custom_product, notice: 'Custom product was successfully created.' }
@@ -59,7 +60,7 @@ class CustomProductsController < ApplicationController
   # PUT /custom_products/1.json
   def update
     @custom_product = CustomProduct.find(params[:id])
-
+    @cart = current_cart
     respond_to do |format|
       if @custom_product.update_attributes(params[:custom_product])
         format.html { redirect_to @custom_product, notice: 'Custom product was successfully updated.' }
@@ -76,7 +77,7 @@ class CustomProductsController < ApplicationController
   def destroy
     @custom_product = CustomProduct.find(params[:id])
     @custom_product.destroy
-
+    @cart = current_cart
     respond_to do |format|
       format.html { redirect_to custom_products_url }
       format.json { head :no_content }

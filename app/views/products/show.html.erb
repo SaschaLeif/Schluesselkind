@@ -1,17 +1,17 @@
+<% if notice %>
 <p id="notice">
 	<%= notice %>
 </p>
+<% end %>
 
 <div id="brand_list">
 
-	<h1>Produkt Information (show.html.erb)</h1>
+	<h1>Produkt Information</h1>
 
 	<p class="list_description">
-		<b>Brand:</b>
-		<%= @product.brand.name %>
+		<b>Brand: </b><%= @product.brand.name %>
 		<br />
-		<b>Artikel:</b>
-		<%= @product.article.name %>
+		<b>Artikel: </b><%= @product.article.name %>
 	</p>
 
 	<%= link_to 'editiere', edit_product_path(@product) %> |

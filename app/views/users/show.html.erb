@@ -1,20 +1,13 @@
-<p id="notice">
-	<%= notice %>
+<p>
+	<b>Name:</b><%= @user.name %>
 </p>
 
 <p>
-	<b>Name:</b>
-	<%= @user.name %>
+	<b>Hashed password:</b><%= @user.hashed_password %>
 </p>
 
 <p>
-	<b>Hashed password:</b>
-	<%= @user.hashed_password %>
-</p>
-
-<p>
-	<b>Salt:</b>
-	<%= @user.salt %>
+	<b>Salt:</b><%= @user.salt %>
 </p>
 
 <%= link_to 'editiere', edit_user_path(@user) %> |

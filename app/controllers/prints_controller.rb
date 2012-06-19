@@ -1,12 +1,11 @@
 class PrintsController < ApplicationController
- 
+
   before_filter :authorize, :except => [:index, :show ]
- 
   # GET /prints
   # GET /prints.json
   def index
     @prints = Print.all
-
+    @cart = current_cart
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @prints }
@@ -17,7 +16,7 @@ class PrintsController < ApplicationController
   # GET /prints/1.json
   def show
     @print = Print.find(params[:id])
-
+    @cart = current_cart
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @print }
@@ -28,7 +27,7 @@ class PrintsController < ApplicationController
   # GET /prints/new.json
   def new
     @print = Print.new
-
+    @cart = current_cart
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @print }
@@ -38,13 +37,14 @@ class PrintsController < ApplicationController
   # GET /prints/1/edit
   def edit
     @print = Print.find(params[:id])
+    @cart = current_cart
   end
 
   # POST /prints
   # POST /prints.json
   def create
     @print = Print.new(params[:print])
-
+    @cart = current_cart
     respond_to do |format|
       if @print.save
         format.html { redirect_to @print, notice: 'Print was successfully created.' }
@@ -60,7 +60,7 @@ class PrintsController < ApplicationController
   # PUT /prints/1.json
   def update
     @print = Print.find(params[:id])
-
+    @cart = current_cart
     respond_to do |format|
       if @print.update_attributes(params[:print])
         format.html { redirect_to @print, notice: 'Print was successfully updated.' }
@@ -77,7 +77,7 @@ class PrintsController < ApplicationController
   def destroy
     @print = Print.find(params[:id])
     @print.destroy
-
+    @cart = current_cart
     respond_to do |format|
       format.html { redirect_to prints_url }
       format.json { head :no_content }

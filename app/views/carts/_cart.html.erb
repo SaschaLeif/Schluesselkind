@@ -1,0 +1,25 @@
+<div align="right">
+	<% if session[:user_id] %>
+	<%= button_to 'Logout', logout_path, :method => :delete %>
+	<% else %>
+	<%= button_to 'Login', login_path, :method => :create %>
+	<% end %>
+</div>
+
+<div class="entry">
+
+	<h2>Warenkorb</h2>
+
+	<table>
+		<%= render(cart.line_items) %>
+		<tr class="total_line">
+			<td colspan="2">Gesamtpreis:</td>
+			<td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
+		</tr>
+	</table>
+
+	<br/>
+	<%= button_to 'Warenkorb leeren', cart, :method => :delete,
+	:confirm => 'Are you sure?' %>
+</div>
+

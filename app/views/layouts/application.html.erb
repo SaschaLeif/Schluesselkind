@@ -21,16 +21,13 @@
 			<a href="http://www....">Druck&nbsp;&nbsp; </a>
 			<a href="http://www....">Marken&nbsp;&nbsp; </a>
 			<a href="http://www....">Impressum&nbsp;&nbsp;</a>
+		</div>
 
+		<div id="side">
+			<div id="cart">
+				<%= render @cart %>
+			</div>
 		</div>
-		<div align="right">
-			<% if session[:user_id] %>
-			<%= button_to 'Logout', logout_path, :method => :delete %>
-			<% else %>
-			<%= button_to 'Login', login_path, :method => :create %>
-			<% end %>
-		</div>
-		<br />
 
 		<div id="main">
 			<%= yield %>

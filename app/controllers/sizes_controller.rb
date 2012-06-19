@@ -2,12 +2,11 @@ class SizesController < ApplicationController
 
   skip_before_filter :authorize, :only => [:show]
   before_filter :authorize, :except => [:index, :show ]
-  
   # GET /sizes
   # GET /sizes.json
   def index
-    #    @sizes = Size.all
     @sizes = Size.find(:all, :order => "id")
+    @cart = current_cart
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @sizes }
@@ -18,7 +17,7 @@ class SizesController < ApplicationController
   # GET /sizes/1.json
   def show
     @size = Size.find(params[:id])
-
+    @cart = current_cart
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @size }
@@ -29,7 +28,7 @@ class SizesController < ApplicationController
   # GET /sizes/new.json
   def new
     @size = Size.new
-
+    @cart = current_cart
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @size }
@@ -39,13 +38,14 @@ class SizesController < ApplicationController
   # GET /sizes/1/edit
   def edit
     @size = Size.find(params[:id])
+    @cart = current_cart
   end
 
   # POST /sizes
   # POST /sizes.json
   def create
     @size = Size.new(params[:size])
-
+    @cart = current_cart
     respond_to do |format|
       if @size.save
         format.html { redirect_to @size, notice: 'Size was successfully created.' }
@@ -61,7 +61,7 @@ class SizesController < ApplicationController
   # PUT /sizes/1.json
   def update
     @size = Size.find(params[:id])
-
+    @cart = current_cart
     respond_to do |format|
       if @size.update_attributes(params[:size])
         format.html { redirect_to @size, notice: 'Size was successfully updated.' }
@@ -78,7 +78,7 @@ class SizesController < ApplicationController
   def destroy
     @size = Size.find(params[:id])
     @size.destroy
-
+    @cart = current_cart
     respond_to do |format|
       format.html { redirect_to sizes_url }
       format.json { head :no_content }

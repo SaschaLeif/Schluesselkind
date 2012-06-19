@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
   
- skip_before_filter :authorize, :only => [:show] 
+ before_filter :authorize, :except => [:index, :show ]
   # GET /users
   # GET /users.xml
   def index
     @users = User.order(:name)
-
+@cart = current_cart
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @users }
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   # GET /users/1.xml
   def show
     @user = User.find(params[:id])
-
+@cart = current_cart
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @user }
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
   # GET /users/new.xml
   def new
     @user = User.new
-
+@cart = current_cart
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @user }
@@ -37,13 +37,14 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
+  @cart = current_cart
   end
 
   # POST /users
   # POST /users.xml
   def create
     @user = User.new(params[:user])
-
+@cart = current_cart
     respond_to do |format|
       if @user.save
         format.html { redirect_to(users_url,
@@ -62,7 +63,7 @@ class UsersController < ApplicationController
   # PUT /users/1.xml
   def update
     @user = User.find(params[:id])
-
+@cart = current_cart
     respond_to do |format|
       if @user.update_attributes(params[:user])
         format.html { redirect_to(users_url,
@@ -80,6 +81,7 @@ class UsersController < ApplicationController
   # DELETE /users/1.xml
   def destroy
     @user = User.find(params[:id])
+    @cart = current_cart
     begin
       @user.destroy
       flash[:notice] = "User #{@user.name} deleted"

@@ -1,14 +1,14 @@
 class BrandsController < ApplicationController
-  
+
   #skip_before_filter :authorize, :only => [:show]
-  
+
   # Adminbereich, alles außer index und show
   before_filter :authorize, :except => [:index, :show ]
-  
   # GET /brands
   # GET /brands.json
   def index
     @brands = Brand.find(:all, :order => "name")
+    @cart = current_cart
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @brands }
@@ -19,7 +19,7 @@ class BrandsController < ApplicationController
   # GET /brands/1.json
   def show
     @brand = Brand.find(params[:id])
-
+    @cart = current_cart
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @brand }
@@ -30,7 +30,7 @@ class BrandsController < ApplicationController
   # GET /brands/new.json
   def new
     @brand = Brand.new
-
+    @cart = current_cart
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @brand }
@@ -40,13 +40,14 @@ class BrandsController < ApplicationController
   # GET /brands/1/edit
   def edit
     @brand = Brand.find(params[:id])
+    @cart = current_cart
   end
 
   # POST /brands
   # POST /brands.json
   def create
     @brand = Brand.new(params[:brand])
-
+    @cart = current_cart
     respond_to do |format|
       if @brand.save
         format.html { redirect_to @brand, notice: 'Brand was successfully created.' }
@@ -62,7 +63,7 @@ class BrandsController < ApplicationController
   # PUT /brands/1.json
   def update
     @brand = Brand.find(params[:id])
-
+    @cart = current_cart
     respond_to do |format|
       if @brand.update_attributes(params[:brand])
         format.html { redirect_to @brand, notice: 'Brand was successfully updated.' }
@@ -79,7 +80,7 @@ class BrandsController < ApplicationController
   def destroy
     @brand = Brand.find(params[:id])
     @brand.destroy
-
+    @cart = current_cart
     respond_to do |format|
       format.html { redirect_to brands_url }
       format.json { head :no_content }

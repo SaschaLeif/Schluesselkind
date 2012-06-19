@@ -1,4 +1,65 @@
-/* Global styles */
+/* Hauptfenster */
+#main {
+	margin-left: 0em;
+	padding-top: 0px;
+	padding-left: 200px;
+	padding-right: 300px;
+	background: white;
+}
+
+/*Logo etc.*/
+#banner {
+	background: #000000;
+	padding-top: 15px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+}
+
+/* Menüpunkte */
+#menu {
+	font-family: Verdana;
+	font-size: 110%;
+	padding-top: 18px;
+	padding-left: 0px;
+	padding-bottom: 15px;
+	background: black;
+}
+
+#menu a {
+	color: white;
+	text-decoration: none;
+}
+
+/* Warenkorb /Login-Button */
+#side {
+	float: right;
+	padding-top: 0.5em;
+	padding-left: 1em;
+	padding-right: 0.5em;
+	padding-bottom: 1em;
+	width: 14em;
+	background: #999999;
+}
+
+#cart, #cart table {
+	font-size: smaller;
+	color: black;
+}
+#cart table {
+	margin-bottom: 0px;
+}
+
+/*Fusszeile*/
+#foot {
+	background: #999999;
+	font-family: Verdana;
+	color: black;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+/* store*/
 
 #store #notice {
 	color: #fff;
@@ -15,7 +76,74 @@
 	border-bottom: 0px dotted black;
 }
 
-/* Styles for app/views/brands/index.html.erb */
+#store .item_price, #store .total_line {
+	text-align: right;
+}
+
+#store .total_line .total_cell {
+	font-weight: bold;
+	border-top: 2px solid red;
+}
+
+#store  .entry {
+	font-family: Verdana;
+	overflow: auto;
+	margin-top: 1em;
+}
+
+#store .entry img {
+	width: 150px;
+	height: 70px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+#store .entry h3 {
+	font-family: Verdana;
+	margin-top: 0;
+	margin-bottom: 2px;
+	color: black;
+}
+
+#store .entry p {
+	margin-top: 0.5em;
+	margin-bottom: 0.8em;
+}
+
+#store .entry .rating_line {
+	clear: both;
+	margin-bottom: 0.5em;
+}
+
+#store .entry .add_to_cart {
+	position: relative;
+}
+
+#store .entry  .origin {
+	color: black;
+	font-size: 80%;
+	font-weight: bold;
+	margin-right: 2em;
+}
+
+#store .entry  .infotext {
+	color: black;
+	font-size: 80%;
+	margin-right: 2em;
+}
+
+#store .entry  .rating {
+	color: red;
+	font-size: 80%;
+	font-weight: bold;
+	margin-right: 2em;
+}
+
+#store .entry form, #store .entry form div {
+	display: inline;
+}
+
+/* Marken */
 
 #brand_list h1 {
 	font-family: Verdana;
@@ -73,120 +201,9 @@
 }
 
 #brand_list .list_line_even {
-	background: red;
+	background: grey;
 }
 
 #brand_list .list_line_odd {
 	background: white;
-}
-
-/* An entry in the store catalog */
-
-#store  .entry {
-	font-family: Verdana;
-	overflow: auto;
-	margin-top: 1em;
-}
-
-#store  .title {
-	font-size: 100%;
-	font-family: Verdana;
-}
-
-#store .entry img {
-	width: 150px;
-	height: 70px;
-	margin-right: 5px;
-	margin-bottom: 5px;
-}
-
-#store .entry h3 {
-	font-family: Verdana;
-	margin-top: 0;
-	margin-bottom: 2px;
-	color: black;
-}
-
-#store .entry p {
-	margin-top: 0.5em;
-	margin-bottom: 0.8em;
-}
-
-#store .entry .rating_line {
-	clear: both;
-	margin-bottom: 0.5em;
-}
-
-#store .entry .add_to_cart {
-	position: relative;
-}
-
-#store .entry  .origin {
-	color: black;
-	font-size: 80%;
-	font-weight: bold;
-	margin-right: 2em;
-}
-
-#store .entry  .infotext {
-	color: black;
-	font-size: 80%;
-	margin-right: 2em;
-}
-
-#store .entry  .rating {
-	color: red;
-	font-size: 80%;
-	font-weight: bold;
-	margin-right: 2em;
-}
-
-#store .entry form, #store .entry form div {
-
-	display: inline;
-}
-
-/*Styles for main page*/
-#banner {
-	background: black;
-	padding-top: 15px;
-	padding-left: 0px;
-	padding-bottom: 0px;
-	/*border-bottom: 0px solid;
-	 color: black;*/
-}
-
-#foot {
-	background: black;
-	font-family: Verdana;
-	color: white;
-	padding-top: 10px;
-	padding-left: 0px;
-	padding-bottom: 10px;
-}
-
-#main {
-	margin-left: 10em;
-	padding-top: 0px;
-	padding-left: 20px;
-	background: white;
-}
-
-/*
- #columns {
- background: black;
- }*/
-
-#menu {
-	font-family: Verdana;
-	font-size: 110%;
-	padding-top: 20px;
-	padding-left: 0px;
-	padding-bottom: 10px;
-	background: black;
-}
-
-#menu a {
-	color: white;
-	text-decoration: none;
 }

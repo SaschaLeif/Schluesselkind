@@ -5,6 +5,7 @@ class ColorsController < ApplicationController
   # GET /colors.json
   def index
     @colors = Color.find(:all, :order => "name")
+    @cart = current_cart
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @colors }
@@ -15,7 +16,7 @@ class ColorsController < ApplicationController
   # GET /colors/1.json
   def show
     @color = Color.find(params[:id])
-
+    @cart = current_cart
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @color }
@@ -26,7 +27,7 @@ class ColorsController < ApplicationController
   # GET /colors/new.json
   def new
     @color = Color.new
-
+    @cart = current_cart
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @color }
@@ -36,13 +37,14 @@ class ColorsController < ApplicationController
   # GET /colors/1/edit
   def edit
     @color = Color.find(params[:id])
+    @cart = current_cart
   end
 
   # POST /colors
   # POST /colors.json
   def create
     @color = Color.new(params[:color])
-
+    @cart = current_cart
     respond_to do |format|
       if @color.save
         format.html { redirect_to @color, notice: 'Color was successfully created.' }
@@ -58,7 +60,7 @@ class ColorsController < ApplicationController
   # PUT /colors/1.json
   def update
     @color = Color.find(params[:id])
-
+    @cart = current_cart
     respond_to do |format|
       if @color.update_attributes(params[:color])
         format.html { redirect_to @color, notice: 'Color was successfully updated.' }
@@ -75,7 +77,7 @@ class ColorsController < ApplicationController
   def destroy
     @color = Color.find(params[:id])
     @color.destroy
-
+    @cart = current_cart
     respond_to do |format|
       format.html { redirect_to colors_url }
       format.json { head :no_content }

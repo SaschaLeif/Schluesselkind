@@ -1,25 +1,26 @@
 <div id="brand_list">
-	<h1>Produkte der Hersteller (index.html.erb)</h1>
+	<h1>Produkte der Hersteller</h1>
 
 	<table>
-
-		<% @products.each do |product| %>
-		<td class="list_description">
-
-			<b>Marke:</b> <%= product.brand.name %>
+		<tr>
+			<% @products.each do |product| %>
+			<td><%= image_tag(product.article.article_url, :class => 'list_image') %></td>
+			<td class="list_description"><b>Marke:</b> <%= product.brand.name %>
 			<br />
-			<b>Artikel:</b> <%= product.article.name %> 
+			<b>Artikel:</b> <%= product.article.name %>
 			<br />
 			<b>Größe:</b> <%= product.article.size.name %>
 			<br />
 			<b>Farbe:</b> <%= product.article.color.name %>
-			</td>
+			<br />
+			<b>Preis:</b> <%= number_to_currency(product.product_price) %>
+			<%= button_to 'in den Warenkorb', line_items_path(:product_id => product) %> </td>
 
 			<td class="list_actions"> <%= link_to 'zeige', product %>
 			<br />
 			<%= link_to 'editiere', edit_product_path(product) %>
 			<br />
-			<%= link_to 'lösche', product, confirm: 'Are you sure?', method: :delete %></td>
+			<%= link_to 'lösche', product, confirm: 'Are you sure?', method: :delete %> </td>
 		</tr>
 
 		<% end %>

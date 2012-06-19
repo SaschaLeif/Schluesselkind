@@ -214,9 +214,16 @@ Product.delete_all
 
 # Produkt 1
 Product.create(
+:product_price => 20.99,
 :brand_id => 1,
-:article_id => 1,
-#:print_id => 1
+:article_id => 1
+)
+
+# Produkt 2
+Product.create(
+:product_price => 19.99,
+:brand_id => 1,
+:article_id => 1
 )
 
 CustomProduct.delete_all

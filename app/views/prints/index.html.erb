@@ -11,8 +11,11 @@
 			<dl>
 				<dt>
 					<%= print.name %>
+					<br />
 				</dt>
-			</dl></td>
+
+				Preis: <%= number_to_currency(print.print_price) %>
+			</dl><%= button_to 'in den Warenkorb', line_items_path(:print_id => print) %> </td></td>
 
 			<td class="list_actions"><%= link_to 'zeige', print %>
 			<br />

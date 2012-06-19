@@ -207,7 +207,15 @@ Print.delete_all
 # Druck 1
 Print.create(
 :name => 'Schluesselkind',
-:print_url => '/images/prints/sk_logo.jpg'
+:print_url => '/images/prints/sk_logo.jpg',
+:print_price => 10.00
+)
+
+# Druck 2
+Print.create(
+:name => 'Bleed',
+:print_url => '/images/brands/bleed.png',
+:print_price => 12.00
 )
 
 Product.delete_all
@@ -215,7 +223,7 @@ Product.delete_all
 # Produkt 1
 Product.create(
 :product_price => 20.99,
-:brand_id => 1,
+:brand_id => 2,
 :article_id => 1
 )
 
@@ -223,7 +231,7 @@ Product.create(
 Product.create(
 :product_price => 19.99,
 :brand_id => 1,
-:article_id => 1
+:article_id => 2
 )
 
 CustomProduct.delete_all

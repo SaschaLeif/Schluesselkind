@@ -44,8 +44,11 @@ class LineItemsController < ApplicationController
     @cart = current_cart
     product = Product.find(params[:product_id])
     @line_item = @cart.add_product(product.id)
-    #@line_item = @cart.line_items.build
     @line_item.product = product
+
+    #    print = Print.find(params[:print_id])
+    #    @line_item = @cart.add_print(print.id)
+    #    @line_item.print = print
 
     respond_to do |format|
       if @line_item.save

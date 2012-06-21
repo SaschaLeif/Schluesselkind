@@ -12,10 +12,29 @@ gem 'sqlite3'
 # rspec einbinden
 group :development, :test do
   gem 'rspec-rails', '2.10.1'
+  gem 'capybara'
 end
 
+group :test do
+  gem 'cucumber-rails', :require => false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
+
+#group :cucumber do
+#  gem 'capybara'
+#  gem 'database_cleaner'
+#  gem 'cucumber-rails'
+#  gem 'cucumber'
+#  gem 'rspec-rails', '2.10.1'
+#  gem 'spork'
+#  gem 'launchy'    # So you can do Then show me the page
+#  gem 'ffi', "= 1.0.9"
+#end  
+
 gem 'cucumber', '1.2.1'
-gem 'database_cleaner', '0.8.0'
+#gem 'capybara'
+gem 'launchy'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -31,8 +50,8 @@ end
 
 gem 'jquery-rails', '2.0.2'
 
-#gem 'activeadmin'
-#gem "meta_search",    '>= 1.1.0.pre'
+gem 'activeadmin'
+gem "meta_search",    '>= 1.1.0.pre'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

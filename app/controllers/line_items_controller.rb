@@ -1,5 +1,6 @@
 class LineItemsController < ApplicationController
-  before_filter :authorize, :except => [:index, :show ]
+ skip_before_filter :authorize
+ # before_filter :authorize, :except => [:index, :show, :new, :create, :update, :destroy, :edit ]
   # GET /line_items
   # GET /line_items.xml
   def index

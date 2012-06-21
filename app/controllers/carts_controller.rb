@@ -1,5 +1,5 @@
 class CartsController < InheritedResources::Base
-  before_filter :authorize, :except => [:index, :show ]
+  skip_before_filter :authorize, :except => [:index, :show ]
   # GET /carts
   # GET /carts.xml
   def index

@@ -5,4 +5,4 @@
 	<br />
 	(Grösse: <%= line_item.product.article.size.name %>
 	/ Farbe: <%= line_item.product.article.color.name %>) </td>
-	<td class="item_price"> <%= number_to_currency(line_item.total_price) %> </td>
+	<td class="item_price"> <%= number_to_currency(line_item.total_price, :unit=>'€') %> </td>

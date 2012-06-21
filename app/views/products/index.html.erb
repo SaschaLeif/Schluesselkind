@@ -13,7 +13,7 @@
 			<br />
 			<b>Farbe:</b> <%= product.article.color.name %>
 			<br />
-			<b>Preis:</b> <%= number_to_currency(product.product_price) %>
+			<b>Preis:</b> <%= number_to_currency(product.product_price, :unit=>'€') %>
 			<%= button_to 'in den Warenkorb', line_items_path(:product_id => product) %> </td>
 
 			<td class="list_actions"> <%= link_to 'zeige', product %>

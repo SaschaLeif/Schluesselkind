@@ -22,5 +22,13 @@ describe "articles/index" do
     assert_select "tr>td", :text => "Name".to_s, :count => 2
     assert_select "tr>td", :text => 1.to_s, :count => 2
     assert_select "tr>td", :text => 2.to_s, :count => 2
+    
+    # webrat
+  #  rendered.should have_selector("tr>td", :content => "Name".to_s, :count => 2)
+    # capybara
+  #  rendered.should have_content("Texxttttt")
+  #  rendered.should have_content("Texxttttt2")
   end
+  
+  
 end

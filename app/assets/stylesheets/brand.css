@@ -1,28 +1,66 @@
+/* kleine Schrift */
+#klein {
+	font-family: Verdana;
+	font-size: 8px;
+	color: black;
+}
+
+#klein a {
+	color: black;
+	text-decoration: none;
+}
+
+#klein a:hover {
+	color: red;
+	text-decoration: none;
+}
+
+h1 {
+	font-family: Verdana;
+	font-size: 18px;
+	text-decoration: underline;
+	color: #000;
+}
+
+/* große Schrift */
+#gross {
+	font-family: Verdana;
+	font-size: 14px;
+	color: black;
+}
+
+#gross a {
+	color: black;
+	text-decoration: none;
+}
+
+#gross a:hover {
+	color: red;
+	text-decoration: none;
+}
+
 /* Hauptfenster */
 #main {
 	margin-left: 0em;
 	padding-top: 0px;
 	padding-left: 200px;
 	padding-right: 300px;
-	background: white;
+	background: #FFF;
 }
 
 /*Logo etc.*/
 #banner {
-	background: #000000;
+	background: #000;
 	padding-top: 15px;
-	padding-left: 0px;
-	padding-bottom: 0px;
 }
 
 /* Menüpunkte */
 #menu {
 	font-family: Verdana;
 	font-size: 110%;
-	padding-top: 18px;
-	padding-left: 0px;
+	padding-top: 10px;
 	padding-bottom: 15px;
-	background: black;
+	background: #000;
 }
 
 #menu a {
@@ -38,7 +76,7 @@
 	padding-right: 0.5em;
 	padding-bottom: 1em;
 	width: 14em;
-	background: #999999;
+	background: #DDD;
 }
 
 #cart, #cart table {
@@ -51,7 +89,7 @@
 
 /*Fusszeile*/
 #foot {
-	background: #999999;
+	background: #DDD;
 	font-family: Verdana;
 	color: black;
 	padding-top: 10px;
@@ -62,18 +100,17 @@
 /* store*/
 
 #store #notice {
-	color: #fff;
-	border: 2px solid red;
+	color: #FFF;
+	border: 2px solid #000;
 	padding: 1em;
 	margin-bottom: 2em;
-	background-color: #000;
+	background-color: #FF0000;
 	font: bold smaller Verdana;
 }
 
 #store h1 {
 	font-family: Verdana;
 	color: black;
-	border-bottom: 0px dotted black;
 }
 
 #store .item_price, #store .total_line {
@@ -100,7 +137,6 @@
 
 #store .entry h3 {
 	font-family: Verdana;
-	margin-top: 0;
 	margin-bottom: 2px;
 	color: black;
 }
@@ -132,6 +168,16 @@
 	margin-right: 2em;
 }
 
+#store .infotext a {
+	color: black;
+	text-decoration: none;
+}
+
+#store .infotext a:hover {
+	color: red;
+	text-decoration: none;
+}
+
 #store .entry  .rating {
 	color: red;
 	font-size: 80%;
@@ -147,8 +193,9 @@
 
 #brand_list h1 {
 	font-family: Verdana;
-	color: black;
-	border-bottom: 0px dotted black;
+	font-size: 18px;
+	text-decoration: underline;
+	color: #000;
 }
 
 #brand_list table {
@@ -176,7 +223,7 @@
 }
 
 #brand_list .list_description dt {
-	color: black;
+	color: #000;
 	font-weight: bold;
 	font-size: 100%;
 }
@@ -193,6 +240,16 @@
 	padding-left: 0em;
 }
 
+#brand_list .list_actions a {
+	color: black;
+	text-decoration: none;
+}
+
+#brand_list .list_actions a:hover {
+	color: #FF0000;
+	text-decoration: none;
+}
+
 #brand_list .custom_products {
 	font-family: Verdana;
 	font-size: 80%;
@@ -201,9 +258,9 @@
 }
 
 #brand_list .list_line_even {
-	background: grey;
+	background: #DDD;
 }
 
 #brand_list .list_line_odd {
-	background: white;
+	background: #999;
 }

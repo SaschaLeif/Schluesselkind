@@ -82,7 +82,7 @@ class CartsController < InheritedResources::Base
   def destroy
     @cart = current_cart
     @cart.destroy
-    @cart = current_cart
+    #@cart = current_cart
     session[:cart_id] = nil
 
     respond_to do |format|

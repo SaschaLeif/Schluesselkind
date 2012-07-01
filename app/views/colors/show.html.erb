@@ -1,7 +1,10 @@
-<p>
+<br />
+<div id="gross">
 	<b>Farbe:</b>
 	<%= @color.name %>
-</p>
-
-<%= link_to 'editiere', edit_color_path(@color) %> |
-<%= link_to 'zurück', colors_path %>
+</div>
+<br />
+<div id="klein">
+	<%= link_to 'editiere', edit_color_path(@color) %> |
+	<%= link_to 'zurück', colors_path %>
+</div>

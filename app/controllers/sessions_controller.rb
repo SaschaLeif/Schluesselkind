@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       # nach Anmeldung kommt man auf die Store-Startseite
       redirect_to store_url
     else
-      redirect_to login_url, :alert => "Invalid user/password combination"
+      redirect_to login_url, :alert => "Falsches Passwort oder Name!"
     end
   end
 
@@ -20,5 +20,6 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     redirect_to store_url, :notice => "Logged out"
+    
   end
 end

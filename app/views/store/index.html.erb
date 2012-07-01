@@ -1,9 +1,11 @@
 <h1>unsere Hersteller</h1>
 <div class="entry">
-	sortiert nach:
-	<%= button_to 'Ranking', store_path(:sort_by => 'rating DESC') %>
-	<%= button_to 'Marke', store_path(:sort_by => 'name') %>
-	<%= button_to 'Herkunft', store_path(:sort_by => 'origin') %>
+	<div id="gross">
+		sortiert nach:
+		<%= button_to 'Ranking', store_path(:sort_by => 'rating DESC') %>
+		<%= button_to 'Marke', store_path(:sort_by => 'name') %>
+		<%= button_to 'Herkunft', store_path(:sort_by => 'origin') %>
+	</div>
 </div>
 
 <% @brands.each do |brand| %>

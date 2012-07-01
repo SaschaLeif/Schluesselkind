@@ -7,17 +7,16 @@
 		<tr>
 			<td> <%= image_tag(print.print_url, :class => 'list_image') %> </td>
 
-			<td class="list_description">
+			<td id="gross">
 			<dl>
 				<dt>
 					<%= print.name %>
 					<br />
 				</dt>
-
-				Preis: <%= number_to_currency(print.print_price) %>
+				Preis: <%= number_to_currency(print.print_price, :unit=>'€') %>
 			</dl><%= button_to 'in den Warenkorb', line_items_path(:print_id => print) %> </td></td>
 
-			<td class="list_actions"><%= link_to 'zeige', print %>
+			<td id="klein"><%= link_to 'zeige', print %>
 			<br />
 			<%= link_to 'editiere', edit_print_path(print) %>
 			<br />
@@ -25,8 +24,9 @@
 		</tr>
 		<% end %>
 	</table>
-
-	<br />
-
+</div>
+<br />
+<div id="klein">
 	<%= link_to 'neuer Druck', new_print_path %>
 </div>
+

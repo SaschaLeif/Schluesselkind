@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_filter :authorize, :except => [:index, :show ]
+  skip_before_filter :authorize, :except => [:index, :show]
   # GET /users
   # GET /users.xml
   def index
@@ -47,8 +47,8 @@ class UsersController < ApplicationController
     @cart = current_cart
     respond_to do |format|
       if @user.save
-        format.html { redirect_to(users_url,
-          :notice => "User #{@user.name} was successfully created.") }
+        format.html { redirect_to(login_url,
+          :notice => "User #{@user.name} wurde erfolgreich angelegt.") }
         format.xml  { render :xml => @user,
           :status => :created, :location => @user }
       else
@@ -67,7 +67,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.update_attributes(params[:user])
         format.html { redirect_to(users_url,
-          :notice => "User #{@user.name} was successfully updated.") }
+          :notice => "User #{@user.name} wurde erfolgreich upgedatet.") }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -84,7 +84,7 @@ class UsersController < ApplicationController
     @cart = current_cart
     begin
       @user.destroy
-      flash[:notice] = "User #{@user.name} deleted"
+      flash[:notice] = "User #{@user.name} geloescht"
     rescue Exception => e
       flash[:notice] = e.message
     end

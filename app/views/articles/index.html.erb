@@ -12,7 +12,7 @@
 			<br />
 			Farbe: <%= article.color.name %></td>
 
-			<td class="list_actions"> <%= link_to 'zeige', article %>
+			<td id="klein"> <%= link_to 'zeige', article %>
 			<br />
 			<%= link_to 'editiere', edit_article_path(article) %>
 			<br />
@@ -22,6 +22,7 @@
 	</table>
 
 	<br />
-
+<div id="klein">
 	<%= link_to 'Neuer Artikel', new_article_path %>
+	</div>
 </div>

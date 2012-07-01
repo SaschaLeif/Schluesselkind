@@ -1,4 +1,5 @@
 <%= form_for(@article) do |f| %>
+
 <% if @article.errors.any? %>
 <div id="error_explanation">
 	<h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
@@ -12,7 +13,7 @@
 	</ul>
 </div>
 <% end %>
-
+<div id="gross">
 <div class="field">
 	<%= f.label :article_url %>
 	<br />
@@ -35,5 +36,5 @@
 </div>
 <div class="actions">
 	<%= f.submit %>
-</div>
+</div></div>
 <% end %>

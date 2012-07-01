@@ -1,9 +1,18 @@
 <div align="right">
-	<% if session[:user_id] %>
-	<%= button_to 'Logout', logout_path, :method => :delete %>
-	<% else %>
-	<%= button_to 'Login', login_path, :method => :create %>
-	<% end %>
+	<table>
+		<tr>
+			<% if session[:user_id] %>
+			<%= button_to 'Logout', logout_path, :method => :delete, :confirm => 'Bist du sicher?' %>
+			<% else %>
+			<%= button_to 'Login', login_path, :method => :create %>
+			<% end %>
+		</tr>
+		<tr>
+			<div id="klein">
+				<%= link_to 'anmelden', new_user_path %>
+			</div>
+		</tr>
+	</table>
 </div>
 
 <div class="entry">
@@ -19,7 +28,5 @@
 	</table>
 
 	<br/>
-	<%= button_to 'Warenkorb leeren', cart, :method => :delete,
-	:confirm => 'Are you sure?' %>
+	<%= button_to 'Warenkorb leeren', cart, :method => :delete, :confirm => 'Are you sure?' %>
 </div>
-

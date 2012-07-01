@@ -1,7 +1,8 @@
 require 'digest/sha2'
 
 class User < ActiveRecord::Base
-attr_accessible :name, :password, :password_confirmation
+  
+  attr_accessible :name, :password, :password_confirmation
 
   validates :name, :presence => true, :uniqueness => true
   validates :password, :confirmation => true
@@ -10,11 +11,12 @@ attr_accessible :name, :password, :password_confirmation
 
   validate :password_must_be_present
 
+  # damit mind. 1 User übrig bleibt
   after_destroy :ensure_an_admin_remains
 
   def ensure_an_admin_remains
     if User.count.zero?
-      raise "Can't delete last user"
+      raise "Der letzte Users kann nicht geloescht werden"
     end
   end
   
@@ -30,6 +32,7 @@ attr_accessible :name, :password, :password_confirmation
     Digest::SHA2.hexdigest(password + "wibble" + salt)
   end
   
+  #writer
   def password=(password)
     @password = password
 
@@ -42,7 +45,7 @@ attr_accessible :name, :password, :password_confirmation
   private
 
     def password_must_be_present
-      errors.add(:password, "Missing password") unless hashed_password.present?
+      errors.add(:password, "Fehlendes Passwort") unless hashed_password.present?
     end
   
     def generate_salt

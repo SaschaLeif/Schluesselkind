@@ -1,19 +1,23 @@
-<% if notice %>
-<p id="notice">
-	<%= notice %>
-</p>
-<% end %>
-
 <div id="brand_list">
 
 	<h1>Produkt Information</h1>
 
-	<p class="list_description">
+	<p id="gross">
+
 		<b>Brand: </b><%= @product.brand.name %>
 		<br />
 		<b>Artikel: </b><%= @product.article.name %>
-	</p>
+		<br />
+		<b>Größe:</b> <%= @product.article.size.name %>
+		<br />
+		<b>Farbe:</b> <%= @product.article.color.name %>
+		<br />
+		<b>Preis:</b> <%= number_to_currency(@product.product_price, :unit=>'€') %>
+		<br />
 
-	<%= link_to 'editiere', edit_product_path(@product) %> |
-	<%= link_to 'zurück', products_path %>
+	</p>
+	<p id="klein">
+		<%= link_to 'editiere', edit_product_path(@product) %> |
+		<%= link_to 'zurück', products_path %>
+	</p>
 </div>

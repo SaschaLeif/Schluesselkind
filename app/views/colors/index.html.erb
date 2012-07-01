@@ -2,20 +2,18 @@
 	<h1>verfügbare Farben</h1>
 
 	<table>
-
 		<% @colors.each do |color| %>
 		<tr>
 			<td class="list_description"> <%= color.name %></td>
-			<td class="list_actions"><%= link_to 'zeige', color %>
-			<br />
-			<%= link_to 'editiere', edit_color_path(color) %>
-			<br />
+			<td id="klein"> <%= link_to 'editiere', edit_color_path(color) %>
+			| 
 			<%= link_to 'lösche', color, confirm: 'Are you sure?', method: :delete %></td>
 		</tr>
 		<% end %>
 	</table>
 
 	<br />
-	<%= link_to 'Neue Farbe anlegen', new_color_path %>
-
+	<div id="klein">
+		<%= link_to 'Neue Farbe anlegen', new_color_path %>
+	</div>
 </div>

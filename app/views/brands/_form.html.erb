@@ -1,4 +1,5 @@
 <%= form_for(@brand) do |f| %>
+
 <% if @brand.errors.any? %>
 <div id="error_explanation">
 	<h2><%= pluralize(@brand.errors.count, "error") %> prohibited this brand from being saved:</h2>
@@ -12,33 +13,34 @@
 	</ul>
 </div>
 <% end %>
-
-<div class="field">
-	<%= f.label :name %>
-	<br />
-	<%= f.text_field :name %>
-</div>
-<div class="field">
-	<%= f.label :origin %>
-	<br />
-	<%= f.text_field :origin %>
-</div>
-<div class="field">
-	<%= f.label :logo_url %>
-	<br />
-	<%= f.text_field :logo_url %>
-</div>
-<div class="field">
-	<%= f.label :rating %>
-	<br />
-	<%= f.text_field :rating %>
-</div>
-<div class="field">
-	<%= f.label :info_text %>
-	<br />
-	<%= f.text_field :info_text %>
-</div>
-<div class="actions">
-	<%= f.submit %>
+<div id="gross">
+	<div class="field">
+		<%= f.label :name %>
+		<br />
+		<%= f.text_field :name %>
+	</div>
+	<div class="field">
+		<%= f.label :origin %>
+		<br />
+		<%= f.text_field :origin %>
+	</div>
+	<div class="field">
+		<%= f.label :logo_url %>
+		<br />
+		<%= f.text_field :logo_url %>
+	</div>
+	<div class="field">
+		<%= f.label :rating %>
+		<br />
+		<%= f.text_field :rating %>
+	</div>
+	<div class="field">
+		<%= f.label :info_text %>
+		<br />
+		<%= f.text_field :info_text %>
+	</div>
+	<div class="actions">
+		<%= f.submit %>
+	</div>
 </div>
 <% end %>

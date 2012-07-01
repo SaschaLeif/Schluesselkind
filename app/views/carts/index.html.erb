@@ -1,20 +1,16 @@
-<h1>Listing carts</h1>
+<h1>Warenkorbauflistung</h1>
 
 <table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @carts.each do |cart| %>
-  <tr>
-    <td><%= link_to 'Show', cart %></td>
-    <td><%= link_to 'Edit', edit_cart_path(cart) %></td>
-    <td><%= link_to 'Destroy', cart, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+	<% @carts.each do |cart| %>
+	<tr id="klein">
+		<td><%= link_to 'Show', cart %></td>
+		<td><%= link_to 'Edit', edit_cart_path(cart) %></td>
+		<td><%= link_to 'Destroy', cart, confirm: 'Are you sure?', method: :delete %></td>
+	</tr>
+	<% end %>
 </table>
 <br />
-
-<%= link_to 'New Cart', new_cart_path %>
+<div id="klein">
+	<%= link_to 'New Cart', new_cart_path %>
+</div>

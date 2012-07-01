@@ -1,14 +1,13 @@
-<p>
-	<b>Name:</b><%= @user.name %>
+<p id="gross">
+	<b>Name: </b><%= @user.name %>
+	<br />
+	<br />
+	<b>Hashed password: </b><%= @user.hashed_password %>
+	<br />
+	<br />
+	<b>Salt: </b><%= @user.salt %>
 </p>
-
-<p>
-	<b>Hashed password:</b><%= @user.hashed_password %>
-</p>
-
-<p>
-	<b>Salt:</b><%= @user.salt %>
-</p>
-
-<%= link_to 'editiere', edit_user_path(@user) %> |
-<%= link_to 'zurück', users_path %>
+<div id="klein">
+	<%= link_to 'editiere', edit_user_path(@user) %> |
+	<%= link_to 'zurück', users_path %>
+</div>

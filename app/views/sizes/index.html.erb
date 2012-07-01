@@ -6,7 +6,7 @@
 		<% @sizes.each do |size| %>
 		<tr >
 			<td class="list_description"><%= size.name %></td>
-			<td class="list_actions"><%= link_to 'zeige', size %>
+			<td id="klein">
 			<%= link_to 'editiere', edit_size_path(size) %>
 			<%= link_to 'lösche', size, confirm: 'Are you sure?', method: :delete %></td>
 		</tr>
@@ -14,6 +14,7 @@
 	</table>
 
 	<br />
-
-	<%= link_to 'neue Grösse hinzufügen', new_size_path %>
+	<div id="klein">
+		<%= link_to 'neue Grösse hinzufügen', new_size_path %>
+	</div>
 </div>

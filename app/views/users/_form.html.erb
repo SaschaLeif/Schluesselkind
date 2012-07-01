@@ -1,10 +1,11 @@
 <div class="depot_form">
 
 	<%= form_for @user do |f| %>
+
 	<% if @user.errors.any? %>
 	<div id="error_explanation">
-		<h2><%= pluralize(@user.errors.count, "error") %>
-		prohibited this user from being saved:</h2>
+		<h2><%= pluralize(@user.errors.count, "Fehler:") %>
+		User konnte nicht gespeichert werden</h2>
 		<ul>
 			<% @user.errors.full_messages.each do |msg| %>
 			<li>
@@ -15,31 +16,23 @@
 	</div>
 	<% end %>
 
-	<fieldset>
+	<fieldset id="gross">
 		<legend>
-			Lege Benutzer und Passwort an
+			Lege deinen Namen & Passwort an:
 		</legend>
-
-		<div>
-			<%= f.label :name %>:
-			<%= f.text_field :name, :size => 40 %>
-		</div>
-
-		<div>
+		<table >
+			<td> <%= f.label :name %>:
+			<br/>
 			<%= f.label :password, 'Passwort' %>:
-			<%= f.password_field :password, :size => 40 %>
-		</div>
-
-		<div>
-			<%= f.label :password_confirmation, 'Passwort bestätigen' %>:
-			<%= f.password_field :password_confirmation, :size => 40 %>
-		</div>
-
-		<div>
-			<%= f.submit %>
-		</div>
-
+			<br/>
+			<%= f.label :password_confirmation, 'Passwort bestätigen' %>: </td>
+			<td> <%= f.text_field :name, :size => 30 %>
+			<br/>
+			<%= f.password_field :password, :size => 30 %>
+			<br/>
+			<%= f.password_field :password_confirmation, :size => 30 %> </td>
+		</table>
+		<%= f.submit %>
 	</fieldset>
 	<% end %>
-
 </div>

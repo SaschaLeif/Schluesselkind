@@ -1,33 +1,28 @@
-<p id="notice">
-	<%= notice %>
-</p>
+<h1> <%= @brand.name %> </h1>
+<div id="gross">
+	<p>
+		<b>Herkunft:</b>
+		<%= strip_tags(@brand.origin) %>
+	</p>
 
-<p>
-	<b>Name:</b>
-	<%= @brand.name %>
-</p>
+	<p>
+		<b>Logo url:</b>
+		<%= @brand.logo_url %>
+	</p>
 
-<p>
-	<b>Herkunft:</b>
-	<%= strip_tags(@brand.origin) %>
-</p>
+	<p>
+		<b>Rating:</b>
+		<%= @brand.rating %>
+	</p>
 
-<p>
-	<b>Logo url:</b>
-	<%= @brand.logo_url %>
-</p>
+	<p>
+		<b>Information:</b>
+		<%= @brand.info_text %>
+	</p>
+</div>
 
-<p>
-	<b>Rating:</b>
-	<%= @brand.rating %>
-</p>
+<div id="klein">
+	<%= link_to 'editiere', edit_brand_path(@brand) %> |
 
-<p>
-	<b>Information:</b>
-	<%= @brand.info_text %>
-</p>
-
-
-<%= link_to 'editiere', edit_brand_path(@brand) %> |
-
-<%= link_to 'zurück', brands_path %>
+	<%= link_to 'zurück', brands_path %>
+</div>

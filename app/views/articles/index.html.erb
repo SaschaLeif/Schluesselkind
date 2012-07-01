@@ -16,7 +16,7 @@
 			<br />
 			<%= link_to 'editiere', edit_article_path(article) %>
 			<br />
-			<%= link_to 'lösche', article, confirm: 'Are you sure?', method: :delete %> </td>
+			<%= link_to 'lösche', article, :data => {:confirm => 'Bist du sicher?'}, method: :delete %> </td>
 		</tr>
 		<% end %>
 	</table>

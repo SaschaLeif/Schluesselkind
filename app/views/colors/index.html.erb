@@ -7,7 +7,7 @@
 			<td class="list_description"> <%= color.name %></td>
 			<td id="klein"> <%= link_to 'editiere', edit_color_path(color) %>
 			| 
-			<%= link_to 'lösche', color, confirm: 'Are you sure?', method: :delete %></td>
+			<%= link_to 'lösche', color, :data => {:confirm => 'Bist du sicher?'}, method: :delete %></td>
 		</tr>
 		<% end %>
 	</table>

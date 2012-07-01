@@ -14,8 +14,7 @@
 
 			<td id="klein"><%= link_to 'zeige', user %>
 			<%= link_to 'editiere', edit_user_path(user) %>
-			<%= link_to 'lösche', user, :confirm => 'Are you sure?',
-			:method => :delete %></td>
+			<%= link_to 'lösche', user, :data => {:confirm => 'Bist du sicher?'}, :method => :delete %></td>
 		</tr>
 		<% end %>
 	</table>

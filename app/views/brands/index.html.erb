@@ -30,7 +30,7 @@
 			<br />
 			<%= link_to 'editiere', edit_brand_path(brand) %>
 			<br />
-			<%= link_to 'lösche', brand, :confirm => 'Are you sure?',
+			<%= link_to 'lösche', brand, :data => {:confirm => 'Bist du sicher?'},
 			:method => :delete %> </td>
 		</tr>
 

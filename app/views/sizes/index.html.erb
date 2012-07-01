@@ -8,7 +8,7 @@
 			<td class="list_description"><%= size.name %></td>
 			<td id="klein">
 			<%= link_to 'editiere', edit_size_path(size) %>
-			<%= link_to 'lösche', size, confirm: 'Are you sure?', method: :delete %></td>
+			<%= link_to 'lösche', size, :data => {:confirm => 'Bist du sicher?'}, method: :delete %></td>
 		</tr>
 		<% end %>
 	</table>

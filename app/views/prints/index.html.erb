@@ -20,7 +20,7 @@
 			<br />
 			<%= link_to 'editiere', edit_print_path(print) %>
 			<br />
-			<%= link_to 'lösche', print, confirm: 'Are you sure?', method: :delete %></td>
+			<%= link_to 'lösche', print, :data => {:confirm => 'Bist du sicher?'}, method: :delete %></td>
 		</tr>
 		<% end %>
 	</table>

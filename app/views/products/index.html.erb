@@ -22,7 +22,7 @@
 			<br />
 			<%= link_to 'editiere', edit_product_path(product) %>
 			<br />
-			<%= link_to 'lösche', product, confirm: 'Bist du sicher?', method: :delete %> </td>
+			<%= link_to 'lösche', product, :data => {:confirm => 'Bist du sicher?'}, method: :delete %> </td>
 		</tr>
 
 		<% end %>

@@ -258,9 +258,37 @@ h1 {
 }
 
 #brand_list .list_line_even {
-	background: #DDD;
+	background: #ddd;
 }
 
 #brand_list .list_line_odd {
 	background: #999;
+}
+
+/* Bestellung */
+
+.bestellung fieldset {
+	background: #ddd;
+}
+
+.bestellung legend {
+	color: #ddd;
+	background: #FF0000;
+	font-family: Verdana;
+	font-size: small;
+	padding: 0.2em 1em;
+}
+
+.bestellung label {
+	width: 5em;
+	float: left;
+	padding-top: 0.2em;
+	margin-right: 0.1em;
+}
+.bestellung select, .bestellung textarea, .bestellung input {
+	margin-left: 0.5em;
+}
+
+.bestellung div {
+	margin: 0.5em 0;
 }

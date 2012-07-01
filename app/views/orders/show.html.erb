@@ -1,0 +1,30 @@
+<div id="gross">
+	<p id="notice">
+		<%= notice %>
+	</p>
+
+	<p>
+		<b>Name:</b>
+		<%= @order.name %>
+	</p>
+
+	<p>
+		<b>Address:</b>
+		<%= @order.address %>
+	</p>
+
+	<p>
+		<b>Email:</b>
+		<%= @order.email %>
+	</p>
+
+	<p>
+		<b>Pay type:</b>
+		<%= @order.pay_type %>
+	</p>
+</div>
+
+<div id="klein">
+	<%= link_to 'editiere', edit_order_path(@order) %> |
+	<%= link_to 'zurück', orders_path %>
+</div>

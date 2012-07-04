@@ -5,20 +5,24 @@ class Product < ActiveRecord::Base
   belongs_to :brand
   belongs_to :article
   has_many :line_items
-  
-  before_destroy :ensure_not_referenced_by_any_line_item
-  
-  private
 
-  # damit man das Produkt nicht löscht, während es als line_item 
+  before_destroy :ensure_not_referenced_by_any_line_item
+
+  private
+  # damit man das Produkt nicht löscht, während es als line_item
   #im Warenkorb ist
   def ensure_not_referenced_by_any_line_item
     if line_items.empty?
-      return true
+    return true
     else
       errors.add(:base, 'Das Produkt liegt gerade im Warenkorb')
     return false
     end
+  end
+
+  def add_brand(brand_id)
+    @current_product = products.find_by_brand_id(brand_id)
+    @current_product = products.build(:brand_id => brand_id)
   end
 
 end

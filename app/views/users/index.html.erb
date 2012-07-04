@@ -5,11 +5,12 @@
 <% end %>
 
 <div id="brand_list">
-	<h1>User</h1>
+	<h1>Kunden</h1>
 
 	<table id="gross">
 		<% @users.each do |user| %>
 		<tr>
+			<td>#<%= user.id %> </td>
 			<td class="list_description"><b>Name:</b> <%= user.name %></td>
 
 			<td id="klein"><%= link_to 'zeige', user %>
@@ -20,6 +21,7 @@
 	</table>
 	<br />
 	<div id="klein">
+		
 		<%= link_to 'neuen Benutzer anlegen', new_user_path %>
 	</div>
 </div>

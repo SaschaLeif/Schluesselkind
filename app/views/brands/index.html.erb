@@ -1,10 +1,8 @@
 <div id="brand_list">
-
 	<h1>unsere Marken</h1>
 
 	<table>
 		<% @brands.each do |brand| %>
-
 		<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
 			<td>
 			<center>
@@ -33,7 +31,6 @@
 			<%= link_to 'lösche', brand, :data => {:confirm => 'Bist du sicher?'},
 			:method => :delete %> </td>
 		</tr>
-
 		<% end %>
 
 		<td id ="klein">

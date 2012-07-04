@@ -75,7 +75,7 @@ h1 {
 	padding-left: 1em;
 	padding-right: 0.5em;
 	padding-bottom: 1em;
-	width: 14em;
+	width: 17em;
 	background: #DDD;
 }
 
@@ -98,10 +98,10 @@ h1 {
 }
 
 /* store*/
-
 #store #notice {
 	color: #FFF;
 	border: 2px solid #000;
+	width:300px;
 	padding: 1em;
 	margin-bottom: 2em;
 	background-color: #FF0000;
@@ -190,7 +190,6 @@ h1 {
 }
 
 /* Marken */
-
 #brand_list h1 {
 	font-family: Verdana;
 	font-size: 18px;

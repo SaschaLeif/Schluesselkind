@@ -1,29 +1,33 @@
-<div id="gross">
-	<p id="notice">
-		<%= notice %>
-	</p>
+<h1>Bestellung #<%= @order.id %></h1>
 
-	<p>
-		<b>Name:</b>
-		<%= @order.name %>
-	</p>
-
-	<p>
-		<b>Address:</b>
-		<%= @order.address %>
-	</p>
-
-	<p>
+<table id="gross">
+	<tr>
+		<br />
+		<td><b>Name:</b>
+		<br />
+		<br />
+		<b>Adresse:</b>
+		<br />
+		<br />
 		<b>Email:</b>
+		<br />
+		<br />
+		<b>Zahlungsweise:</b></td>
+
+		<td> <%= @order.name %>
+		<br />
+		<br />
+		<%= @order.address %>
+		<br />
+		<br />
 		<%= @order.email %>
-	</p>
+		<br />
+		<br />
+		<%= @order.pay_type %> </td>
+	</tr>
+</table>
 
-	<p>
-		<b>Pay type:</b>
-		<%= @order.pay_type %>
-	</p>
-</div>
-
+<br />
 <div id="klein">
 	<%= link_to 'editiere', edit_order_path(@order) %> |
 	<%= link_to 'zurück', orders_path %>

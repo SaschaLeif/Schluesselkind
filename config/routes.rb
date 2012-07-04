@@ -1,5 +1,7 @@
 Schluesselkind::Application.routes.draw do
  
+  resources :producers
+
   resources :orders
 
   resources :line_items

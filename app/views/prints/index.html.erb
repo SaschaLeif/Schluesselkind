@@ -2,7 +2,6 @@
 	<h1>verfügbare Drucke</h1>
 
 	<table>
-
 		<% @prints.each do |print| %>
 		<tr>
 			<td> <%= image_tag(print.print_url, :class => 'list_image') %> </td>

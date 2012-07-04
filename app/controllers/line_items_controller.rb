@@ -1,11 +1,11 @@
 class LineItemsController < ApplicationController
- skip_before_filter :authorize
- # before_filter :authorize, :except => [:index, :show, :new, :create, :update, :destroy, :edit ]
+  skip_before_filter :authorize
+  # before_filter :authorize, :except => [:index, :show, :new, :create, :update, :destroy, :edit ]
   # GET /line_items
   # GET /line_items.xml
   def index
     @line_items = LineItem.all
-
+    @cart = current_cart
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @line_items }
@@ -47,10 +47,6 @@ class LineItemsController < ApplicationController
     @line_item = @cart.add_product(product.id)
     @line_item.product = product
 
-    #    print = Print.find(params[:print_id])
-    #    @line_item = @cart.add_print(print.id)
-    #    @line_item.print = print
-
     respond_to do |format|
       if @line_item.save
         format.html { redirect_to(products_url) }
@@ -87,7 +83,7 @@ class LineItemsController < ApplicationController
     @line_item.destroy
 
     respond_to do |format|
-      format.html { redirect_to(line_items_url) }
+      format.html { redirect_to(store_url) }
       format.xml  { head :ok }
     end
   end

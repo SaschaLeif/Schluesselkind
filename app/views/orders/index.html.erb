@@ -1,29 +1,35 @@
 <h1>Bestellungen</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Address</th>
-    <th>Email</th>
-    <th>Pay type</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div id="gross">
+	<table>
+		<tr>
+			<th>#</th>
+			<th>Name</th>
+			<th>Adresse</th>
+			<th>Email</th>
+			<th>Zahlungsweise</th>
+			<th></th>
 
-<% @orders.each do |order| %>
-  <tr>
-    <td><%= order.name %></td>
-    <td><%= order.address %></td>
-    <td><%= order.email %></td>
-    <td><%= order.pay_type %></td>
-    <td><%= link_to 'Show', order %></td>
-    <td><%= link_to 'Edit', edit_order_path(order) %></td>
-    <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+		</tr>
 
+		<% @orders.each do |order| %>
+		<tr>
+			<td><%= order.id %></td>
+			<td><%= order.name %></td>
+			<td><%= order.address %></td>
+			<td><%= order.email %></td>
+			<td><%= order.pay_type %></td>
+
+			<td id="klein"> <%= link_to 'zeige', order %>
+			<%= link_to 'editiere', edit_order_path(order) %>
+			<%= link_to 'lösche', order, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+
+			<% end %>
+	</table>
+	<br />
+	<%= will_paginate @orders %>
+</div>
 <br />
-
-<%= link_to 'New Order', new_order_path %>
+<div id="klein">
+	<%= link_to 'zurück zum Shop', store_path %>
+</div>

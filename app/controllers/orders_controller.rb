@@ -1,13 +1,12 @@
-#class OrdersController < InheritedResources::Base
-#end
-
 class OrdersController < ApplicationController
+  
+  before_filter :authorize, :except => [:new, :create ]
   # GET /orders
   # GET /orders.xml
   def index
-    @orders = Order.paginate :page=>params[:page], :order=>'created_at desc',
-      :per_page => 10
-
+    @orders = Order.paginate :page=>params[:page], :order=>'created_at',
+      :per_page => 3
+ @cart = current_cart
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @orders }
@@ -18,7 +17,7 @@ class OrdersController < ApplicationController
   # GET /orders/1.xml
   def show
     @order = Order.find(params[:id])
-
+ @cart = current_cart
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @order }
@@ -45,6 +44,7 @@ class OrdersController < ApplicationController
   # GET /orders/1/edit
   def edit
     @order = Order.find(params[:id])
+     @cart = current_cart
   end
 
   # POST /orders
@@ -52,7 +52,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(params[:order])
     @order.add_line_items_from_cart(current_cart)
-
+ @cart = current_cart
     respond_to do |format|
       if @order.save
         Cart.destroy(session[:cart_id])
@@ -73,7 +73,7 @@ class OrdersController < ApplicationController
   # PUT /orders/1.xml
   def update
     @order = Order.find(params[:id])
-
+ @cart = current_cart
     respond_to do |format|
       if @order.update_attributes(params[:order])
         format.html { redirect_to(@order, :notice => 'Bestellung wurde erfolgreich geupdatet') }
@@ -90,7 +90,7 @@ class OrdersController < ApplicationController
   def destroy
     @order = Order.find(params[:id])
     @order.destroy
-
+ @cart = current_cart
     respond_to do |format|
       format.html { redirect_to(orders_url) }
       format.xml  { head :ok }

@@ -37,4 +37,7 @@ Schluesselkind::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  # Paperclip path
+  Paperclip.options[:command_path] = "/c/Program Files/ImageMagick/convert"
 end

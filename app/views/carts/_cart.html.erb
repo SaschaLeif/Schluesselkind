@@ -2,7 +2,7 @@
 	<table>
 		<tr>
 			<% if session[:user_id] %>
-			<%= button_to 'Logout', logout_path, :method => :delete, :confirm => 'Bist du sicher?' %>
+			<%= button_to 'Logout', logout_path, :method => :delete, :data => {:confirm => 'Bist du sicher?'} %>
 			<% else %>
 			<%= button_to 'Login', login_path, :method => :create %>
 			<% end %>
@@ -29,5 +29,6 @@
 
 	<br/>
 	<%= button_to "Checkout", new_order_path, :method => :get %>
-	<%= button_to 'Warenkorb leeren', cart, :method => :delete, :confirm => 'Are you sure?' %>
+	<%= button_to 'Warenkorb leeren', cart, :method => :delete, :data => {:confirm => 'Bist du sicher?'} %>
+
 </div>

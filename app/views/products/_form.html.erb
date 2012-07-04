@@ -14,18 +14,22 @@
 </div>
 <% end %>
 
-<div class="field">
-	<%= f.label :brand_id %>
-	<br />
-	<%= f.number_field :brand_id %>
+<div id="gross">
+	<div class="field">
+		<%= f.label :brand_id %>
+		<br />
+		<%= f.number_field :brand_id %>
+	</div>
+	<div class="field">
+		<%= f.label :article_id %>
+		<br />
+		<%= f.number_field :article_id %>
+	</div>
 </div>
-<div class="field">
-	<%= f.label :article_id %>
-	<br />
-	<%= f.number_field :article_id %>
-</div>
+<br />
 
 <div class="actions">
-	<%= f.submit %>
+	<%= f.submit 'Produkt ändern' %>
 </div>
+<br />
 <% end %>

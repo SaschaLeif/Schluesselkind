@@ -87,7 +87,7 @@ class CartsController < InheritedResources::Base
 
     respond_to do |format|
       format.html { redirect_to(store_url,
-        :notice => 'Der Warenkorb ist leer!') }
+        :notice => 'Dein Warenkorb wurde geleert!') }
       format.xml  { head :ok }
     end
   end

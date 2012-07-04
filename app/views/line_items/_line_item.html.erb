@@ -1,8 +1,10 @@
 <tr>
-	<td> <%= line_item.quantity %> &times; </td>
+	<td width="20"> <%= line_item.quantity %> &times; </td>
 	<td> <%= line_item.product.brand.name %> -
 	<%= line_item.product.article.name %>
 	<br />
 	(Grösse: <%= line_item.product.article.size.name %>
 	/ Farbe: <%= line_item.product.article.color.name %>) </td>
 	<td class="item_price"> <%= number_to_currency(line_item.total_price, :unit=>'€') %> </td>
+	<td><%= button_to 'x', line_item, :method => :delete, :data => {:confirm => 'Bist du sicher?'} %></td>
+</tr>

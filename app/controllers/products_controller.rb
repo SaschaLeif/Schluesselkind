@@ -7,6 +7,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    @products = Product.paginate :page=>params[:page], :per_page => 3
     @cart = current_cart
 
     respond_to do |format|
@@ -20,6 +21,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @cart = current_cart
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @product }
@@ -30,7 +32,8 @@ class ProductsController < ApplicationController
   # GET /products/new.json
   def new
     @product = Product.new
-@cart = current_cart
+    @cart = current_cart
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @product }
@@ -46,14 +49,12 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-
     @product = Product.new(params[:product])
 
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product,
-          notice: 'Product was successfully created.' }
-
+          notice: 'Produkt wurde erfolgreich erstellt' }
         format.json { render json: @product, status: :created, location: @product }
       else
         format.html { render action: "new" }
@@ -69,7 +70,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.update_attributes(params[:product])
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
+        format.html { redirect_to @product, notice: 'Produkt wurde erfolgreich geupdatet' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

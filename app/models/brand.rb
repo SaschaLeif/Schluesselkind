@@ -4,7 +4,7 @@ class Brand < ActiveRecord::Base
 
   has_many :products
   has_one :producer, :dependent => :destroy
-  
+
   # default_scope :order => 'name'
 
   before_destroy :ensure_not_referenced_by_any_product

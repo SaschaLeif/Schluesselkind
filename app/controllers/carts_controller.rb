@@ -32,7 +32,7 @@ class CartsController < InheritedResources::Base
   # GET /carts/new.xml
   def new
     @cart = Cart.new
-@cart = current_cart
+    @cart = current_cart
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @cart }
@@ -49,7 +49,7 @@ class CartsController < InheritedResources::Base
   # POST /carts.xml
   def create
     @cart = Cart.new(params[:cart])
-@cart = current_cart
+    @cart = current_cart
     respond_to do |format|
       if @cart.save
         format.html { redirect_to(@cart, :notice => 'Warenkorb wurde erfolgreich erstellt') }
@@ -65,7 +65,7 @@ class CartsController < InheritedResources::Base
   # PUT /carts/1.xml
   def update
     @cart = Cart.find(params[:id])
-@cart = current_cart
+    @cart = current_cart
     respond_to do |format|
       if @cart.update_attributes(params[:cart])
         format.html { redirect_to(@cart, :notice => 'Warenkorb wurde erfolgreich upgedatet!') }

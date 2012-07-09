@@ -67,12 +67,12 @@ class ProducersController < InheritedResources::Base
     @producer = Producer.find(params[:id])
     @cart = current_cart
     respond_to do |format|
-     
+
       if @producer.avatar = params[:producer][:avatar]
-     # if @producer.update_attributes(params[:producer])
+        # if @producer.update_attributes(params[:producer])
         format.html { redirect_to @producer, notice: 'Herstellerinfo wurde erfolgreich geupdatet' }
         format.xml  { head :ok }
-        #  format.json { render json: @producer, status: :updated, location: @producer }
+      #  format.json { render json: @producer, status: :updated, location: @producer }
       else
         format.html { render action: "edit" }
         # format.json { render json: @producer.errors, status: :unprocessable_entity }

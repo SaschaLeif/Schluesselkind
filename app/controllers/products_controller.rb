@@ -6,9 +6,13 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-   
-    @products = Product.find(:all)
-    @products = Product.paginate :page=>params[:page], :per_page => 3
+
+    filter = params[:brand_filter] || nil
+    if filter != nil
+      @products = Product.find(:all, :conditions => {:brand_id=>filter})
+    else
+      @products = Product.find(:all)
+    end
     @cart = current_cart
 
     respond_to do |format|

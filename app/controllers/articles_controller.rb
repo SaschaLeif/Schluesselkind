@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
- 
- skip_before_filter :authorize, :only => [:show]
- before_filter :authorize, :except => [:index, :show ]
+
+  skip_before_filter :authorize, :only => [:show]
+  before_filter :authorize, :except => [:index, :show ]
   # GET /articles
   # GET /articles.json
   def index
@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1.json
   def show
     @article = Article.find(params[:id])
-@cart = current_cart
+    @cart = current_cart
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @article }
@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
   # GET /articles/new.json
   def new
     @article = Article.new
-@cart = current_cart
+    @cart = current_cart
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @article }
@@ -45,7 +45,7 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(params[:article])
-@cart = current_cart
+    @cart = current_cart
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
@@ -61,7 +61,7 @@ class ArticlesController < ApplicationController
   # PUT /articles/1.json
   def update
     @article = Article.find(params[:id])
-@cart = current_cart
+    @cart = current_cart
     respond_to do |format|
       if @article.update_attributes(params[:article])
         format.html { redirect_to @article, notice: 'Article was successfully updated.' }
@@ -78,7 +78,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
-@cart = current_cart
+    @cart = current_cart
     respond_to do |format|
       format.html { redirect_to articles_url }
       format.json { head :no_content }

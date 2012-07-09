@@ -2,7 +2,7 @@
 
 <div id="gross">
 	<table>
-		<tr>
+		<tr >
 			<% @products.each do |product| %>
 			<td><%= image_tag(product.article.article_url, :class => 'list_image') %></td>
 			<td class="list_description"><b>Marke:</b> <%= product.brand.name %>
@@ -10,11 +10,11 @@
 			<b>Artikel:</b> <%= product.article.name %>
 			<br />
 			<b>Größe:</b> <%= product.article.size.name %>
-			
+
 			<%= select( "Grösse", "size_id", Size.find(:all).map { |u| [u.name, u.id]}, :prompt => 'Größe') %>
 			<br />
 			<b>Farbe:</b> <%= product.article.color.name %>
-			
+
 			<%= select( "farbe", "color_id", Color.find(:all).map { |u| [u.name, u.id]}, :prompt => 'Farbe') %>
 			<br />
 			<b>Preis:</b> <%= number_to_currency(product.product_price, :unit=>'€') %>
@@ -38,5 +38,5 @@
 </div>
 <br />
 <div id="gross" align="center">
-		<%#= will_paginate @brands %>
+	<%#= will_paginate @brands %>
 </div>

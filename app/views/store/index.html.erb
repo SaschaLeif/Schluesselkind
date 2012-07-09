@@ -27,13 +27,10 @@
 		<span class="infotext"> <%= brand.info_text %>
 			<br />
 			<br />
-			<%= link_to "alle Produkte zeigen", products_path(:brand_id => brand) %>
-			<%= link_to "Herstellerprofil", producers_path(params[:brand_id]) %> </span>
-			</td>
+			<%= link_to "alle Produkte zeigen", products_path() %>
+		<%#  	<%= link_to "Herstellerprofil", producer_path(:brand_id) %> 
+			</span></td>
 	</table>
 </div>
 <br />
 <% end %>
-<div id="gross" align="center">
-	<%= will_paginate @brands %>
-</div>

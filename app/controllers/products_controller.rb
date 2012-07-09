@@ -6,7 +6,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+   
+    @products = Product.find(:all)
     @products = Product.paginate :page=>params[:page], :per_page => 3
     @cart = current_cart
 
@@ -53,8 +54,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to @product,
-          notice: 'Produkt wurde erfolgreich erstellt' }
+        format.html { redirect_to @product, notice: 'Produkt wurde erfolgreich erstellt' }
         format.json { render json: @product, status: :created, location: @product }
       else
         format.html { render action: "new" }
@@ -86,7 +86,7 @@ class ProductsController < ApplicationController
     @product.destroy
 
     respond_to do |format|
-      format.html { redirect_to products_url }
+      format.html { redirect_to products_url, notice: 'Produkt wurde geloescht' }
       format.json { head :no_content }
     end
   end

@@ -1,17 +1,20 @@
-<p id="notice">
-	<%= notice %>
-</p>
-
-<p>
-	<b>Product:</b>
-	<%= @line_item.product_id %>
-</p>
-
-<p>
-	<b>Cart:</b>
+<div id="gross">
+	<br />
+	<h1>Product:
+	<%= @line_item.product.article.name %></h1>
+	
+	<b>Größe:</b>
+	<%= @line_item.product.article.size.name %>
+	<br />
+	<br />
+	<b>Farbe:</b>
+	<%= @line_item.product.article.color.name %>
+	<br />
+	<br />
+	<b>Warenkorb: </b>#
 	<%= @line_item.cart_id %>
-</p>
-
+</div>
+<br />
 <div id="klein">
 	<%= link_to 'editiere', edit_line_item_path(@line_item) %> |
 	<%= link_to 'zurück', line_items_path %>

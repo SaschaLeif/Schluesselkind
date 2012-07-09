@@ -1,12 +1,11 @@
 class OrdersController < ApplicationController
-  
+
   before_filter :authorize, :except => [:new, :create ]
   # GET /orders
   # GET /orders.xml
   def index
-    @orders = Order.paginate :page=>params[:page], :order=>'created_at',
-      :per_page => 3
- @cart = current_cart
+    @orders = Order.paginate :page=>params[:page], :order=>'created_at', :per_page => 3
+    @cart = current_cart
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @orders }
@@ -17,7 +16,7 @@ class OrdersController < ApplicationController
   # GET /orders/1.xml
   def show
     @order = Order.find(params[:id])
- @cart = current_cart
+    @cart = current_cart
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @order }
@@ -30,7 +29,7 @@ class OrdersController < ApplicationController
     @cart = current_cart
     if @cart.line_items.empty?
       redirect_to store_url, :notice => "Dein Warekorb ist leer"
-      return
+    return
     end
 
     @order = Order.new
@@ -44,7 +43,7 @@ class OrdersController < ApplicationController
   # GET /orders/1/edit
   def edit
     @order = Order.find(params[:id])
-     @cart = current_cart
+    @cart = current_cart
   end
 
   # POST /orders
@@ -52,19 +51,18 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(params[:order])
     @order.add_line_items_from_cart(current_cart)
- @cart = current_cart
+    @cart = current_cart
     respond_to do |format|
       if @order.save
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
-        format.html { redirect_to(store_url, :notice => 
+        format.html { redirect_to(store_url, :notice =>
           'Vielen Dank fuer deine Bestellung!') }
         format.xml  { render :xml => @order, :status => :created,
           :location => @order }
       else
-      #  format.html { render :action => "new" }
-        format.xml  { render :xml => @order.errors,
-          :status => :unprocessable_entity }
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @order.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -73,7 +71,7 @@ class OrdersController < ApplicationController
   # PUT /orders/1.xml
   def update
     @order = Order.find(params[:id])
- @cart = current_cart
+    @cart = current_cart
     respond_to do |format|
       if @order.update_attributes(params[:order])
         format.html { redirect_to(@order, :notice => 'Bestellung wurde erfolgreich geupdatet') }
@@ -90,7 +88,7 @@ class OrdersController < ApplicationController
   def destroy
     @order = Order.find(params[:id])
     @order.destroy
- @cart = current_cart
+    @cart = current_cart
     respond_to do |format|
       format.html { redirect_to(orders_url) }
       format.xml  { head :ok }

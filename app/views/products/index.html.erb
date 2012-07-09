@@ -10,8 +10,11 @@
 			<b>Artikel:</b> <%= product.article.name %>
 			<br />
 			<b>Größe:</b> <%= product.article.size.name %>
+			
+			<%= select( "Grösse", "size_id", @products.map { |u| [u.article.size.name, u.article.size.id]}, :prompt => 'Größe') %>
 			<br />
 			<b>Farbe:</b> <%= product.article.color.name %>
+			<%= select( "farbe", "color_id", @products.map { |u| [u.article.color.name, u.article.color.id]}, :prompt => 'Farbe') %>
 			<br />
 			<b>Preis:</b> <%= number_to_currency(product.product_price, :unit=>'€') %>
 			<%= button_to 'in den Warenkorb', line_items_path(:product_id => product) %>

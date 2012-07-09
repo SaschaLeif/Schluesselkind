@@ -43,7 +43,7 @@ h1 {
 #main {
 	margin-left: 0em;
 	padding-top: 0px;
-	padding-left: 200px;
+	padding-left: 50px;
 	padding-right: 300px;
 	background: #FFF;
 }
@@ -71,12 +71,10 @@ h1 {
 /* Warenkorb /Login-Button */
 #side {
 	float: right;
-	padding-top: 0.5em;
-	padding-left: 1em;
-	padding-right: 0.5em;
-	padding-bottom: 1em;
-	width: 17em;
+	padding: 10px;
+	width: 280px;
 	background: #DDD;
+	border-radius:10px;
 }
 
 #cart, #cart table {

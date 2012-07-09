@@ -16,7 +16,7 @@ class LineItemsController < ApplicationController
   # GET /line_items/1.xml
   def show
     @line_item = LineItem.find(params[:id])
-
+    @cart = current_cart
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @line_item }
@@ -27,7 +27,7 @@ class LineItemsController < ApplicationController
   # GET /line_items/new.xml
   def new
     @line_item = LineItem.new
-
+    @cart = current_cart
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @line_item }
@@ -37,6 +37,7 @@ class LineItemsController < ApplicationController
   # GET /line_items/1/edit
   def edit
     @line_item = LineItem.find(params[:id])
+    @cart = current_cart
   end
 
   # POST /line_items
@@ -64,7 +65,7 @@ class LineItemsController < ApplicationController
   # PUT /line_items/1.xml
   def update
     @line_item = LineItem.find(params[:id])
-
+    @cart = current_cart
     respond_to do |format|
       if @line_item.update_attributes(params[:line_item])
         format.html { redirect_to(@line_item, :notice => 'Line item was successfully updated.') }
@@ -81,7 +82,7 @@ class LineItemsController < ApplicationController
   def destroy
     @line_item = LineItem.find(params[:id])
     @line_item.destroy
-
+    @cart = current_cart
     respond_to do |format|
       format.html { redirect_to(store_url) }
       format.xml  { head :ok }

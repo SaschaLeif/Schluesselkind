@@ -229,6 +229,13 @@ Product.create(
 
 # Produkt 2
 Product.create(
+:product_price => 20.99,
+:brand_id => 2,
+:article_id => 2
+)
+
+# Produkt 3
+Product.create(
 :product_price => 19.99,
 :brand_id => 1,
 :article_id => 2

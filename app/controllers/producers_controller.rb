@@ -1,4 +1,6 @@
 class ProducersController < InheritedResources::Base
+
+  skip_before_filter :authorize, :only => [:index, :show]
   # GET /producers
   # GET /producers.json
   def index
@@ -34,13 +36,51 @@ class ProducersController < InheritedResources::Base
       format.json { render json: @producer }
     end
   end
-  
+
+  # POST /producers
+  # POST /producers.json
+  def create
+    @producer = Producer.new(params[:producer])
+    #@producer = Producer.create(params[:producer])
+    @cart = current_cart
+    respond_to do |format|
+      if @producer.save
+        format.html { redirect_to @producer, notice: 'Hersteller erfolgreich erstellt' }
+        format.json { render json: @producer, status: :created, location: @producer }
+      else
+        format.html { render action: "create" }
+        format.json { render json: @producer.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   # GET /producers/1/edit
   def edit
     @producer = Producer.find(params[:id])
     @cart = current_cart
+
   end
-  
+
+  # PUT /producers/1
+  # PUT /producers/1.json
+  def update
+    @producer = Producer.find(params[:id])
+    @cart = current_cart
+    respond_to do |format|
+     
+      if @producer.avatar = params[:producer][:avatar]
+     # if @producer.update_attributes(params[:producer])
+        format.html { redirect_to @producer, notice: 'Herstellerinfo wurde erfolgreich geupdatet' }
+        format.xml  { head :ok }
+        #  format.json { render json: @producer, status: :updated, location: @producer }
+      else
+        format.html { render action: "edit" }
+        # format.json { render json: @producer.errors, status: :unprocessable_entity }
+        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+
   # DELETE /producers/1
   # DELETE /producers/1.json
   def destroy

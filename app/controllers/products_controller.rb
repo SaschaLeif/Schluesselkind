@@ -15,18 +15,18 @@ class ProductsController < ApplicationController
     end
     @cart = current_cart
 
-  #  filter2 = params[ :auswahl] || nil
-  #  if filter2 != nil
-  #    @sizes = Size.find(:all, :conditions => {:article_id =>filter2})
-  #  else
-  #    @sizes = Size.find(:all, :order => "id")
-  #  end
+    #  filter2 = params[ :auswahl] || nil
+    #  if filter2 != nil
+    #    @sizes = Size.find(:all, :conditions => {:article_id =>filter2})
+    #  else
+    #    @sizes = Size.find(:all, :order => "id")
+    #  end
 
-  #  if (params[:size] && Size.all.collect(&:name).include?(params[:size][:name]))
-  #    @products = Product.send(params[:size][:name].downcase)
-  #  else
-  #    @products = Product.all
-  #  end
+    #  if (params[:size] && Size.all.collect(&:name).include?(params[:size][:name]))
+    #    @products = Product.send(params[:size][:name].downcase)
+    #  else
+    #    @products = Product.all
+    #  end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -68,7 +68,7 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(params[:product])
-
+    @cart = current_cart
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Produkt wurde erfolgreich erstellt' }
@@ -83,8 +83,8 @@ class ProductsController < ApplicationController
   # PUT /products/1
   # PUT /products/1.json
   def update
-    @product = Product.find(params[:id])
-
+    @product = Product.find(params[:id], :readonly => false)
+    @cart = current_cart
     respond_to do |format|
       if @product.update_attributes(params[:product])
         format.html { redirect_to @product, notice: 'Produkt wurde erfolgreich geupdatet' }
@@ -101,7 +101,7 @@ class ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
-
+@cart = current_cart
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Produkt wurde geloescht' }
       format.json { head :no_content }

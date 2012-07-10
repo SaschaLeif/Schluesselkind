@@ -2,23 +2,25 @@
 
 <div id="gross">
 	<table>
-		<tr>
+		<tr align="left">
 			<th>#</th>
 			<th>Name</th>
 			<th>Adresse</th>
 			<th>Email</th>
 			<th>Zahlungsweise</th>
 			<th></th>
+			
 
 		</tr>
-
+<tr height = 20 px></tr>
 		<% @orders.each do |order| %>
+		
 		<tr>
-			<td><%= order.id %></td>
-			<td><%= order.name %></td>
-			<td><%= order.address %></td>
-			<td><%= order.email %></td>
-			<td><%= order.pay_type %></td>
+			<td width=40px><%= order.id %></td>
+			<td width=150px><%= order.name %></td>
+			<td width=150px><%= order.address %></td>
+			<td width=150px><%= order.email %></td>
+			<td width=80px><%= order.pay_type %></td>
 
 			<td id="klein"> <%= link_to 'zeige', order %>
 			<%= link_to 'editiere', edit_order_path(order) %>

@@ -15,6 +15,19 @@ class ProductsController < ApplicationController
     end
     @cart = current_cart
 
+  #  filter2 = params[ :auswahl] || nil
+  #  if filter2 != nil
+  #    @sizes = Size.find(:all, :conditions => {:article_id =>filter2})
+  #  else
+  #    @sizes = Size.find(:all, :order => "id")
+  #  end
+
+  #  if (params[:size] && Size.all.collect(&:name).include?(params[:size][:name]))
+  #    @products = Product.send(params[:size][:name].downcase)
+  #  else
+  #    @products = Product.all
+  #  end
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @products }

@@ -184,6 +184,10 @@ Color.create(
 :name => 'weiss'
 )
 
+Color.create(
+:name => 'orange'
+)
+
 Article .delete_all
 
 # Artikel 1
@@ -201,6 +205,23 @@ Article.create(
 :article_url => '/images/shirt_color/schwarz.jpg',
 :size_id => 8 #XXL
 )
+
+# Artikel 3
+Article.create(
+:name => 'T-Shirt Arbeit',
+:color_id => 7,
+:article_url => '/images/shirt_color/orange.jpg',
+:size_id => 5 #M
+)
+
+# Artikel 4
+Article.create(
+:name => 'T-Shirt Girlie',
+:color_id => 6,
+:article_url => '/images/shirt_color/weiss.jpg',
+:size_id => 3 #XS
+)
+
 
 Print.delete_all
 
@@ -239,6 +260,20 @@ Product.create(
 :product_price => 19.99,
 :brand_id => 1,
 :article_id => 2
+)
+
+# Produkt 4
+Product.create(
+:product_price => 29.99,
+:brand_id => 3,
+:article_id => 4
+)
+
+# Produkt 5
+Product.create(
+:product_price => 9.99,
+:brand_id => 2,
+:article_id => 3
 )
 
 CustomProduct.delete_all

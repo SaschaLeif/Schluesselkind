@@ -5,7 +5,13 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+     @articles = Article.all
+    #size_auswahl = params[:size_auswahl] || nil
+   # if size_auswahl != nil
+    #  @articles = Article.find(:all, :conditions => {:size_id =>size_auswahl})
+    #else
+    #  @articles = Article.find(:all)
+    #end
     @cart = current_cart
     respond_to do |format|
       format.html # index.html.erb

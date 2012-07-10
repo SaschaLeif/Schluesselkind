@@ -3,19 +3,24 @@
 <div id="gross">
 	<table>
 		<tr >
+		<%#	<%= select("Grösse", "size_id", Size.all.collect(&:name), :prompt => 'Größe') %>			
+		<%#	<%= select( "farbe", "color_id", Color.find(:all).map { |u| [u.name, u.id]}, :prompt => 'Farbe') %>
+			
+			<br />
 			<% @products.each do |product| %>
-			<td><%= image_tag(product.article.article_url, :class => 'list_image') %></td>
+			
+			<td>
+				<%= image_tag(product.article.article_url, :class => 'list_image') %></td>
 			<td class="list_description"><b>Marke:</b> <%= product.brand.name %>
 			<br />
-			<b>Artikel:</b> <%= product.article.name %>
+			<b>Typ:</b> <%= product.article.name %>
 			<br />
 			<b>Größe:</b> <%= product.article.size.name %>
-
-			<%= select( "Grösse", "size_id", Size.find(:all).map { |u| [u.name, u.id]}, :prompt => 'Größe') %>
+			
 			<br />
 			<b>Farbe:</b> <%= product.article.color.name %>
 
-			<%= select( "farbe", "color_id", Color.find(:all).map { |u| [u.name, u.id]}, :prompt => 'Farbe') %>
+			
 			<br />
 			<b>Preis:</b> <%= number_to_currency(product.product_price, :unit=>'€') %>
 			<%= button_to 'in den Warenkorb', line_items_path(:product_id => product) %>

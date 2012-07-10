@@ -7,6 +7,7 @@ class Product < ActiveRecord::Base
   has_many :line_items
 
   before_destroy :ensure_not_referenced_by_any_line_item
+  default_scope joins(:brand).order('brands.name')
 
   private
   # damit man das Produkt nicht löscht, während es als line_item

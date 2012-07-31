@@ -101,7 +101,7 @@ class ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
-@cart = current_cart
+    @cart = current_cart
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Produkt wurde geloescht' }
       format.json { head :no_content }

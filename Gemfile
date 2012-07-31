@@ -10,7 +10,7 @@ gem 'rails', '3.2.6'
 
 group :development do
   gem 'pg'
-  gem 'sqlite3'
+  #gem 'sqlite3'
 end
 
 # rspec einbinden

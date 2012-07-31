@@ -5,7 +5,7 @@ Brand.create(
 :name => 'Continental',
 :origin => %{<p>Grossbritanien</p>},
 :logo_url =>   '/images/brands/continental.gif',
-:rating => 6.66,
+:rating => 0.66,
 :info_text =>
 'CONTINENTAL has been designing, manufacturing and selling wholesale to the imprintables industry since 1994.
     We were the innovators of the wholesale baby doll t-shirt in Europe and continue to lead the way in terms of innovation and design.
@@ -19,7 +19,7 @@ Brand.create(
 :name => 'Armed Angels & Friend',
 :origin => %{<p>Deutschland</p>},
 :logo_url => '/images/brands/armedangels.png',
-:rating => 9.50,
+:rating => 0.50,
 :info_text =>
 'Gestartet sind wir 2007 mit sechs verschiedenen Shirts. Leider war damals nicht nur die Auswahl bescheiden,
   sondern auch die Qualitaet. Deshalb haben wir fast das gesamte erste Jahr damit verbracht, diese zu optimieren,
@@ -31,7 +31,7 @@ Brand.create(
 :name => 'Epona Clothing',
 :origin => %{<p>Grossbritanien</p>},
 :logo_url => '/images/brands/epona.jpg',
-:rating => 8.00,
+:rating => 0.00,
 :info_text =>
 'Epona was set up by Tom Andrews in 2002. To find out how it all started, here is an article on the early days.
   In 2005 we became one of the first companies to produce Fairtrade cotton clothing certified by the Fairtrade Foundation.
@@ -44,7 +44,7 @@ Brand.create(
 :name => 'Wombat Clothing',
 :origin => %{<p>Grossbritanien</p>},
 :logo_url => '/images/brands/wombat.gif',
-:rating => 4.00,
+:rating => 0.00,
 :info_text =>
 'We were first set up in 2004 as an online store with a small range of mens adventure clothing. This proved pretty popular,
   so we made the range a bit bigger and started doing womens clothing too. Since then, we have been refining and adjusting our style,
@@ -57,7 +57,7 @@ Brand.create(
 :name => 'Earth Posivite Apparel',
 :origin => %{<p>Grossbritanien</p>},
 :logo_url => '/images/brands/Earth_positive.gif',
-:rating => 7.00,
+:rating => 0.00,
 :info_text =>
 'EarthPositive is a green revolution in promotional apparel: Climate Neutral T-shirts. Organic and ethically made, but crucially, manufactured
   solely using sustainable energy generated from wind and solar power.
@@ -70,7 +70,7 @@ Brand.create(
 :name => 'Living Crafts',
 :origin => %{<p>Deutschland</p>},
 :logo_url => '/images/brands/LivingCrafts.gif',
-:rating => 7.00,
+:rating => 0.00,
 :info_text =>
 'LIVING CRAFTS began as a sole-trader-business in a garage. Persuasion and stamina have turned it into an eco-friendly company which has
   been pursuing its traditional values consistently. Being responsible towards nature is first and foremost for LIVING CRAFTS. This maxim dictates
@@ -82,7 +82,7 @@ Brand.create(
 :name => 'Pants To Poverty',
 :origin => %{<p>Grossbritanien</p>},
 :logo_url => '/images/brands/pants_to_poverty.jpg',
-:rating => 5.50,
+:rating => 0.50,
 :info_text =>
 'We are a new type of underwear brand. Not simply content to make some of the most comfortable and stylish pants on the planet, we work with thousands of
   farmers and factory workers in India to celebrate fashion as a beautiful tool to change the world!
@@ -95,7 +95,7 @@ Brand.create(
 :name => 'Recolution',
 :origin => %{<p>Deutschland</p>},
 :logo_url => '/images/brands/recolution.png',
-:rating => 5.50,
+:rating => 0.50,
 :info_text =>
 'Nach &uuml;ber einem Jahr Vorbereitung haben die drei Nordlichter Jan, Nikolaus und Robert im Jahr 2010 das Modelabel recolution gegr&uuml;ndet.
   Gerade in der heutigen Zeit finden wir es wichtig, aktiv an der Gestaltung unserer Wirtschaft mitzuwirken und dabei &ouml;kologische und soziale
@@ -110,7 +110,7 @@ Brand.create(
 :name => 'Tee Jays',
 :origin => %{<p>D&auml;nemark</p>},
 :logo_url => '/images/brands/TeeJays.png',
-:rating => 7.50,
+:rating => 0.50,
 :info_text =>
 'It began in 1976 with a passion to create the best quality T-Shirts and the first production started in Florence, Alabama.
   In 2002 we were focussed establishing a unique basic collection for the European market. A collection of best selling basics, based on leading classics and

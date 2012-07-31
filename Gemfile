@@ -6,7 +6,10 @@ gem 'rails', '3.2.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+group :development do
+  gem 'pg'
+end
+#gem 'sqlite3'
 #gem 'mysql'
 
 # rspec einbinden
@@ -30,7 +33,7 @@ end
 #  gem 'spork'
 #  gem 'launchy'    # So you can do Then show me the page
 #  gem 'ffi', "= 1.0.9"
-#end  
+#end
 
 gem 'cucumber', '1.2.1'
 #gem 'capybara'

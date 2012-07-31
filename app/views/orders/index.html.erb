@@ -9,16 +9,18 @@
 			<th>Email</th>
 			<th>Zahlungsweise</th>
 			<th></th>
+			
 
 		</tr>
-
+<tr height = 20 px></tr>
 		<% @orders.each do |order| %>
+		
 		<tr>
-			<td width="50px"><%= order.id %></td>
-			<td width="150px"><%= order.name %></td>
-			<td width="150px"><%= order.address %></td>
-			<td width="100px"><%= order.email %></td>
-			<td width="200px"><%= order.pay_type %></td>
+			<td width=40px><%= order.id %></td>
+			<td width=150px><%= order.name %></td>
+			<td width=150px><%= order.address %></td>
+			<td width=150px><%= order.email %></td>
+			<td width=80px><%= order.pay_type %></td>
 
 			<td id="klein"> <%= link_to 'zeige', order %>
 			<%= link_to 'editiere', edit_order_path(order) %>

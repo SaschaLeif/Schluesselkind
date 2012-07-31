@@ -8,8 +8,9 @@ gem 'rails', '3.2.6'
 
 group :development do
   gem 'pg'
+  gem 'sqlite3'
 end
-#gem 'sqlite3'
+
 #gem 'mysql'
 
 # rspec einbinden

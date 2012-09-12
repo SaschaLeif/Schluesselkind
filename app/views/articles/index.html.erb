@@ -6,17 +6,15 @@
 		<% @articles.each do |article| %>
 		<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
 			<td><%= image_tag(article.article_url, :class => 'list_image') %></td>
-			<td> Name: <%= article.name %>
-			<br />
-			Größe: <%= article.size.name %>
-			<br />
-			Farbe: <%= article.color.name %></td>
-
+			<td> Name: <%= article.name %><br />
+				Geschlecht: <%= article.gender %>
+			</td>
 			<td id="klein"> <%= link_to 'zeige', article %>
 			<br />
 			<%= link_to 'editiere', edit_article_path(article) %>
 			<br />
-			<%= link_to 'lösche', article, :data => {:confirm => 'Bist du sicher?'}, method: :delete %> </td>
+			<%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+			
 		</tr>
 		<% end %>
 	</table>

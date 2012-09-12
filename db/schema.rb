@@ -11,13 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120708131644) do
+ActiveRecord::Schema.define(:version => 20120701144535) do
 
   create_table "articles", :force => true do |t|
     t.string   "name"
     t.string   "article_url"
-    t.integer  "size_id"
-    t.integer  "color_id"
+    t.string   "gender"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
@@ -43,20 +42,13 @@ ActiveRecord::Schema.define(:version => 20120708131644) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "custom_products", :force => true do |t|
-    t.integer  "product_id"
-    t.integer  "print_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "line_items", :force => true do |t|
     t.integer  "product_id"
     t.integer  "cart_id"
+    t.integer  "order_id"
+    t.integer  "quantity",   :default => 1
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
-    t.integer  "quantity",   :default => 1
-    t.integer  "order_id"
   end
 
   create_table "orders", :force => true do |t|
@@ -68,29 +60,12 @@ ActiveRecord::Schema.define(:version => 20120708131644) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "prints", :force => true do |t|
-    t.decimal  "print_price", :precision => 8, :scale => 2
-    t.string   "name"
-    t.string   "print_url"
-    t.datetime "created_at",                                :null => false
-    t.datetime "updated_at",                                :null => false
-  end
-
-  create_table "producers", :force => true do |t|
-    t.integer  "brand_id"
-    t.text     "description"
-    t.datetime "created_at",          :null => false
-    t.datetime "updated_at",          :null => false
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
-  end
-
   create_table "products", :force => true do |t|
     t.decimal  "product_price", :precision => 8, :scale => 2
     t.integer  "brand_id"
     t.integer  "article_id"
+    t.integer  "size_id"
+    t.integer  "color_id"
     t.datetime "created_at",                                  :null => false
     t.datetime "updated_at",                                  :null => false
   end

@@ -1,13 +1,10 @@
 <div id="brand_list">
-	<h1>unsere Marken</h1>
+	<h1>Hersteller</h1>
 
 	<table>
 		<% @brands.each do |brand| %>
 		<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-			<td>
-			<center>
-				<%= image_tag(brand.logo_url, :class => 'list_image') %>
-			</center></td>
+			<td width="170px"> <%= link_to image_tag(brand.logo_url, :class => 'list_image'), brand %> </td>
 
 			<td class="list_description">
 			<dl>
@@ -15,11 +12,10 @@
 					<%= brand.name %>
 				</dt>
 				<br />
-				<dd>
-					<u>Herkunft</u>: <%= (strip_tags(brand.origin)) %>
-				</dd>
-				<dd>
-					<u>FairTrade-Rating</u>: <%= brand.rating %>
+				<dd id="klein">
+					<%= raw truncate((brand.info_text), :length => 250) %>
+					<br />
+					<b><%= link_to '[mehr Infos]', brand %></b>
 				</dd>
 
 			</dl></td>
@@ -32,9 +28,10 @@
 			:method => :delete %> </td>
 		</tr>
 		<% end %>
-
-		<td id ="klein">
-		<br />
-		<%= link_to 'neue Marke hinzufügen', new_brand_path %> </td>
 	</table>
+
+	<div id ="klein">
+		<br />
+		<%= link_to 'neue Marke hinzufügen', new_brand_path %>
+	</div>
 </div>

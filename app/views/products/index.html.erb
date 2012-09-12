@@ -17,19 +17,18 @@
 			<% @products.each do |product| %>
 			
 			<td>
-				<%= image_tag(product.article.article_url, :class => 'list_image') %></td>
+				<%= link_to image_tag(product.article.article_url, :class => 'list_image'), product %></td>
 			<td class="list_description"><b>Marke:</b> <%= product.brand.name %>
 			<br />
-			<b>Typ:</b> <%= product.article.name %>
+			<b>Typ:</b> <%= product.article.name %> (<%= product.article.gender %>)
 			<br />
-			<b>Größe:</b> <%= product.article.size.name %>
-			
+			<b>Größe:</b> <%= product.size.name %>
 			<br />
-			<b>Farbe:</b> <%= product.article.color.name %>
+			<b>Farbe:</b> <%= product.color.name %>
 
 			
 			<br />
-			<b>Preis:</b> <%= number_to_currency(product.product_price, :unit=>'€') %>
+			<b>Preis:</b> <%= number_to_currency(product.product_price, :unit=>'€ ') %>
 			<%= button_to 'in den Warenkorb', line_items_path(:product_id => product) %>
 			<br/>
 			</td>
@@ -38,7 +37,7 @@
 			<br />
 			<%= link_to 'editiere', edit_product_path(product) %>
 			<br />
-			<%= link_to 'lösche', product, :data => {:confirm => 'Bist du sicher?'}, method: :delete %> </td>
+			<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
 		</tr>
 
 		<% end %>

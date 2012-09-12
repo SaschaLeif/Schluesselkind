@@ -2,14 +2,8 @@
 	<br />
 	<%= image_tag(@article.article_url, :class => 'list_image') %>
 	<br />
-	<b>Name:</b>
-	<%= @article.name %>
-	<br />
-	<b>Size:</b>
-	<%= @article.size.name %>
-	<br />
-	<b>Color:</b>
-	<%= @article.color.name %>
+	<b>Name: </b><%= @article.name %><br />
+	<b>Geschlecht: </b> <%= @article.gender %>
 	<br />
 	<br />
 </div>

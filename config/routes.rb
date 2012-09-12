@@ -1,11 +1,6 @@
 Schluesselkind::Application.routes.draw do
- 
-  resources :producers
-
   resources :orders
-
   resources :line_items
-
   resources :carts
 
   get "admin/index"
@@ -23,17 +18,13 @@ Schluesselkind::Application.routes.draw do
   get "sessions/new"
   get "sessions/create"
   get "sessions/destroy"
-
-  resources :custom_products
+  get "store/index"
+  
   resources :articles
-  resources :prints
   resources :colors
   resources :sizes
   resources :products
   resources :infos
-
-  get "store/index"
-
   resources :brands
 
   # The priority is based upon order of creation:

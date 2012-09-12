@@ -4,6 +4,8 @@ class CreateProducts < ActiveRecord::Migration
       t.decimal :product_price, :precision => 8, :scale => 2
       t.integer :brand_id #Fremdschluessel
       t.integer :article_id
+      t.integer :size_id
+      t.integer :color_id
 
       t.timestamps
     end

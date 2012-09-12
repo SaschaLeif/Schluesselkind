@@ -1,12 +1,13 @@
 source 'http://rubygems.org'
 #source 'https://rubygems.org'
 
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.7'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+#gem 'pg'
+gem 'sqlite3'
 
 # rspec einbinden
 group :development, :test do

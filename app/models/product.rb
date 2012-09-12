@@ -1,9 +1,11 @@
 class Product < ActiveRecord::Base
 
-  attr_accessible :brand_id, :article_id, :product_price
+  attr_accessible :brand_id, :article_id, :product_price, :color_id, :size_id
 
   belongs_to :brand
   belongs_to :article
+  belongs_to :size
+  belongs_to :color
   has_many :line_items
 
   before_destroy :ensure_not_referenced_by_any_line_item

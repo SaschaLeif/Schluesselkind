@@ -1,3 +1,13 @@
+#store_logos img {
+  float: left;
+  width: 112px;
+  height: 52px;
+  margin-top: 15px;
+  margin-right: 0px;
+  margin-bottom: 1px;
+}
+
+
 /* kleine Schrift */
 #klein {
 	font-family: Verdana;
@@ -45,7 +55,7 @@ h1 {
 	padding-top: 0px;
 	padding-left: 50px;
 	padding-right: 300px;
-	background: #FFF;
+	background: #FFFFCC;
 }
 
 /*Logo etc.*/
@@ -206,17 +216,20 @@ h1 {
 }
 
 #brand_list .list_image {
+	padding-top: 10px;
+	padding-left: 10px;
 	width: 150px;
 	height: 70px;
 }
 
 #brand_list .list_description {
 	font-family: Verdana;
-	width: 50%;
+	width: 70%;
 }
 
 #brand_list .list_description dl {
 	margin: 0;
+	width: 450px;
 }
 
 #brand_list .list_description dt {

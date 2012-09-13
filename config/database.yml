@@ -46,7 +46,7 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: schluessel
+  database: schluesselkind
   pool: 5
   username: postgres
   password: Carnage1998
@@ -73,7 +73,7 @@ development:
 test:
   adapter: postgresql
   encoding: utf8
-  database: schluessel
+  database: schluesselkind
   pool: 5
   username: postgres
   password: Carnage1998
@@ -81,7 +81,7 @@ test:
 production:
   adapter: postgresql
   encoding: utf8
-  database: schluessel
+  database: schluesselkind
   pool: 5
   username: postgres
   password: Carnage1998

@@ -155,28 +155,28 @@ Article .delete_all
 
 # Artikel 1
 Article.create(
-:name => 'T-Shirt gelb',
+:name => 'T-Shirt gelb (w)',
 :article_url => '/images/shirt_color/gelb.jpg',
 :gender => 'Frau'
 )
 
 # Artikel 2
 Article.create(
-:name => 'T-Shirt gelb',
+:name => 'T-Shirt gelb (m)',
 :article_url => '/images/shirt_color/gelb.jpg',
 :gender => 'Mann'
 )
 
 # Artikel 3
 Article.create(
-:name => 'T-Shirt orange',
+:name => 'T-Shirt orange (w)',
 :article_url => '/images/shirt_color/orange.jpg',
 :gender => 'Frau'
 )
 
 # Artikel 4
 Article.create(
-:name => 'T-Shirt orange',
+:name => 'T-Shirt orange (m)',
 :article_url => '/images/shirt_color/orange.jpg',
 :gender => 'Mann'
 )
@@ -184,29 +184,36 @@ Article.create(
 
 # Artikel 5
 Article.create(
-:name => 'T-Shirt schwarz',
+:name => 'T-Shirt schwarz (w)',
 :article_url => '/images/shirt_color/schwarz.jpg',
 :gender => 'Frau'
 )
 
 # Artikel 6
 Article.create(
-:name => 'T-Shirt schwarz',
+:name => 'T-Shirt schwarz (m)',
 :article_url => '/images/shirt_color/schwarz.jpg',
 :gender => 'Mann'
 )
 
 # Artikel 7
 Article.create(
-:name => 'T-Shirt weiss',
+:name => 'T-Shirt weiss (w)',
 :article_url => '/images/shirt_color/weiss.jpg',
 :gender => 'Frau'
 )
 
 # Artikel 8
 Article.create(
-:name => 'T-Shirt weiss',
+:name => 'T-Shirt weiss (m)',
 :article_url => '/images/shirt_color/weiss.jpg',
+:gender => 'Mann'
+)
+
+# Artikel 9
+Article.create(
+:name => 'Hoodie blau "Attitude" (m)',
+:article_url => '/images/shirt_color/recolution_hoodie_blau.png',
 :gender => 'Mann'
 )
 
@@ -228,4 +235,13 @@ Product.create(
 :article_id => 4, # orange
 :size_id => 3, # XS
 :color_id => 6 # orange
+)
+
+# Produkt 3
+Product.create(
+:product_price => 79.90,
+:brand_id => 4,
+:article_id => 9, # Hoodie blau
+:size_id => 7, # XS
+:color_id => 1 # blau
 )

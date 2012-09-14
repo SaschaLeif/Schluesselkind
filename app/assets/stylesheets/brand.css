@@ -1,3 +1,11 @@
+#product_foto img {
+	width: 96px;
+	height: 110px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+
 #store_logos img {
   float: left;
   width: 112px;

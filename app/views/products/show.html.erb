@@ -1,20 +1,31 @@
 <div id="brand_list">
 
-	<h1>Produkt Information</h1>
-
 	<p id="gross">
+		<br />
+		<h1><%= @product.article.name %></h1>
+		
+		<table>
+			<td>
+				<%= image_tag @product.article.article_url %>
+				<br />
+				<b>Preis:</b> <%= number_to_currency(@product.product_price, :unit=>'€ ') %>
+				<br /><br />
+				<%= button_to 'in den Warenkorb', line_items_path(:product_id => @product.id) %>
+			</td>
+			<td>
+				
+				<b>Hersteller: </b><%= @product.brand.name %>
+				<br /><br />
 
-		<b>Hersteller: </b><%= @product.brand.name %>
-		<br />
-		<b>Typ: </b><%= @product.article.name %> (<%= @product.article.gender %>)
-		<br />
-		<b>Größe:</b> <%= @product.size.name %>
-		<br />
-		<b>Farbe:</b> <%= @product.color.name %>
-		<br />
-		<b>Preis:</b> <%= number_to_currency(@product.product_price, :unit=>'€ ') %>
-		<br />
-
+				<b>Größe:</b> <%= @product.size.name %>
+				<br /><br />
+				<b>Farbe:</b> <%= @product.color.name %>
+				<br /><br />
+				<b>Beschreibung:</b><br /> <%= raw @product.description %>
+				
+			</td>
+		</table>
+		
 	</p>
 	<p id="klein">
 		<%= link_to 'editiere', edit_product_path(@product) %> |

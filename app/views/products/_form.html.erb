@@ -16,31 +16,13 @@
 
 <div id="gross">
 	<div class="field">
-		<%= f.label 'Hersteller:' %>
-		<%= f.select :brand_id,
-      [
-        ['Bleed Organic Clothing',1],
-        ['Knowledge Cotton Apparel',2],
-        ['Pants To Poverty',3],
-        ['Recolution',4],
-        ['Thokk Thokk',5]
-      ] %>
+		<%= f.collection_select :brand_id, Brand.find(:all, :order => "name"), :id, :name,  { :prompt => 'Hersteller' } %>
+
 	</div>
 	<br />
 
 	<div class="field">
-		<%= f.label 'Artikel:' %>
-		<%= f.select :article_id,
-      [
-        ['T-Shirt gelb (weiblich)',1],
-        ['T-Shirt gelb (männlich)',2],
-        ['T-Shirt orange (weiblich)',3],
-        ['T-Shirt orange (männlich)',4],
-        ['T-Shirt schwarz (weiblich)',5],
-        ['T-Shirt schwarz (männlich)',6],
-        ['T-Shirt weiss (weiblich)',7],
-        ['T-Shirt weiss (männlich)',8]
-      ] %>
+		<%= f.collection_select :article_id, Article.find(:all, :order => "name"), :id, :name,  { :prompt => 'Artikel'} %>
 	</div>
 	<br />
 	<div class="field">
@@ -74,7 +56,12 @@
 	</div>
 
 	<br />
-
+	<div class="field">
+		<%= f.label 'Beschreibung: ' %><br /> <%= f.text_area :description, :size=>"70x30" %>
+	</div>
+	
+	<br />
+	
 	<div class="field">
 		<%= f.label 'Preis:' %> <%= f.number_field :product_price %>
 	</div>

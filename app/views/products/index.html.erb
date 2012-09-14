@@ -17,10 +17,10 @@
 			<% @products.each do |product| %>
 			
 			<td>
-				<%= link_to image_tag(product.article.article_url, :class => 'list_image'), product %></td>
+				<div id="product_foto"><%= link_to image_tag(product.article.article_url, :class => 'list_image'), product %></div></td>
 			<td class="list_description"><b>Marke:</b> <%= product.brand.name %>
 			<br />
-			<b>Typ:</b> <%= product.article.name %> (<%= product.article.gender %>)
+			<b>Typ:</b> <%= product.article.name %>
 			<br />
 			<b>Größe:</b> <%= product.size.name %>
 			<br />

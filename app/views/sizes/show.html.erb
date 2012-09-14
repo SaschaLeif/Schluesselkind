@@ -1,10 +1,11 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Größe:</b>
-  <%= @size.name %>
+<p id="notice">
+	<%= notice %>
 </p>
 
+<p>
+	<b>Größe:</b>
+	<%= @size.name %>
+</p>
 
 <%= link_to 'editiere', edit_size_path(@size) %> |
 <%= link_to 'zurück', sizes_path %>

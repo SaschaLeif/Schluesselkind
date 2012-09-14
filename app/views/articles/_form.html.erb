@@ -16,16 +16,12 @@
 hier wird nix geändert!
 <div id="gross">
 	<div class="field">
-		<%= f.label 'Art:' %>
-		<%= f.select :name,
-      [
-        ['T-Shirt gelb', 'T-Shirt gelb'],
-        ['T-Shirt orange', 'T-Shirt orange'],
-        ['T-Shirt schwarz', 'T-Shirt schwarz'],
-        ['T-Shirt weiss', 'T-Shirt weiss']
-      ] %>
+
+		<%= f.collection_select :name, Article.find(:all, :order => :name), :id, :name,  { :prompt => 'Bezeichnung' } %> oder neue
+		<%= f.label 'Bezeichnung: ' %>
+		<%= f.text_field :name %>
 	</div>
-<br />	
+	<br />
 	<div class="field">
 		<%= f.label 'Geschlecht: ' %>
 		<%= f.select :gender,
@@ -34,7 +30,7 @@ hier wird nix geändert!
         ['weiblich', 'Frau']
       ] %>
 	</div>
-<br />
+	<br />
 	<div class="field">
 		<%= f.label 'Motiv url: ' %>
 		<%= f.text_field :article_url %>

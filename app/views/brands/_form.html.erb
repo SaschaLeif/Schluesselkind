@@ -25,19 +25,19 @@
 		<%= f.text_field :origin %>
 	</div>
 	<div class="field">
-		<%= f.label 'Adresse des Logos:' %>
+		<%= f.label 'Logo-url:' %>
 		<br />
 		<%= f.text_field :logo_url %>
 	</div>
 	<div class="field">
-		<%= f.label 'Fair-Trade Rating' %>
+		<%= f.label "Fair-Trade Rating:" %>
 		<br />
 		<%= f.text_field :rating %>
 	</div>
 	<div class="field">
 		<%= f.label 'Infos:' %>
 		<br />
-		<%= f.text_field :info_text %>
+		<%= f.text_area :info_text, :size=>"70x30" %>
 	</div>
 	<div class="actions">
 		<%= f.submit %>

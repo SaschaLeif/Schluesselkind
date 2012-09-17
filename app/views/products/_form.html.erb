@@ -16,54 +16,44 @@
 
 <div id="gross">
 	<div class="field">
+		<%= f.label 'Marke:' %>
 		<%= f.collection_select :brand_id, Brand.find(:all, :order => "name"), :id, :name,  { :prompt => 'Hersteller' } %>
 
-	</div>
-	<br />
+		<br />
+		<br />
 
-	<div class="field">
+		<%= f.label 'Artikel:' %>
 		<%= f.collection_select :article_id, Article.find(:all, :order => "name"), :id, :name,  { :prompt => 'Artikel'} %>
-	</div>
-	<br />
-	<div class="field">
+
+		<br />
+		<br />
+
 		<%= f.label 'Größe:' %>
-		<%= f.select :size_id,
-      [
-        ['XXXS',1],
-        ['XXS',2],
-        ['XS',3],
-        ['S',4],
-        ['M',5],
-        ['L',6],
-        ['XL',7],
-        ['XXL',8],
-        ['XXXL',9],
+		<%= f.collection_select :size_id, Size.find(:all, :order => "name"), :id, :name,  { :prompt => 'Größe'} %>
 
-      ] %>
 		<br />
 		<br />
+
 		<%= f.label 'Farbe:' %>
-		<%= f.select :color_id,
-      [
-        ['blau',1],
-        ['gelb',2],
-        ['grün',3],
-        ['rot',4],
-        ['schwarz',5],
-        ['weiss',6],
-        ['orange',7],
-      ] %>
-	</div>
+		<%= raw f.collection_select :color_id, Color.find(:all, :order => "name"), :id, :name,  { :prompt => 'Farbe'} %>
 
-	<br />
-	<div class="field">
-		<%= f.label 'Beschreibung: ' %><br /> <%= f.text_area :description, :size=>"70x30" %>
-	</div>
-	
-	<br />
-	
-	<div class="field">
+		<br />
+		<br />
+
+		<%= f.label 'Anzahl: ' %>
+		<%= f.number_field :quantity, :size=>"10x10" %>
+
+		<br />
+		<br />
+
 		<%= f.label 'Preis:' %> <%= f.number_field :product_price %>
+		
+		<br />
+		<br />
+		
+		<%= f.label 'Beschreibung: ' %>
+		<br />
+		<%= f.text_area :description, :size=>"70x30" %>
 	</div>
 </div>
 <br />

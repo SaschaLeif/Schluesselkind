@@ -1,7 +1,6 @@
+<br />
 <div id="brand_list">
-
 	<p id="gross">
-		<br />
 		<h1><%= @product.article.name %></h1>
 		
 		<table>
@@ -20,6 +19,9 @@
 				<b>Größe:</b> <%= @product.size.name %>
 				<br /><br />
 				<b>Farbe:</b> <%= @product.color.name %>
+				<br /><br />
+				
+				<b>Auf Lager: </b> <%= @product.quantity %>
 				<br /><br />
 				<b>Beschreibung:</b><br /> <%= raw @product.description %>
 				

@@ -41,7 +41,7 @@
 }
 
 #klein a:hover {
-	color: blue;
+	color: red;
 	text-decoration: none;
 }
 
@@ -129,7 +129,7 @@ h1 {
 #store #notice {
 	color: #FFF;
 	border: 2px solid #000;
-	width:300px;
+	width: 300px;
 	padding: 1em;
 	margin-bottom: 2em;
 	background-color: #FF0000;

@@ -132,7 +132,7 @@ Color.create(
 )
 
 Color.create(
-:name => 'gruen'
+:name => 'gr&uuml;n'
 )
 
 Color.create(
@@ -160,15 +160,23 @@ Article.create(
 :gender => 'Mann'
 )
 
+# Artikel 2
+Article.create(
+:name => 'Zipper blau (m)',
+:article_url => '/images/shirt_color/recolution_zipper_blau.png',
+:gender => 'Mann'
+)
+
 Product.delete_all
 
 # Produkt 1
 Product.create(
 :product_price => 79.90,
-:brand_id => 4,
+:brand_id => 4, #Recolution
 :article_id => 1, # Hoodie blau
 :size_id => 7, # XS
 :color_id => 1, # blau
+:quantity => 2,
 :description => '
 - blauer Hoodie aus extra dickem Stoff (360 Gramm)<br />
 - aufgeraute Innenseite f&uuml;r gem&uuml;tlichen Tragekomfort<br />
@@ -180,6 +188,50 @@ Product.create(
 - Siebdruck auf Wasserbasis<br /><br /> 
 100% Bio-Baumwolle<br />
 100% fair produziert und GOTS-zertifiziert,<br />
+angebaut und verarbeitet in der T&uuml;rkei
+'
+)
+
+# Produkt 2
+Product.create(
+:product_price => 89.90,
+:brand_id => 4, #Recolution
+:article_id => 2, # Zipper blau
+:size_id => 5, # L
+:color_id => 1, # blau
+:quantity => 2,
+:description => '
+- blauer Hoodie aus extra dickem Stoff (360 Gramm)<br />
+- aufgeraute Innenseite f&uuml;r gem&uuml;tlichen Tragekomfort<br />
+- doppelte Kapuze mit zwei Nähten und dezentem "recolution"-Stick<br />
+- Kapuzeninnenseite und Bänder in Kontrastfarbe<br />
+- Kängurutasche vorn<br />
+- breite Rippb&uuml;ndchen an Saum und &Auml;rmeln<br />
+- Logo-Edgelabel am rechten &Auml;rmel<br />
+- YKK-Zipper aus recyceltem Kunststoff<br /><br />  
+100% Bio-Baumwolle<br /> 100% fair produziert und GOTS-zertifiziert<br />
+angebaut und verarbeitet in der T&uuml;rkei
+'
+)
+
+# Produkt 3
+Product.create(
+:product_price => 89.90,
+:brand_id => 4, # Recolution
+:article_id => 2, # Zipper blau
+:size_id => 6, # M
+:color_id => 1, # blau
+:quantity => 2,
+:description => '
+- blauer Hoodie aus extra dickem Stoff (360 Gramm)<br />
+- aufgeraute Innenseite f&uuml;r gem&uuml;tlichen Tragekomfort<br />
+- doppelte Kapuze mit zwei Nähten und dezentem "recolution"-Stick<br />
+- Kapuzeninnenseite und Bänder in Kontrastfarbe<br />
+- Kängurutasche vorn<br />
+- breite Rippb&uuml;ndchen an Saum und &Auml;rmeln<br />
+- Logo-Edgelabel am rechten &Auml;rmel<br />
+- YKK-Zipper aus recyceltem Kunststoff<br /><br />  
+100% Bio-Baumwolle<br /> 100% fair produziert und GOTS-zertifiziert<br />
 angebaut und verarbeitet in der T&uuml;rkei
 '
 )

@@ -203,9 +203,9 @@ Product.create(
 :description => '
 - blauer Hoodie aus extra dickem Stoff (360 Gramm)<br />
 - aufgeraute Innenseite f&uuml;r gem&uuml;tlichen Tragekomfort<br />
-- doppelte Kapuze mit zwei Nähten und dezentem "recolution"-Stick<br />
-- Kapuzeninnenseite und Bänder in Kontrastfarbe<br />
-- Kängurutasche vorn<br />
+- doppelte Kapuze mit zwei N&auml;hten und dezentem "recolution"-Stick<br />
+- Kapuzeninnenseite und B&auml;nder in Kontrastfarbe<br />
+- K&auml;ngurutasche vorn<br />
 - breite Rippb&uuml;ndchen an Saum und &Auml;rmeln<br />
 - Logo-Edgelabel am rechten &Auml;rmel<br />
 - YKK-Zipper aus recyceltem Kunststoff<br /><br />  
@@ -225,9 +225,9 @@ Product.create(
 :description => '
 - blauer Hoodie aus extra dickem Stoff (360 Gramm)<br />
 - aufgeraute Innenseite f&uuml;r gem&uuml;tlichen Tragekomfort<br />
-- doppelte Kapuze mit zwei Nähten und dezentem "recolution"-Stick<br />
-- Kapuzeninnenseite und Bänder in Kontrastfarbe<br />
-- Kängurutasche vorn<br />
+- doppelte Kapuze mit zwei N&auml;hten und dezentem "recolution"-Stick<br />
+- Kapuzeninnenseite und B&auml;nder in Kontrastfarbe<br />
+- K&auml;ngurutasche vorn<br />
 - breite Rippb&uuml;ndchen an Saum und &Auml;rmeln<br />
 - Logo-Edgelabel am rechten &Auml;rmel<br />
 - YKK-Zipper aus recyceltem Kunststoff<br /><br />  

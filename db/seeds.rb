@@ -155,63 +155,6 @@ Article .delete_all
 
 # Artikel 1
 Article.create(
-:name => 'T-Shirt gelb (w)',
-:article_url => '/images/shirt_color/gelb.jpg',
-:gender => 'Frau'
-)
-
-# Artikel 2
-Article.create(
-:name => 'T-Shirt gelb (m)',
-:article_url => '/images/shirt_color/gelb.jpg',
-:gender => 'Mann'
-)
-
-# Artikel 3
-Article.create(
-:name => 'T-Shirt orange (w)',
-:article_url => '/images/shirt_color/orange.jpg',
-:gender => 'Frau'
-)
-
-# Artikel 4
-Article.create(
-:name => 'T-Shirt orange (m)',
-:article_url => '/images/shirt_color/orange.jpg',
-:gender => 'Mann'
-)
-
-
-# Artikel 5
-Article.create(
-:name => 'T-Shirt schwarz (w)',
-:article_url => '/images/shirt_color/schwarz.jpg',
-:gender => 'Frau'
-)
-
-# Artikel 6
-Article.create(
-:name => 'T-Shirt schwarz (m)',
-:article_url => '/images/shirt_color/schwarz.jpg',
-:gender => 'Mann'
-)
-
-# Artikel 7
-Article.create(
-:name => 'T-Shirt weiss (w)',
-:article_url => '/images/shirt_color/weiss.jpg',
-:gender => 'Frau'
-)
-
-# Artikel 8
-Article.create(
-:name => 'T-Shirt weiss (m)',
-:article_url => '/images/shirt_color/weiss.jpg',
-:gender => 'Mann'
-)
-
-# Artikel 9
-Article.create(
 :name => 'Hoodie blau "Attitude" (m)',
 :article_url => '/images/shirt_color/recolution_hoodie_blau.png',
 :gender => 'Mann'
@@ -221,30 +164,22 @@ Product.delete_all
 
 # Produkt 1
 Product.create(
-:product_price => 20.99,
-:brand_id => 2,
-:article_id => 1, # gelb
-:size_id => 1, # XXXS
-:color_id => 2, # gelb
-:description => 'nix'
-)
-
-# Produkt 1
-Product.create(
-:product_price => 20.99,
-:brand_id => 3,
-:article_id => 4, # orange
-:size_id => 3, # XS
-:color_id => 6, # orange
-:description => 'nix'
-)
-
-# Produkt 3
-Product.create(
 :product_price => 79.90,
 :brand_id => 4,
-:article_id => 9, # Hoodie blau
+:article_id => 1, # Hoodie blau
 :size_id => 7, # XS
 :color_id => 1, # blau
-:description => 'M&auml;nner Hoodie "Attitude" - blau<br /><br />- blauer Hode aus extra dickem Stoff (360Gramm)<br /><br />- aufgeraute Innenseite f&uuml;r gem&uuml;tlichen Tragekomfort<br /><br />-doppelte Kapuze mit zwei N&auml;hten und dezentem "recolution"-Stick<br /><br />- Kapuzeninnenseite und B&auml;nder in Kontrastfarbe<br /><br />- K&auml;ngurutasche vorn<br /><br />- breite Rippb&uuml;ndchen an Saum und &Auml;rmeln<br /><br />- Logo-Edgelabelam rechten &Auml;rmel<br /><br />- Siebdruck auf Wasserbasis<br /><br /> 100% Bio-Baumwolle<br />100%fair produziert und GOTS-zertifiziert,<br /><br />angebaut und verarbeitet in der T&uuml;rkei<br /><br />Farbe: blau'
+:description => '
+- blauer Hoodie aus extra dickem Stoff (360 Gramm)<br />
+- aufgeraute Innenseite f&uuml;r gem&uuml;tlichen Tragekomfort<br />
+- doppelte Kapuze mit zwei N&auml;hten und dezentem "recolution"-Stick<br />
+- Kapuzeninnenseite und B&auml;nder in Kontrastfarbe<br />
+- K&auml;ngurutasche vorn<br />
+- breite Rippb&uuml;ndchen an Saum und &Auml;rmeln<br />
+- Logo-Edgelabel am rechten &Auml;rmel<br />
+- Siebdruck auf Wasserbasis<br /><br /> 
+100% Bio-Baumwolle<br />
+100% fair produziert und GOTS-zertifiziert,<br />
+angebaut und verarbeitet in der T&uuml;rkei
+'
 )

@@ -1,4 +1,4 @@
-<div id="brand_list">
+<div id="article_list">
 
 	<h1>Artikel</h1>
 
@@ -9,18 +9,17 @@
 			<td> Name: <%= article.name %><br />
 				Geschlecht: <%= article.gender %>
 			</td>
-			<td id="klein"> <%= link_to 'zeige', article %>
+			<td id="article_klein"> <%= link_to 'zeige', article %>
 			<br />
 			<%= link_to 'editiere', edit_article_path(article) %>
 			<br />
-			<%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
-			
+			<%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %> </td>	
 		</tr>
 		<% end %>
 	</table>
 
 	<br />
-	<div id="klein">
+	<div id="article_klein">
 		<%= link_to 'Neuer Artikel', new_article_path %>
 	</div>
 </div>

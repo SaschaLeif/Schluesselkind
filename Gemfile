@@ -24,6 +24,11 @@ group :test do
   gem 'database_cleaner'
 end
 
+gem 'heroku'
+
+# production webserver, anstelle von Webrick
+gem 'thin'
+
 #group :cucumber do
 #  gem 'capybara'
 #  gem 'database_cleaner'
@@ -53,7 +58,7 @@ end
 gem 'jquery-rails'#, '2.0.2'
 
 gem 'activeadmin'
-gem "meta_search"#,    '>= 1.1.0.pre'
+gem "meta_search"
 
 gem 'will_paginate'#, '3.0.3'
 

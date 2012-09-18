@@ -16,11 +16,11 @@
 		</div>
 
 		<div id="menu", align="center">
-			<a href="../../store/index">Start&nbsp;&nbsp;</a>
-			<a href="../../products#index">Mädels&nbsp;&nbsp; </a>
-			<a href="../../products#index">Jungs&nbsp;&nbsp; </a>
-			<a href="../../products#index">Accessoirs&nbsp;&nbsp; </a>
-			<a href="../../brands">Marken&nbsp;&nbsp; </a>
+			<%= link_to "Startseite", store_path() %>&nbsp;&nbsp;
+			<%= link_to "Mädels", products_path(:filter_gender => 'female') %>&nbsp;&nbsp;
+			<%= link_to "Jungs", products_path(:filter_gender => 'male') %>&nbsp;&nbsp;
+			<%= link_to "Accessoirs", products_path(:filter_gender => 'accessoirs') %>&nbsp;&nbsp;
+			<%= link_to "Marken", brands_path() %>&nbsp;&nbsp;
 			<a href="">Impressum&nbsp;&nbsp;</a>
 		</div>
 

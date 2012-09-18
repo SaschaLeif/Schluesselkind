@@ -11,23 +11,28 @@
 <div id="gross">
 	<table>
 		<tr >
-		<%#	<%= select("Grösse", "size_id", Size.all.collect(&:name), :prompt => 'Größe') %>			
-		<%#	<%= select( "farbe", "color_id", Color.find(:all).map { |u| [u.name, u.id]}, :prompt => 'Farbe') %>
-			
-			<br />
+			<%#	<%= select("Grösse", "size_id", Size.all.collect(&:name), :prompt => 'Größe') %>
+			<%#	<%= select( "farbe", "color_id", Color.find(:all).map { |u| [u.name, u.id]}, :prompt => 'Farbe') %>
+
 			<% @products.each do |product| %>
-			
+
 			<td>
-				<div id="product_foto"><%= link_to image_tag(product.article.article_url, :class => 'list_image'), product %></div></td>
+			<div id="product_foto">
+				<%= link_to image_tag(product.article.article_url, :class => 'list_image'), product %>
+			</div></td>
 			<td class="list_description"><b>Marke:</b> <%= product.brand.name %>
 			<br />
 			<b>Typ:</b> <%= product.article.name %>
+
+			<% if product.gender == 'male' %>
+			(Männchen)
+			<% else %>
+			(Weibchen)
+			<% end %>
 			<br />
 			<b>Größe:</b> <%= product.size.name %>
 			<br />
 			<b>Farbe:</b> <%= product.color.name %>
-
-			
 			<br />
 			<b>Preis:</b> <%= number_to_currency(product.product_price, :unit=>'€ ') %>
 			<%= button_to 'in den Warenkorb', line_items_path(:product_id => product) %>
@@ -47,6 +52,7 @@
 
 <div id="klein">
 	<%= link_to 'Neues Produkt anlegen', new_product_path %>
-<br /><br />
+	<br />
+	<br />
 </div>
 

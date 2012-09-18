@@ -7,7 +7,6 @@
 		<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
 			<td><%= image_tag(article.article_url, :class => 'list_image') %></td>
 			<td> Name: <%= article.name %><br />
-				Geschlecht: <%= article.gender %>
 			</td>
 			<td id="article_klein"> <%= link_to 'zeige', article %>
 			<br />

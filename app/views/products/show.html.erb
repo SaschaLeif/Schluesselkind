@@ -1,7 +1,13 @@
 <br />
 <div id="brand_list">
 	<p id="gross">
-		<h1><%= @product.article.name %></h1>
+		<h1><%= @product.brand.name %> <%= @product.article.name %>
+			<% if @product.gender == "male" %>
+			(Männchen)
+			<% else %>
+			(Weibchen)
+			<% end %>
+		</h1>
 		
 		<table>
 			<td>
@@ -13,9 +19,7 @@
 			</td>
 			<td>
 				
-				<b>Hersteller: </b><%= @product.brand.name %>
-				<br /><br />
-
+<br />
 				<b>Größe:</b> <%= @product.size.name %>
 				<br /><br />
 				<b>Farbe:</b> <%= @product.color.name %>

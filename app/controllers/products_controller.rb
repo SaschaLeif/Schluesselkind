@@ -3,17 +3,25 @@ class ProductsController < ApplicationController
   skip_before_filter :authorize, :only => [:show]
   # Adminbereich, alles außer index und show
   before_filter :authorize, :except => [:index, :show ]
-  
   # GET /products
   # GET /products.json
   def index
 
-    filter = params[:brand_filter] || nil
-    if filter != nil
-      @products = Product.find(:all, :conditions => {:brand_id=>filter})
+    filter_gender = params[:filter_gender]
+    #gender_search = Article.find(:all, :conditions => {:gender => filter_gender})
+
+    if filter_gender != nil
+     @products = Product.find(:all, :conditions => {:gender => filter_gender})
     else
       @products = Product.find(:all)
     end
+
+    #  filter = params[:brand_filter] || nil
+    #  if filter != nil
+    #    @products = Product.find(:all, :conditions => {:brand_id=>filter})
+    #  else
+    #    @products = Product.find(:all)
+    #  end
     @cart = current_cart
 
     #  filter2 = params[ :auswahl] || nil

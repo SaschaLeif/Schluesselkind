@@ -40,17 +40,26 @@
 		<br />
 		<br />
 
+			<%= f.label 'Geschlecht: ' %>
+			<%= f.select :gender,
+        [
+          ['Mann', 'male'],
+          ['Frau', 'female']
+        ] %>
+		
+		<br /><br />
+
 		<%= f.label 'Anzahl: ' %>
-		<%= f.number_field :quantity, :size=>"10x10" %>
+		<%= f.number_field :quantity, :size=>"3x10" %>
 
 		<br />
 		<br />
 
-		<%= f.label 'Preis:' %> <%= f.number_field :product_price %>
-		
+		<%= f.label 'Preis:' %> <%= f.number_field :product_price, :size => "6x10" %>
+
 		<br />
 		<br />
-		
+
 		<%= f.label 'Beschreibung: ' %>
 		<br />
 		<%= f.text_area :description, :size=>"70x30" %>

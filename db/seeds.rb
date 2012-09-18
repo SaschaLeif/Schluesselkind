@@ -155,16 +155,14 @@ Article .delete_all
 
 # Artikel 1
 Article.create(
-:name => 'Hoodie blau "Attitude" (m)',
+:name => 'Hoodie blau "Attitude"',
 :article_url => '/images/shirt_color/recolution_hoodie_blau.png',
-:gender => 'Mann'
 )
 
 # Artikel 2
 Article.create(
-:name => 'Zipper blau (m)',
+:name => 'Zipper blau',
 :article_url => '/images/shirt_color/recolution_zipper_blau.png',
-:gender => 'Mann'
 )
 
 Product.delete_all
@@ -177,6 +175,7 @@ Product.create(
 :size_id => 7, # XS
 :color_id => 1, # blau
 :quantity => 2,
+:gender => 'male',
 :description => '
 - blauer Hoodie aus extra dickem Stoff (360 Gramm)<br />
 - aufgeraute Innenseite f&uuml;r gem&uuml;tlichen Tragekomfort<br />
@@ -197,9 +196,10 @@ Product.create(
 :product_price => 89.90,
 :brand_id => 4, #Recolution
 :article_id => 2, # Zipper blau
-:size_id => 5, # L
+:size_id => 6, # M
 :color_id => 1, # blau
 :quantity => 2,
+:gender => 'male',
 :description => '
 - blauer Hoodie aus extra dickem Stoff (360 Gramm)<br />
 - aufgeraute Innenseite f&uuml;r gem&uuml;tlichen Tragekomfort<br />
@@ -219,9 +219,10 @@ Product.create(
 :product_price => 89.90,
 :brand_id => 4, # Recolution
 :article_id => 2, # Zipper blau
-:size_id => 6, # M
+:size_id => 5, # L
 :color_id => 1, # blau
 :quantity => 2,
+:gender => 'male',
 :description => '
 - blauer Hoodie aus extra dickem Stoff (360 Gramm)<br />
 - aufgeraute Innenseite f&uuml;r gem&uuml;tlichen Tragekomfort<br />

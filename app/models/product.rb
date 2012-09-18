@@ -1,6 +1,6 @@
 class Product < ActiveRecord::Base
 
-  attr_accessible :brand_id, :article_id, :product_price, :color_id, :size_id, :description, :quantity
+  attr_accessible :brand_id, :article_id, :product_price, :color_id, :size_id, :description, :quantity, :gender
 
   belongs_to :brand
   belongs_to :article

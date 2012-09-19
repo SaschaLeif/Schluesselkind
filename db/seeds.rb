@@ -236,11 +236,3 @@ Product.create(
 angebaut und verarbeitet in der T&uuml;rkei
 '
 )
-
-# User 1
-User.create(
-:name => "leif",
-:hashed_password => "6597d4bc5226884c6fc57ca0d37e0a29e375a2b29a8376cc85a38cd5f1f03cb4",
-:salt => "305144520.7270258626919925",
-:admin => TRUE
-)

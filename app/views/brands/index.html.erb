@@ -2,37 +2,26 @@
 <div id="brand_list">
 	<h1>Hersteller</h1>
 
-	<table>
+	<table width="85%">
 		<% @brands.each do |brand| %>
-		<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+		<tr id="<%= cycle('list_line_odd', 'list_line_even') %>">
 			<td width="170px"> <%= link_to image_tag(brand.logo_url, :class => 'list_image'), brand %> </td>
 
-			<td class="list_description">
-			<dl>
-				<dt>
-					<%= brand.name %>
-				</dt>
-				<br />
-				<dd id="klein">
-					<%= raw truncate((brand.info_text), :length => 250) %>
-					<br />
-					<b><%= link_to '[mehr Infos]', brand %></b>
-				</dd>
+			<td id="brand_gross"> <%= raw truncate((brand.info_text), :length => 290) %>
+			<br />
+			<b><%= link_to '[mehr Infos]', brand %></b></td>
 
-			</dl></td>
-
-			<td id="klein"> <%= link_to 'zeige', brand %>
+			<% if session[:user_id] == 1 %>
+			<td id="brand_index_klein"> <%= link_to 'zeige', brand %>
 			<br />
 			<%= link_to 'editiere', edit_brand_path(brand) %>
 			<br />
-			<%= link_to 'lösche', brand, :data => {:confirm => 'Bist du sicher?'},
-			:method => :delete %> </td>
+			<%= link_to 'lösche', brand, :data => {:confirm => 'Bist du sicher?'}, :method => :delete %>
+			<br />
+			<%= link_to 'neue Marke', new_brand_path %> </td>
+			<% else %>
+			<% end %>
 		</tr>
 		<% end %>
 	</table>
-
-	<div id ="klein">
-		<br />
-		<%= link_to 'neue Marke hinzufügen', new_brand_path %>
-	</div>
 </div>

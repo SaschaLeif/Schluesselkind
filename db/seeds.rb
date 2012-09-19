@@ -10,13 +10,13 @@ Brand.create(
 'Wir alle lieben extreme Sportarten wie Skateboarding, Surfen, Montainbiking und Snowboarden.
 Gerade bei diesen Sportarten ist man besonders auf die Natur angewiesen, da sie entweder nur in der Natur machbar sind oder nur in der Natur richtig Spass machen.
 Genau deshalb ist es f&uuml;r uns wichtig die Umwelt zu schonen und sie so lange wie m&ouml;glich so zu erhalten.
-<br />
+<br /><br />
 Unser Markenname "bleed" steht bildhaft fuer die "blutende" Umwelt, die seit Jahrzehnten vom Menschen ausgebeutet wird.
-<br />
+<br /><br />
 Wir wollen beweisen, dass nachhaltige und oekologische Street- und Sportswear ganz und gar nicht langweilig sein muss.
 Wir lieben das Leben, Spass und Sport in unserer Natur, und deshalb ist es fuer uns besonders wichtig, die oekologische und menschliche Belastung, die waehrend der Produktion unserer Kleidung entsteht, so gering wie moeglich zu halten.
 So wird die Energie fuer unsere Produktion wird ausschliesslich aus erneuerbaren Ressourcen gewonnen wie z. B. Wind- und Solarenergie.
-<br />
+<br /><br />
 Auf Funktion muss auch bei umweltfreundlichen und fairen Herstellungsverfahren nicht verzichtet werden.
 Wir sind staendig auf der Suche nach neuen Materialien und technischen Verbesserungen um unsere Sportswear mit den neuesten Entwicklungen fuer anspruchsvollen sportlichen Einsatz auszustatten. Fuer besonders anspruchsvolle Sportbekleidung wie unsere Funktionsjacken werden recycelte Materialien eingesetzt. Nebenbei bemerkt sind auch alle unsere Accessoires aus nachhaltigen Rohstoffen.'
 )
@@ -40,10 +40,10 @@ Brand.create(
 '
 Pants bedeutet im Englischen "Unterwaesche" und nicht etwa Hose. PANTS to poverty bedeutet uebersetzt "zur Hoelle mit der Armut". Das Label startet erfolgreich den Kampf gegen die Armut durch fairen Handel, partnerschaftliche Beziehungen und Baumwolle aus biologischem Anbau.
 PANTS to poverty - ganzheitliches Engagement fuer eine bessere Welt.
-<br />
+<br /><br />
 Hervorgegangen ist Modelabel als aus der globalen "Make Poverty History-Kampagne". Mit tausenden von Bauern und Fabrikarbeitern in Indien werden nun die Kollektionen von PANTS to poverty gefertigt. "Weich, fair und voellig natuerlich", so kommt die Baumwolle aus dem indischen Baumwoll-Guertel Andhra Pradesh und Maharashtra daher. Dort sind an die 5000 Farmer in der Zameen Organic Organisation zusammengeschlossen. "Zameen" bedeutet Erde oder Land in Sanskrit und die Bio-und Fair Grundsaetze ermoeglichen tausenden von Bauern, dass sie die Erde behandeln, wie wir sie alle behandeln sollten - mit "Sorgfalt, Respekt und Hingabe". Das Modelabel PANTS to poverty laesst seine Kollektion von der indischen Pratibha Syntex fertigen, die grossen Wert auf faire Produktionsbedingungen legt. Dies schliesst auch die Umwelt wie auch die Gesellschaft mit ein. Das Produktionswerk beispielsweise strebt staendig nach Innovationen. So ist das verwendete Wasser durch eine Entsalzungsanlage nach der Produktion sauberer als vorher. Auch wurde ein Baumwoll-Recycling-Programm gestartet, welches der weiteren Verwendung von Baumwollresten zu gute kommt. Das Gesellschaftliche Engagement bezieht sich unter anderem auf Schulen, Waisenhaeuser und auch die medizinische Versorgung vor Ort.
 PANTS to poverty Kollektion
-<br />
+<br /><br />
 Die Kollektionen von PANTS to poverty sind laut, frech und sexy. PANTS to poverty bietet hochwertige Unterwaesche, welche aus Bio-Baumwolle hergestellt wird. Durch die unterstuetzte Farmerorganisation Zameen und die Fertigung bei Pratibha Syntex werden alle PANTS to poverty Kollektionen fair und sozial hergestellt. PANTS to poverty weis nicht nur, wo die Rohstoffe herkommen, sondern hat langfristige Beziehung zu den Bauern, die die Baumwolle Anbauen, aufgebaut. PANTS to poverty steht fuer den ganzheitlichen Ansatz eines modernen oeko-Modelabels und bei Avocado Store gibt es die Auswahl von frechen oekofairen Damen Pants hin bis zur Bio-Baumwoll Boxershort fuer Ihn.'
 )
 
@@ -55,15 +55,15 @@ Brand.create(
 :rating => 0.00,
 :info_text =>
 'Die gesamte Kollektion von recolution wird von einem nach den Richtlinien des GOTS (Global Organic Textile Standard) zertifizierten Produzenten in der Tuerkei aus Bio-Baumwolle hergestellt. GOTS definiert soziale Mindeststandards und garantiert in jeder Phase des Herstellungsprozesses eine oekologische und soziale Produktion unter Beachtung von fairen Arbeitsbedingungen und -loehnen.
-<br />
+<br /><br />
 Ein wichtiges Kriterium fuer oekologische Kleidung ist deren Langlebigkeit. So bieten wir mit recolution hochwertige und zeitlose Streetfashion, die ihren Besitzern lange Freude bereiten soll und nicht nach wenigen Monaten schon wieder ausgedient hat.
-<br />
+<br /><br />
 Da soziales Handeln fuer uns mit der Produktion erst beginnt und nicht schon endet, spenden wir drei Prozent des gesamten Umsatzes unseres Onlineshops und unterstuetzen damit verschiedene soziale Projekte.
-<br />
+<br /><br />
 Mit recolution moechten wir Euch fuer unser Projekt begeistern, gemeinsam Ideen entwickeln und Euch in verschiedene Unternehmens- und Produktionsentscheidungen, wie beispielsweise in die Kreation und Auswahl neuer Motive und Produkte, die Verwendung der Spenden etc., einbeziehen.
-<br />
+<br /><br />
 Neben gruener Mode unterstuetzt recolution bunte Staedte. Aus diesem Grund werden alle unsere Kleidungsstuecke mit Tueten voll mit Bio-Sonnenblumensamen als Hangtag ausgestattet. Durch Verbreitung von Sonnenblumen sollen die Staedte bunter und unseren Mitmenschen ein bisschen Freude im grauen Alltag vermittelt werden.
-<br />
+<br /><br />
 Viva la recolution!'
 )
 
@@ -76,9 +76,9 @@ Brand.create(
 :info_text =>
 'THOKKTHOKK ist Lizenznehmer von Fairtrade (FLO-ID 27074). Das unabh&auml;ngige Fairtrade-Siegel gibt dir die Sicherheit, dass die Baumwolle in unseren Produkten nach den internationalen Fairtrade-Standards zertifiziert wurde.
 Mit dem Kauf einer der Produkte mit Fairtrade-Baumwolle leistest du einen Beitrag zur Verbesserung der Lebens- und Arbeitsbedingungen von Baumwollproduzenten in Entwicklungsl&auml;ndern und zur F&ouml;rderung des Umweltschutzes. 
-<br/>
+<br/><br />
  Viele Produktionsschritte werden von uns selbst in Handarbeit im eigenen Haus &uuml;bernommen. Dies ist in unseren Augen auch wichtig, da die eigene Handarbeit die Individualit&auml;t und Eigenheit erst richtig zu Tage bringt! Jedoch kann aus einigen Gr&uuml;nden (z.B. Ausstattung, Fachwissen, Infrastruktur) die Produktion nicht komplett intern abgewickelt werden. So wird unsere Rohware in der T&uuml;rkei und in Indien hergestellt. Bei dieser Produktion legen wir sehr hohen Wert darauf, dass die Baumwolle biologisch angebaut wird, dass der Handel fair erfolgt, dass die Herstellung "sweatshop free" ist und auch die Verpackung und der Transport so weit wie m&ouml;glich umweltfreundlich sind! Unsere Shirts sind nach dem GOTS Standard zertifiziert. Die Weiterverarbeitung der Rohware findet ausschlie&szlig;lich in Deutschland statt. Die Bedruckung aller Artikel erfolgt in kleinen Auflagen und es werden wasserbasierende, schadstofffreie und umweltfreundliche Druckfarben, die &ouml;ko-Tex 100 zertifiziert sind, verwendet!
-<br/>
+<br/><br />
 Die THOKKTHOKK-Attit&uuml;de spiegelt sich auch in der Liebe zum Detail wieder: Individuell gestaltete Hang-Tags, Sticker, Brosch&uuml;ren, Flyer, Webseiten und einiges mehr erg&auml;nzen das finale Produkt. Auch bei der Verpackung verwenden wir biologisch abbaubare PVC-freie Plastik-Verpackungen und 100% wieder verwertbare Karton-Verpackungen. Der Transport unserer Ware zum Endkunden erfolgt mit CO2-Ausgleich. Unser Anliegen ist es auch, eine vern&uuml;nftige Preisstruktur mit mit Hilfe von optimierten Produktionsabl&auml;ufen zu gew&auml;hrleisten, bei denen niemand benachteiligt wird.
 '
 )
@@ -235,4 +235,12 @@ Product.create(
 100% Bio-Baumwolle<br /> 100% fair produziert und GOTS-zertifiziert<br />
 angebaut und verarbeitet in der T&uuml;rkei
 '
+)
+
+# User 1
+User.create(
+:name => "leif",
+:hashed_password => "6597d4bc5226884c6fc57ca0d37e0a29e375a2b29a8376cc85a38cd5f1f03cb4",
+:salt => "305144520.7270258626919925",
+:admin => TRUE
 )

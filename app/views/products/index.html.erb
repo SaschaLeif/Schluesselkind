@@ -11,39 +11,38 @@
 <div id="gross">
 	<table>
 		<tr >
-			<%#	<%= select("Grösse", "size_id", Size.all.collect(&:name), :prompt => 'Größe') %>
-			<%#	<%= select( "farbe", "color_id", Color.find(:all).map { |u| [u.name, u.id]}, :prompt => 'Farbe') %>
+			<%#= select("Grösse", "size_id", Size.all.collect(&:name), :prompt => 'Größe') %>
+			<%#= select( "farbe", "color_id", Color.find(:all).map { |u| [u.name, u.id]}, :prompt => 'Farbe') %>
 
 			<% @products.each do |product| %>
-
 			<td>
-			<div id="product_foto">
+			<div id="product_index_foto">
 				<%= link_to image_tag(product.article.article_url, :class => 'list_image'), product %>
 			</div></td>
 			<td class="list_description"><b>Marke:</b> <%= product.brand.name %>
 			<br />
 			<b>Typ:</b> <%= product.article.name %>
-
-			<% if product.gender == 'male' %>
-			(Männchen)
-			<% else %>
-			(Weibchen)
-			<% end %>
 			<br />
 			<b>Größe:</b> <%= product.size.name %>
+			<%#= select_tag 'A', options_for_select(@products.collect{ |u| [u.size_id, u.size_id]}), :prompt => "Größe" -%>
+			<%#= select("Grösse", "size_id", Size.all.collect(&:name), :prompt => 'Größe') %>
 			<br />
 			<b>Farbe:</b> <%= product.color.name %>
 			<br />
 			<b>Preis:</b> <%= number_to_currency(product.product_price, :unit=>'€ ') %>
+			<br />
+			<br />
 			<%= button_to 'in den Warenkorb', line_items_path(:product_id => product) %>
 			<br/>
 			</td>
-
-			<td id="klein"> <%= link_to 'zeige', product %>
+			<% if session[:user_id] == 1 %>
+			<td id="klein"> <%= link_to 'editiere', edit_product_path(product) %>
 			<br />
-			<%= link_to 'editiere', edit_product_path(product) %>
+			<%= link_to 'lösche', product, method: :delete, data: { confirm: 'Are you sure?' } %>
 			<br />
-			<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+			<%= link_to 'neues Produkt', new_product_path %> </td>
+			<% else %>
+			<% end %>
 		</tr>
 
 		<% end %>
@@ -51,7 +50,7 @@
 </div>
 
 <div id="klein">
-	<%= link_to 'Neues Produkt anlegen', new_product_path %>
+
 	<br />
 	<br />
 </div>

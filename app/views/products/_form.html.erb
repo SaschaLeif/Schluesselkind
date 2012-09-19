@@ -18,49 +18,37 @@
 	<div class="field">
 		<%= f.label 'Marke:' %>
 		<%= f.collection_select :brand_id, Brand.find(:all, :order => "name"), :id, :name,  { :prompt => 'Hersteller' } %>
-
 		<br />
 		<br />
-
 		<%= f.label 'Artikel:' %>
 		<%= f.collection_select :article_id, Article.find(:all, :order => "name"), :id, :name,  { :prompt => 'Artikel'} %>
-
 		<br />
 		<br />
-
 		<%= f.label 'Größe:' %>
 		<%= f.collection_select :size_id, Size.find(:all, :order => "name"), :id, :name,  { :prompt => 'Größe'} %>
-
 		<br />
 		<br />
-
 		<%= f.label 'Farbe:' %>
 		<%= raw f.collection_select :color_id, Color.find(:all, :order => "name"), :id, :name,  { :prompt => 'Farbe'} %>
-
 		<br />
 		<br />
-
 			<%= f.label 'Geschlecht: ' %>
 			<%= f.select :gender,
         [
           ['Mann', 'male'],
           ['Frau', 'female']
         ] %>
-		
-		<br /><br />
-
+		<br />
+		<br />
 		<%= f.label 'Anzahl: ' %>
-		<%= f.number_field :quantity, :size=>"3x10" %>
-
+		<%= f.number_field :quantity, :size=>"3x10" %> (nur Zahl eintragen!)
+		<br />
+		<br />
+		<%= f.label 'Preis:' %> <%= f.number_field :product_price, :size => "6x10" %> (Preis mit Punkt ohne Währung! Bsp.: 10.50)
 		<br />
 		<br />
 
-		<%= f.label 'Preis:' %> <%= f.number_field :product_price, :size => "6x10" %>
-
-		<br />
-		<br />
-
-		<%= f.label 'Beschreibung: ' %>
+		<%= f.label 'Beschreibung:' %> (Beschreibung mit HTML Tags!)
 		<br />
 		<%= f.text_area :description, :size=>"70x30" %>
 	</div>

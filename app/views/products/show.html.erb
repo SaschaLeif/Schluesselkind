@@ -1,16 +1,10 @@
 <br />
 <div id="brand_list">
 	<p id="gross">
-		<h1><%= @product.brand.name %> <%= @product.article.name %>
-			<% if @product.gender == "male" %>
-			(Männchen)
-			<% else %>
-			(Weibchen)
-			<% end %>
-		</h1>
+		<h1><%= @product.brand.name %> <%= @product.article.name %></h1>
 		
 		<table>
-			<td>
+			<td id="product_show_foto">
 				<%= image_tag @product.article.article_url %>
 				<br />
 				<b>Preis:</b> <%= number_to_currency(@product.product_price, :unit=>'€ ') %>

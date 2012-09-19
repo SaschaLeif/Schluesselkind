@@ -8,10 +8,9 @@ class ProductsController < ApplicationController
   def index
 
     filter_gender = params[:filter_gender]
-    #gender_search = Article.find(:all, :conditions => {:gender => filter_gender})
 
     if filter_gender != nil
-     @products = Product.find(:all, :conditions => {:gender => filter_gender})
+      @products = Product.find(:all, :conditions => {:gender => filter_gender})
     else
       @products = Product.find(:all)
     end

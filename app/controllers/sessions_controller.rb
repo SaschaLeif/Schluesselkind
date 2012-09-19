@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
   def create
     if user = User.authenticate(params[:name], params[:password])
       session[:user_id] = user.id
+      session[:user_admin] = user.admin
       # nach Anmeldung kommt man auf die Store-Startseite
       redirect_to store_url
     else

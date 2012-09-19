@@ -30,7 +30,7 @@
 
 /* kleine Schrift */
 #klein {
-	font-family: Verdana;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 8px;
 	color: black;
 }
@@ -46,7 +46,7 @@
 }
 
 h1 {
-	font-family: Verdana;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 18px;
 	text-decoration: underline;
 	color: #000;
@@ -54,7 +54,7 @@ h1 {
 
 /* große Schrift */
 #gross {
-	font-family: Verdana;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	color: black;
 }
@@ -86,7 +86,7 @@ h1 {
 
 /* Menüpunkte */
 #menu {
-	font-family: Verdana;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 110%;
 	padding-top: 10px;
 	padding-bottom: 15px;
@@ -118,7 +118,7 @@ h1 {
 /*Fusszeile*/
 #foot {
 	background: #DDD;
-	font-family: Verdana;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	color: black;
 	padding-top: 10px;
 	padding-left: 10px;
@@ -133,11 +133,11 @@ h1 {
 	padding: 1em;
 	margin-bottom: 2em;
 	background-color: #FF0000;
-	font: bold smaller Verdana;
+	font: bold smaller Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 
 #store h1 {
-	font-family: Verdana;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	color: black;
 }
 
@@ -151,7 +151,7 @@ h1 {
 }
 
 #store  .entry {
-	font-family: Verdana;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	overflow: auto;
 	margin-top: 1em;
 }
@@ -164,7 +164,7 @@ h1 {
 }
 
 #store .entry h3 {
-	font-family: Verdana;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	margin-bottom: 2px;
 	color: black;
 }
@@ -219,14 +219,14 @@ h1 {
 
 /* Marken */
 #brand_list h1 {
-	font-family: Verdana;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 18px;
 	text-decoration: underline;
 	color: #000;
 }
 
 #brand_list table {
-	font-family: Verdana;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	border-collapse: collapse;
 }
 
@@ -243,7 +243,7 @@ h1 {
 }
 
 #brand_list .list_description {
-	font-family: Verdana;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	width: 70%;
 }
 
@@ -264,7 +264,7 @@ h1 {
 }
 
 #brand_list .list_actions {
-	font-family: Verdana;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 80%;
 	text-align: left;
 	padding-left: 0em;
@@ -281,7 +281,7 @@ h1 {
 }
 
 #brand_list .custom_products {
-	font-family: Verdana;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 80%;
 	text-align: left;
 	padding-left: 1em;
@@ -304,7 +304,7 @@ h1 {
 .bestellung legend {
 	color: #ddd;
 	background: #FF0000;
-	font-family: Verdana;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-size: small;
 	padding: 0.2em 1em;
 }

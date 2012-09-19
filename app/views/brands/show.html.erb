@@ -1,21 +1,16 @@
 <br />
 
-<div align="center" ">
-	
-<p>
-	<%= image_tag (@brand.logo_url) %>
-</p>
+<%= image_tag (@brand.logo_url) %>
+
 <h1> <%= @brand.name %> </h1>
-</div>
-<div id="gross">
 
-
-	<p>
-		<%= raw @brand.info_text %>
-	</p>
+<div id="brand_gross">
+	<%= raw @brand.info_text %>
 </div>
 
-<div id="klein">
+<br />
+
+<div id="brand_klein">
 	<%= link_to 'editiere', edit_brand_path(@brand) %> |
 
 	<%= link_to 'zurück', brands_path %>

@@ -1,3 +1,63 @@
 // Place all the styles related to the Brands controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* kleine Schrift */
+#brand_klein {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 8px;
+  color: black;
+}
+
+#brand_klein a {
+  color: black;
+  text-decoration: none;
+}
+
+#brand_klein a:hover {
+  color: red;
+  background: none;
+  text-decoration: none;
+}
+
+/* kleine Schrift index */
+#brand_index_klein {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: black;
+}
+
+#brand_index_klein a {
+  color: black;
+  text-decoration: none;
+}
+
+#brand_index_klein a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+/* große Schrift */
+#brand_gross {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: black;
+}
+
+#brand_gross a {
+  color: black;
+  text-decoration: none;
+}
+
+#brand_gross a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+#list_line_even {
+  background: none;
+}
+
+#list_line_odd {
+  background: #999;
+}

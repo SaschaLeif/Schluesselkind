@@ -293,7 +293,7 @@ Product.create(
 :gender => 'male',
 :description => '
 - schwarzer Zipper aus extra dickem Stoff (360 Gramm)<br />
-- aufgeraute Innenseite für gem&uuml;tlichen Tragekomfort<br />
+- aufgeraute Innenseite f&uuml;r gem&uuml;tlichen Tragekomfort<br />
 - doppelte Kapuze mit zwei N&auml;hten und dezentem "recolution"-Stick<br />
 - Kapuzeninnenseite und B&auml;nder in Kontrastfarbe<br />
 - K&auml;ngurutasche vorn<br />
@@ -318,7 +318,7 @@ Product.create(
 :description => '
 - gr&uuml;ner Zipper aus extra dickem Stoff (360 Gramm)
 <br />
-- aufgeraute Innenseite für gem&uuml;tlichen Tragekomfort
+- aufgeraute Innenseite f&uuml;r gem&uuml;tlichen Tragekomfort
 <br />
 - doppelte Kapuze mit zwei N&auml;hten und dezentem "recolution"-Stick
 <br />

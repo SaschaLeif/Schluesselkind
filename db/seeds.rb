@@ -136,13 +136,21 @@ Article .delete_all
 # Artikel 1
 Article.create(
 :name => 'Hoodie blau "Attitude"',
-:article_url => '/images/shirt_color/recolution_hoodie_blau.png',
+:pic1 => '/images/shirt_color/recolution_hoodie_blau.png',
+:pic2 => '/images/shirt_color/recolution_hoodie_blau2.png',
+:pic3 => '',
+:pic4 => '',
+:pic5 => ''
 )
 
 # Artikel 2
 Article.create(
 :name => 'Zipper blau',
-:article_url => '/images/shirt_color/recolution_zipper_blau.png',
+:pic1 => '/images/shirt_color/recolution_zipper_blau.png',
+:pic2 => '/images/shirt_color/recolution_zipper_blau2.png',
+:pic3 => '/images/shirt_color/recolution_zipper_blau3.png',
+:pic4 => '/images/shirt_color/recolution_zipper_blau4.png',
+:pic5 => '/images/shirt_color/recolution_zipper_blau5.png'
 )
 
 Product.delete_all

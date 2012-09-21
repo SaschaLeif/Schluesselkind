@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-     @articles = Article.all
+     @articles = Article.find(:all, :order => "name")
     #size_auswahl = params[:size_auswahl] || nil
    # if size_auswahl != nil
     #  @articles = Article.find(:all, :conditions => {:size_id =>size_auswahl})

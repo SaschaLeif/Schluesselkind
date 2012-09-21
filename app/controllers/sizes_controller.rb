@@ -5,13 +5,7 @@ class SizesController < ApplicationController
   # GET /sizes
   # GET /sizes.json
   def index
-   # @sizes = Size.find(:all, :order => "id")
- #   filter2 = params[:filter2] || nil
- #   if filter2 != nil
- #     @sizes = Size.find(:all, :conditions => {:article_id=>filter2})
- #   else
- #     @sizes = Size.find(:all)
- #   end
+    @sizes = Size.find(:all, :order => "id")
     @cart = current_cart
     respond_to do |format|
       format.html # index.html.erb

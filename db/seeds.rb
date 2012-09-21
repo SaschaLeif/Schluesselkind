@@ -101,6 +101,11 @@ Size.create(
 :name => 'XXXL'
 )
 
+Size.create(
+:name => 'nosize'
+)
+
+
 Color.delete_all
 
 Color.create(
@@ -152,6 +157,58 @@ Article.create(
 :pic4 => '/images/shirt_color/recolution_zipper_blau4.png',
 :pic5 => '/images/shirt_color/recolution_zipper_blau5.png'
 )
+
+# Artikel 3
+Article.create(
+:name => 'Zipper schwarz',
+:pic1 => '/images/shirt_color/reco_zip_schwarz_1.png',
+:pic2 => '/images/shirt_color/reco_zip_schwarz_2.jpg',
+:pic3 => '/images/shirt_color/reco_zip_schwarz_3.png',
+:pic4 => '/images/shirt_color/reco_zip_schwarz_4.jpg',
+:pic5 => ''
+)
+
+# Artikel 4
+Article.create(
+:name => 'Zipper gr&uuml;n',
+:pic1 => '/images/shirt_color/reco_zip_green1.png',
+:pic2 => '/images/shirt_color/reco_zip_green2.png',
+:pic3 => '/images/shirt_color/reco_zip_green3.png',
+:pic4 => '/images/shirt_color/reco_zip_green4.png',
+:pic5 => '/images/shirt_color/reco_zip_green5.png'
+)
+
+
+# Artikel 5
+Article.create(
+:name => "Satchel Bag - Testate Blue",
+:pic1 => '/images/shirt_color/kca_messenger_bag_blau.png',
+:pic2 => '/images/shirt_color/kca_bags_detail1.png',
+:pic3 => '/images/shirt_color/kca_bags_detail2.png',
+:pic4 => '',
+:pic5 => ''
+)
+
+# Artikel 6
+Article.create(
+:name => 'Messenger Bag - Estate Blue',
+:pic1 => "/images/shirt_color/kca_satchel_bag_blau.png",
+:pic2 => '/images/shirt_color/kca_bags_detail1.png',
+:pic3 => '/images/shirt_color/kca_bags_detail2.png',
+:pic4 => '',
+:pic5 => ''
+)
+
+# Artikel 7
+Article.create(
+:name => "Satchel Bag - Total Eclipse",
+:pic1 => "/images/shirt_color/kca_satchel_bag_schwarz.png",
+:pic2 => '/images/shirt_color/kca_bags_detail1.png',
+:pic3 => '/images/shirt_color/kca_bags_detail2.png',
+:pic4 => '',
+:pic5 => ''
+)
+
 
 Product.delete_all
 
@@ -222,5 +279,119 @@ Product.create(
 - YKK-Zipper aus recyceltem Kunststoff<br /><br />  
 100% Bio-Baumwolle<br /> 100% fair produziert und GOTS-zertifiziert<br />
 angebaut und verarbeitet in der T&uuml;rkei
+'
+)
+
+# Produkt 4
+Product.create(
+:product_price => 89.90,
+:brand_id => 4, # Recolution
+:article_id => 3, # Zipper schwarz
+:size_id => 6, # M
+:color_id => 5, # schwarz
+:quantity => 2,
+:gender => 'male',
+:description => '
+- schwarzer Zipper aus extra dickem Stoff (360 Gramm)<br />
+- aufgeraute Innenseite für gem&uuml;tlichen Tragekomfort<br />
+- doppelte Kapuze mit zwei N&auml;hten und dezentem "recolution"-Stick<br />
+- Kapuzeninnenseite und B&auml;nder in Kontrastfarbe<br />
+- K&auml;ngurutasche vorn<br />
+- breite Rippb&uuml;ndchen an Saum und &Auml;rmeln<br />
+- Logo-Edgelabel am rechten &Auml;rmel<br />
+- YKK-Zipper aus recyceltem Kunststoff<br /><br />
+100% Bio-Baumwolle<br /> 
+100% fair produziert und GOTS-zertifiziert<br /><br /> 
+angebaut und verarbeitet in der T&uuml;rkei
+'
+)
+
+# Produkt 5
+Product.create(
+:product_price => 89.90,
+:brand_id => 4, # Recolution
+:article_id => 4, # Zipper gruen
+:size_id => 5, # M
+:color_id => 3, # gruen
+:quantity => 2,
+:gender => 'male',
+:description => '
+- gr&uuml;ner Zipper aus extra dickem Stoff (360 Gramm)
+<br />
+- aufgeraute Innenseite für gem&uuml;tlichen Tragekomfort
+<br />
+- doppelte Kapuze mit zwei N&auml;hten und dezentem "recolution"-Stick
+<br />
+- Kapuzeninnenseite und B&auml;nder in Kontrastfarbe
+<br />
+- K&auml;ngurutasche vorn
+<br />
+- breite Rippb&uuml;ndchen an Saum und &Auml;rmeln
+<br />
+- Logo-Edgelabel am rechten &Auml;rmel
+<br />
+- YKK-Zipper aus recyceltem Kunststoff
+<br /><br /> 
+100% Bio-Baumwolle
+<br /> 
+100% fair produziert und GOTS-zertifiziert
+<br />
+angebaut und verarbeitet in der T&uuml;rkei
+'
+)
+
+# Produkt 6
+Product.create(
+:product_price => 129.90,
+:brand_id => 2, # Knowledge
+:article_id => 5, # Tasche
+:size_id => 10, # nosize
+:color_id => 1, # blau
+:quantity => 2,
+:gender => 'accessoires',
+:description => '
+Blaue, aufwendig verarbeitete Messenger Bag mit gepolstertem Futter.
+<br />
+Die Tasche ist in zwei gro&szlig;e Innenf&auml;cher und mehrere kleine aufgeteilt, 
+zus&auml;tzlich gibt es ein Rei&szlig;verschlu&szlig;fach. Au&szlig;erdem gibt es zwei aufgesetzte F&auml;cher an der Au&szlig;enseite. 
+Das Innenfutter ist blau-wei&szlig; gestreift und die Tasche l&auml;&szlig;t sich mittels zwei Lederriemen schlie&szlig;en.
+<br /><br /> Material: 100% Bio-Baumwolle <br /> Ma&szlig;e: 32 x 37 x 9 cm
+'
+)
+
+# Produkt 7
+Product.create(
+:product_price => 99.00,
+:brand_id => 2, # Knowledge
+:article_id => 6, # Tasche
+:size_id => 10, # nosize
+:color_id => 1, # blau
+:quantity => 2,
+:gender => 'accessoires',
+:description => '
+"Blaue, aufwendig verarbeitete Satchel Bag mit gepolstertem Futter. 
+<br />
+Die Tasche ist in zwei gro&szlig;e Innenf&auml;cher und mehrere kleine aufgeteilt, 
+zus&auml;tzlich gibt es ein Rei&szlig;verschlu&szlig;fach. Das Innenfutter ist blau-wei&szlig; gestreift und die 
+Tasche l&auml;&szlig;t sich mittels zwei Lederriemen schlie&szlig;en.
+<br /><br /> Material: 100% Bio-Baumwolle<br /> Ma&szlig;e: 30 x 36 x 8 cm"
+'
+)
+
+# Produkt 8
+Product.create(
+:product_price => 99.00,
+:brand_id => 2, # Knowledge
+:article_id => 7, # Tasche
+:size_id => 10, # nosize
+:color_id => 5, # blau
+:quantity => 4,
+:gender => 'accessoires',
+:description => '
+Schwarze, aufwendig verarbeitete Satchel Bag mit gepolstertem Futter. 
+<br />
+Die Tasche ist in zwei gro&szlig;e Innenf&auml;cher und mehrere kleine aufgeteilt, zus&auml;tzlich gibt es ein Rei&szlig;verschlu&szlig;fach. 
+Das Innenfutter ist blau-wei&szlig; gestreift und die Tasche l&auml;&szlig;t sich mittels zwei Lederriemen schlie&szlig;en.
+<br /><br /> Material: 100% Bio-Baumwolle<br /> Ma&szlig;e: 30 x 36 x 8 cm
 '
 )

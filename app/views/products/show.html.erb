@@ -2,30 +2,49 @@
 <div id="brand_list">
 	<p id="gross">
 		<h1><%= @product.brand.name %> <%= @product.article.name %></h1>
-		
+
 		<table>
-			<td id="product_show_foto">
-				<%= image_tag @product.article.article_url %>
-				<br />
-				<b>Preis:</b> <%= number_to_currency(@product.product_price, :unit=>'€ ') %>
-				<br /><br />
-				<%= button_to 'in den Warenkorb', line_items_path(:product_id => @product.id) %>
-			</td>
+			<td id="product_show_foto_small"> <% if @product.article.pic2 == ''%>
+			<% else %>
+			<%= (image_tag @product.article.pic2) %>
+			<% end %>
+			<br />
+			<% if @product.article.pic3 == ''%>
+			<% else %>
+			<%= image_tag @product.article.pic3 %>
+			<% end %>
+			<br />
+			<% if @product.article.pic4 == ''%>
+			<% else %>
+			<%= image_tag @product.article.pic4 %>
+			<% end %>
+			<br />
+			<% if @product.article.pic5 == ''%>
+			<% else %>
+			<%= image_tag @product.article.pic5 %>
+			<% end %> </td>
+			<td id="product_show_foto"> <%= image_tag @product.article.pic1 %>
+			<br />
+			<b>Preis:</b> <%= number_to_currency(@product.product_price, :unit=>'€ ') %>
+			<br />
+			<br />
+			<%= button_to 'in den Warenkorb', line_items_path(:product_id => @product.id) %> 
 			<td>
-				
-<br />
-				<b>Größe:</b> <%= @product.size.name %>
-				<br /><br />
-				<b>Farbe:</b> <%= @product.color.name %>
-				<br /><br />
-				
-				<b>Auf Lager: </b> <%= @product.quantity %>
-				<br /><br />
-				<b>Beschreibung:</b><br /> <%= raw @product.description %>
-				
-			</td>
+			<br />
+			<b>Größe:</b> <%= @product.size.name %>
+			<br />
+			<br />
+			<b>Farbe:</b> <%= @product.color.name %>
+			<br />
+			<br />
+			<b>Auf Lager: </b> <%= @product.quantity %>
+			<br />
+			<br />
+			<b>Beschreibung:</b>
+			<br />
+			<%= raw @product.description %> </td>
 		</table>
-		
+
 	</p>
 	<p id="klein">
 		<%= link_to 'editiere', edit_product_path(@product) %> |

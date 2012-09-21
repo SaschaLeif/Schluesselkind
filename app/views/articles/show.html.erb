@@ -1,13 +1,32 @@
-<br /><div id="gross">
-	<br />
-	<%= image_tag(@article.article_url, :class => 'list_image') %>
-	<br />
-	<b>Name: </b><%= @article.name %><br />
-	<br />
-	<br />
-</div>
+<br />
+	<h1><%= @article.name %></h1>
+	<div id="article_show_foto">
+		<%= image_tag(@article.pic1) %>
+	</div>
+	<div id="article_index_foto">
+		<% if @article.pic2 == '' %>
+		<% else %>
+		<%= image_tag(@article.pic2) %>
+		<% end %>
+		
+		<% if @article.pic3 == '' %>
+		<% else %>
+		<%= image_tag(@article.pic3) %>
+		<% end %>
+		
+		<% if @article.pic4 == '' %>
+		<% else %>
+		<%= image_tag(@article.pic4) %>
+		<% end %>
+		
+		<% if @article.pic5 == '' %>
+		<% else %>
+		<%= image_tag(@article.pic5) %>
+		<% end %>
+	</div>
 
-<div id="klein">
+
+<div id="article_klein">
 	<%= link_to 'editiere', edit_article_path(@article) %> |
 	<%= link_to 'zurück', articles_path %>
 </div>

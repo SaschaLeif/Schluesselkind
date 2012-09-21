@@ -1,18 +1,17 @@
-<br /><div id="article_list">
+<br />
+<div id="article_list">
 
 	<h1>Artikel</h1>
 
 	<table>
 		<% @articles.each do |article| %>
 		<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-			<td><%= image_tag(article.article_url, :class => 'list_image') %></td>
-			<td> Name: <%= article.name %><br />
-			</td>
-			<td id="article_klein"> <%= link_to 'zeige', article %>
-			<br />
-			<%= link_to 'editiere', edit_article_path(article) %>
-			<br />
-			<%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %> </td>	
+			<td id="article_index_foto"><%= link_to image_tag(article.pic1), article %></td>
+			<td> <br />Name: <%= article.name %>
+			<br /><br />
+			
+			<div id="article_klein"> <%= link_to 'editiere', edit_article_path(article) %> |
+			<%= link_to 'lösche', article, method: :delete, data: { confirm: 'Are you sure?' } %> </div>
 		</tr>
 		<% end %>
 	</table>

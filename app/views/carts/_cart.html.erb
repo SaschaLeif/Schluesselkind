@@ -22,8 +22,8 @@
 	<table>
 		<%= render(cart.line_items) %>
 		<tr class="total_line">
-			<td colspan="2">Gesamtpreis:</td>
-			<td class="total_cell"><%= number_to_currency(cart.total_price, :unit=>'€ ') %></td>
+			<td id="cart_gesamt", colspan="2">Gesamtpreis:</td>
+			<td id="cart_totalprice"><%= number_to_currency(cart.total_price, :unit=>'€ ') %></td>
 		</tr>
 	</table>
 

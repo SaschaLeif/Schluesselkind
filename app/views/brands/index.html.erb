@@ -7,8 +7,7 @@
 		<tr id="<%= cycle('list_line_odd', 'list_line_even') %>">
 			<td width="170px"> <%= link_to image_tag(brand.logo_url, :class => 'list_image'), brand %> </td>
 
-			<td id="brand_gross"> <%= raw truncate((brand.info_text), :length => 290) %>
-			<br />
+			<td id="brand_gross"> <%= raw truncate((brand.info_text), :length => 274) %>
 			<b><%= link_to '[mehr Infos]', brand %></b></td>
 
 			<% if session[:user_id] == 1 %>

@@ -1,9 +1,8 @@
 <tr>
-	<td width="20"> <%= line_item.quantity %> &times; </td>
-	<td> <%= line_item.product.brand.name %> -
+	<td id="cart_content", width="30"> <%= line_item.quantity %> &times; </td>
+	<td id="cart_content"> <%= line_item.product.brand.name %> -
 	<%= line_item.product.article.name %>
-	(<%= line_item.product.size.name %>
-	/ <%= line_item.product.color.name %>) </td>
-	<td class="item_price"> <%= number_to_currency(line_item.total_price, :unit=>'€') %> </td>
+	(<%= line_item.product.size.name %>) </td>
+	<td id="cart_content_price"> <%= number_to_currency(line_item.total_price, :unit=>'€') %> </td>
 	<td><%= button_to 'x', line_item, :method => :delete, :data => {:confirm => 'Bist du sicher?'} %></td>
 </tr>

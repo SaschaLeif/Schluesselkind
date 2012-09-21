@@ -17,7 +17,7 @@
 			<% @products.each do |product| %>
 			<td>
 			<div id="product_index_foto">
-				<%= link_to image_tag(product.article.article_url, :class => 'list_image'), product %>
+				<%= link_to image_tag(product.article.pic1, :class => 'list_image'), product %>
 			</div></td>
 			<td class="list_description"><b>Marke:</b> <%= product.brand.name %>
 			<br />

@@ -7,11 +7,15 @@
 		<% @articles.each do |article| %>
 		<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
 			<td id="article_index_foto"><%= link_to image_tag(article.pic1), article %></td>
-			<td> <br /><b><%= article.name %></b>
-			<br /><br />
-			
-			<div id="article_klein"> <%= link_to 'editiere', edit_article_path(article) %> |
-			<%= link_to 'lösche', article, method: :delete, data: { confirm: 'Are you sure?' } %> </div>
+			<td>
+			<br />
+			<b><%= article.name %></b>
+			<br />
+			<br />
+			<div id="article_klein">
+				<%= link_to 'editiere', edit_article_path(article) %> |
+				<%= link_to 'lösche', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+			</div>
 		</tr>
 		<% end %>
 	</table>

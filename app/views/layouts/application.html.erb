@@ -8,30 +8,53 @@
 		<%= stylesheet_link_tag 'articles' %>
 		<%= stylesheet_link_tag 'products' %>
 		<%= stylesheet_link_tag 'carts' %>
-		<%#= javascript_include_tag 'brands' %>
+		<%= javascript_include_tag 'application' %>
 		<%= csrf_meta_tag %>
 	</head>
 
-	<body id="store">
+	<script>
+		function zuklappenGirls() {
+			document.getElementById('girls').style.display = 'none';
+			document.getElementById('schluesselGirl').style.border = 'none';
+		}
+
+		function aufklappenGirl() {
+			document.getElementById('girls').style.display = 'block';
+			document.getElementById('schluesselGirl').style.border = '0px solid darkred';
+		}
+	</script>
+
+	<body>
 
 		<div id="banner", align="center">
 			<%= image_tag("sk_logo.jpg") %>
 		</div>
 
-		<div id="menu", align="center">
-			<%= link_to "Startseite", store_path() %>&nbsp;&nbsp;
-			<%= link_to "Mädels", products_path(:filter_gender => 'female') %>&nbsp;&nbsp;
-			<%= link_to "Jungs", products_path(:filter_gender => 'male') %>&nbsp;&nbsp;
-			<%= link_to "Accessoires", products_path(:filter_gender => 'accessoires') %>&nbsp;&nbsp;
-			<%= link_to "Marken", brands_path() %>&nbsp;&nbsp;
-			<a href="">Impressum&nbsp;&nbsp;</a>
-		</div>
+		<div id="menu">
+			<div align="center">
+				<%= link_to "Startseite", store_path() %>&nbsp;&nbsp;
+				<%= link_to "Mädels", products_path(:filter_gender => 'female') %>&nbsp;&nbsp;
+				<%= link_to "Jungs", products_path(:filter_gender => 'male') %>&nbsp;&nbsp;
+				<%= link_to "Accessoires", products_path(:filter_gender => 'accessoires') %>&nbsp;&nbsp;
+				<%= link_to "Marken", brands_path() %>&nbsp;&nbsp;
+				<a href="#">Impressum&nbsp;&nbsp;</a>
+				<a onMouseOver="aufklappenGirl()" onMouseOut="zuklappenGirls()" href="#">Mädels &nbsp;&nbsp;</a>
+			</div>
 
-		<div id="side">
-			<div id="cart">
-				<%= render @cart %>
+			<div onMouseOver="aufklappenGirl()" onMouseOut="zuklappenGirls()" id="girls">
+				<p id="dropDownMenuGirls">
+				<p id="dropDownMenuGirls">
+					Shirts
+				</p>
+				<br />
+				<a href="#">Hoodies</a>
+				<br />
+				<a href="#">Wäsche</a>
+				</p>
 			</div>
 		</div>
+
+		<%= render @cart %>
 
 		<div id="main">
 			<%= yield %>
@@ -41,5 +64,7 @@
 		<div id="foot", align="center">
 			FAIR TRADE SEIT 2007
 		</div>
+
 	</body>
 </html>
+

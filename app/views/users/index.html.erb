@@ -1,27 +1,27 @@
+<br />
 <% if notice %>
 <p id="notice">
 	<%= notice %>
 </p>
 <% end %>
 
-<div id="brand_list">
-	<h1>Kunden</h1>
+<h1>Kunden</h1>
 
-	<table id="gross">
-		<% @users.each do |user| %>
-		<tr>
-			<td>#<%= user.id %> </td>
-			<td class="list_description"><b>Name:</b> <%= user.name %></td>
+<table id="user_gross">
+	<% @users.each do |user| %>
+	<tr>
+		<td>#<%= user.id %> </td>
+		<td width="150px"><b>Name:</b> <%= user.name %></td>
 
-			<td id="klein"><%= link_to 'zeige', user %>
-			<%= link_to 'editiere', edit_user_path(user) %>
-			<%= link_to 'lösche', user, :data => {:confirm => 'Bist du sicher?'}, :method => :delete %></td>
-		</tr>
-		<% end %>
-	</table>
-	<br />
-	<div id="klein">
-		
-		<%= link_to 'neuen Benutzer anlegen', new_user_path %>
-	</div>
+		<td id="user_klein"><%= link_to 'zeige', user %>
+		<%= link_to 'editiere', edit_user_path(user) %>
+		<%= link_to 'lösche', user, :data => {:confirm => 'Bist du sicher?'}, :method => :delete %></td>
+	</tr>
+	<% end %>
+</table>
+<br />
+<div id="user_klein">
+
+	<%= link_to 'neuen Benutzer anlegen', new_user_path %>
 </div>
+<br />

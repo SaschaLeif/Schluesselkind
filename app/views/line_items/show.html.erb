@@ -1,21 +1,21 @@
-<div id="gross">
+<div id="lineitem_gross">
 	<br />
 	<h1>Product:
 	<%= @line_item.product.article.name %></h1>
-	
+
 	<b>Größe:</b>
-	<%= @line_item.product.article.size.name %>
+	<%= @line_item.product.size.name %>
 	<br />
 	<br />
 	<b>Farbe:</b>
-	<%= @line_item.product.article.color.name %>
+	<%= @line_item.product.color.name %>
 	<br />
 	<br />
 	<b>Warenkorb: </b>#
 	<%= @line_item.cart_id %>
 </div>
 <br />
-<div id="klein">
+<div id="lineitem_klein">
 	<%= link_to 'editiere', edit_line_item_path(@line_item) %> |
 	<%= link_to 'zurück', line_items_path %>
 </div>

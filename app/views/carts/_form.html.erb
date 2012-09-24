@@ -1,17 +1,19 @@
 <%= form_for(@cart) do |f| %>
-  <% if @cart.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@cart.errors.count, "Fehler!") %> Wurde deshalb nicht gespeichert!</h2>
+<% if @cart.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@cart.errors.count, "Fehler!") %> Wurde deshalb nicht gespeichert!</h2>
 
-      <ul>
-      <% @cart.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<ul>
+		<% @cart.errors.full_messages.each do |msg| %>
+		<li>
+			<%= msg %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<div class="actions">
+	<%= f.submit %>
+</div>
 <% end %>

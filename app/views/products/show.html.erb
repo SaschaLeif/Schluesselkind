@@ -1,5 +1,5 @@
 <br />
-<div id="brand_list">
+<div>
 	<p id="gross">
 		<h1><%= @product.brand.name %> <%= @product.article.name %></h1>
 
@@ -28,8 +28,7 @@
 			<b>Preis:</b> <%= number_to_currency(@product.product_price, :unit=>'€ ') %>
 			<br />
 			<br />
-			<%= button_to 'in den Warenkorb', line_items_path(:product_id => @product.id) %> 
-			<td>
+			<%= button_to 'in den Warenkorb', line_items_path(:product_id => @product.id) %> <td>
 			<br />
 			<b>Größe:</b> <%= @product.size.name %>
 			<br />
@@ -46,7 +45,7 @@
 		</table>
 
 	</p>
-	<p id="klein">
+	<p id="product_klein">
 		<%= link_to 'editiere', edit_product_path(@product) %> |
 		<%= link_to 'zurück', products_path %>
 	</p>

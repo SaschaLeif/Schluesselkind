@@ -8,26 +8,26 @@
 
 <h1>Produkte des Herstellers</h1>
 
-<div id="gross">
+<div id="product_gross">
 	<table>
-		<tr >
+		<tr>
 			<%#= select("Grösse", "size_id", Size.all.collect(&:name), :prompt => 'Größe') %>
 			<%#= select( "farbe", "color_id", Color.find(:all).map { |u| [u.name, u.id]}, :prompt => 'Farbe') %>
 
 			<% @products.each do |product| %>
+
 			<td>
 			<div id="product_index_foto">
 				<%= link_to image_tag(product.article.pic1), product %>
 			</div></td>
-			<td class="list_description"><b>Marke:</b> <%= product.brand.name %>
+
+			<td><b>Marke:</b> <%= product.brand.name %>
 			<br />
 			<b>Typ:</b> <%= product.article.name %>
-			
 			<% if product.size.name == 'nosize'%>
 			<% else %>
 			<br />
-			<b>Größe:</b> 
-			<%= product.size.name %>
+			<b>Größe:</b> <%= product.size.name %>
 			<% end %>
 			<%#= select_tag 'A', options_for_select(@products.collect{ |u| [u.size_id, u.size_id]}), :prompt => "Größe" -%>
 			<%#= select("Grösse", "size_id", Size.all.collect(&:name), :prompt => 'Größe') %>
@@ -40,8 +40,9 @@
 			<%= button_to 'in den Warenkorb', line_items_path(:product_id => product) %>
 			<br/>
 			</td>
+
 			<% if session[:user_id] == 1 %>
-			<td id="klein"> <%= link_to 'editiere', edit_product_path(product) %>
+			<td id="product_klein"> <%= link_to 'editiere', edit_product_path(product) %>
 			<br />
 			<%= link_to 'lösche', product, method: :delete, data: { confirm: 'Are you sure?' } %>
 			<br />
@@ -49,14 +50,6 @@
 			<% else %>
 			<% end %>
 		</tr>
-
 		<% end %>
 	</table>
 </div>
-
-<div id="klein">
-
-	<br />
-	<br />
-</div>
-

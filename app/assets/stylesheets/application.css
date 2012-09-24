@@ -1,324 +1,54 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
-*/
-#product_foto img {
-	width: 96px;
-	height: 110px;
-	margin-right: 5px;
-	margin-bottom: 5px;
+
+#dropDownMenuGirls {
+	position: absolute;
+	top: 182px;
+	left: 251px;
+	display: none;
 }
 
-#store_logos img {
-  float: left;
-  width: 112px;
-  height: 52px;
-  margin-top: 15px;
-  margin-right: 0px;
-  margin-bottom: 1px;
+#dropDownMenuGirls a {
+	color: #008000;
+	position: absolute;
+	top: 182px;
+	left: 251px;
+	display: none;
 }
 
-
-/* kleine Schrift */
-#klein {
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 8px;
-	color: black;
+#dropDownMenuGirls a:hover {
+	position: absolute;
+	top: 182px;
+	left: 251px;
+	display: none;
 }
 
-#klein a {
-	color: black;
+#dropDownMenu2 {
+	background: #000000;
+	border: 0px solid black;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+}
+
+#dropDownMenu2 a {
 	text-decoration: none;
-}
-
-#klein a:hover {
-	color: red;
-	text-decoration: none;
-}
-
-h1 {
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 18px;
-	text-decoration: underline;
-	color: #000;
-}
-
-/* große Schrift */
-#gross {
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 14px;
-	color: black;
-}
-
-#gross a {
-	color: black;
-	text-decoration: none;
-}
-
-#gross a:hover {
-	color: red;
-	text-decoration: none;
-}
-
-/* Hauptfenster */
-#main {
-	margin-left: 0em;
-	padding-top: 0px;
-	padding-left: 50px;
-	padding-right: 300px;
-	background: #FFFFCC;
-}
-
-/*Logo etc.*/
-#banner {
-	background: #000;
-	padding-top: 15px;
-}
-
-/* Menüpunkte */
-#menu {
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 110%;
-	padding-top: 10px;
-	padding-bottom: 15px;
-	background: #000;
-}
-
-#menu a {
 	color: white;
-	text-decoration: none;
-}
-
-/* Warenkorb /Login-Button */
-#side {
-	float: right;
-	padding: 10px;
-	width: 280px;
-	background: #DDD;
-	border-radius:10px;
-}
-
-#cart, #cart table {
-	font-size: smaller;
-	color: black;
-}
-#cart table {
-	margin-bottom: 0px;
-}
-
-/*Fusszeile*/
-#foot {
-	background: #DDD;
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-	color: black;
-	padding-top: 10px;
-	padding-left: 10px;
-	padding-bottom: 10px;
-}
-
-/* store*/
-#store #notice {
-	color: #FFF;
-	border: 2px solid #000;
-	width: 300px;
-	padding: 1em;
-	margin-bottom: 2em;
-	background-color: #FF0000;
-	font: bold smaller Verdana, Geneva, Arial, Helvetica, sans-serif;
-}
-
-#store h1 {
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-	color: black;
-}
-
-#store .item_price, #store .total_line {
-	text-align: right;
-}
-
-#store .total_line .total_cell {
-	font-weight: bold;
-	border-top: 2px solid red;
-}
-
-#store  .entry {
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-	overflow: auto;
-	margin-top: 1em;
-}
-
-#store .entry img {
-	width: 150px;
-	height: 70px;
-	margin-right: 5px;
-	margin-bottom: 5px;
-}
-
-#store .entry h3 {
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-	margin-bottom: 2px;
-	color: black;
-}
-
-#store .entry p {
-	margin-top: 0.5em;
-	margin-bottom: 0.8em;
-}
-
-#store .entry .rating_line {
-	clear: both;
-	margin-bottom: 0.5em;
-}
-
-#store .entry .add_to_cart {
-	position: relative;
-}
-
-#store .entry  .origin {
-	color: black;
-	font-size: 80%;
-	font-weight: bold;
-	margin-right: 2em;
-}
-
-#store .entry  .infotext {
-	color: black;
-	font-size: 80%;
-	margin-right: 2em;
-}
-
-#store .infotext a {
-	color: black;
-	text-decoration: none;
-}
-
-#store .infotext a:hover {
-	color: red;
-	text-decoration: none;
-}
-
-#store .entry  .rating {
-	color: red;
-	font-size: 80%;
-	font-weight: bold;
-	margin-right: 2em;
-}
-
-#store .entry form, #store .entry form div {
-	display: inline;
-}
-
-/* Marken */
-#brand_list h1 {
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-family: Verdana;
 	font-size: 18px;
-	text-decoration: underline;
-	color: #000;
 }
 
-#brand_list table {
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-	border-collapse: collapse;
+#dropDownMenu2 p {
+	margin: 0px;
+	padding-right: 30px;
+	padding-left: 15px;
+	padding-top: 1px;
 }
 
-#brand_list table tr td {
-	padding: 5px;
-	vertical-align: top;
-}
-
-#brand_list .list_image {
-	padding-top: 10px;
-	padding-left: 10px;
-	width: 150px;
-	height: 70px;
-}
-
-#brand_list .list_description {
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-	width: 70%;
-}
-
-#brand_list .list_description dl {
-	margin: 0;
-	width: 450px;
-}
-
-#brand_list .list_description dt {
-	color: #000;
-	font-weight: bold;
-	font-size: 100%;
-}
-
-#brand_list .list_description dd {
-	font-size: 80%;
-	margin: 0;
-}
-
-#brand_list .list_actions {
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 80%;
+#dropDownMenu3 {
+	background: green;
+	border: 0px solid black;
 	text-align: left;
-	padding-left: 0em;
-}
-
-#brand_list .list_actions a {
-	color: black;
-	text-decoration: none;
-}
-
-#brand_list .list_actions a:hover {
-	color: #FF0000;
-	text-decoration: none;
-}
-
-#brand_list .custom_products {
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 80%;
-	text-align: left;
-	padding-left: 1em;
-}
-
-#brand_list .list_line_even {
-	background: #ddd;
-}
-
-#brand_list .list_line_odd {
-	background: #999;
-}
-
-/* Bestellung */
-
-.bestellung fieldset {
-	background: #ddd;
-}
-
-.bestellung legend {
-	color: #ddd;
-	background: #FF0000;
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-	font-size: small;
-	padding: 0.2em 1em;
-}
-
-.bestellung label {
-	width: 5em;
-	float: left;
-	padding-top: 0.2em;
-	margin-right: 0.1em;
-}
-.bestellung select, .bestellung textarea, .bestellung input {
-	margin-left: 0.5em;
-}
-
-.bestellung div {
-	margin: 0.5em 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
 }

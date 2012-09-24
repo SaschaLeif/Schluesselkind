@@ -23,3 +23,20 @@
   font-weight: bold;
   border-top: 2px solid red;
 }
+
+/* kleine Schrift */
+#cart_klein {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 8px;
+  color: black;
+}
+
+#cart_klein a {
+  color: black;
+  text-decoration: none;
+}
+
+#cart_klein a:hover {
+  color: red;
+  text-decoration: none;
+}

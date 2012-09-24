@@ -1,20 +1,17 @@
 <br />
-<div id="brand_list">
-	<h1>erhältliche Grössen</h1>
+<h1>erhältliche Grössen</h1>
 
-	<table>
-		<% @sizes.each do |size| %>
-		<tr >
-			<td class="list_description"><%= size.name %></td>
-			<td id="klein">
-			<%= link_to 'editiere', edit_size_path(size) %>
-			<%= link_to 'lösche', size, :data => {:confirm => 'Bist du sicher?'}, method: :delete %></td>
-		</tr>
-		<% end %>
-	</table>
+<table>
+	<% @sizes.each do |size| %>
+	<tr >
+		<td width="200px"><%= size.name %></td>
+		<td id="size_klein"> <%= link_to 'editiere', edit_size_path(size) %> |
+		<%= link_to 'lösche', size, :data => {:confirm => 'Bist du sicher?'}, method: :delete %></td>
+	</tr>
+	<% end %>
+</table>
 
-	<br />
-	<div id="klein">
-		<%= link_to 'neue Grösse hinzufügen', new_size_path %>
-	</div>
+<br />
+<div id="size_klein">
+	<%= link_to 'neue Größe hinzufügen', new_size_path %>
 </div>

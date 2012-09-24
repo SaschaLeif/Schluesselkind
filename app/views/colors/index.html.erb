@@ -1,19 +1,18 @@
-<br /><div id="brand_list">
-	<h1>verfügbare Farben</h1>
+<br />
+<h1>verfügbare Farben</h1>
 
-	<table>
-		<% @colors.each do |color| %>
-		<tr>
-			<td class="list_description"> <%= raw color.name %></td>
-			<td id="klein"> <%= link_to 'editiere', edit_color_path(color) %>
-			| 
-			<%= link_to 'lösche', color, :data => {:confirm => 'Bist du sicher?'}, method: :delete %></td>
-		</tr>
-		<% end %>
-	</table>
+<table>
+	<% @colors.each do |color| %>
+	<tr>
+		<td> <%= raw color.name %></td>
+		<td id="color_klein"> <%= link_to 'editiere', edit_color_path(color) %>
+		|
+		<%= link_to 'lösche', color, :data => {:confirm => 'Bist du sicher?'}, method: :delete %></td>
+	</tr>
+	<% end %>
+</table>
 
-	<br />
-	<div id="klein">
-		<%= link_to 'Neue Farbe anlegen', new_color_path %>
-	</div>
+<br />
+<div id="color_klein">
+	<%= link_to 'Neue Farbe anlegen', new_color_path %>
 </div>

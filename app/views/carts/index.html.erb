@@ -3,7 +3,7 @@
 <table>
 
 	<% @carts.each do |cart| %>
-	<tr id="klein">
+	<tr id="cart_klein">
 		<td><%= link_to 'Show', cart %></td>
 		<td><%= link_to 'Edit', edit_cart_path(cart) %></td>
 		<td><%= link_to 'Destroy', cart, :data => {:confirm => 'Bist du sicher?'}, method: :delete %></td>
@@ -11,6 +11,6 @@
 	<% end %>
 </table>
 <br />
-<div id="klein">
+<div id="cart_klein">
 	<%= link_to 'New Cart', new_cart_path %>
 </div>

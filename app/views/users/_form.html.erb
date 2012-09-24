@@ -1,5 +1,4 @@
-<div class="depot_form">
-
+<div>
 	<%= form_for @user do |f| %>
 
 	<% if @user.errors.any? %>
@@ -22,13 +21,13 @@
 				Lege deinen Namen & Passwort an:
 			</legend>
 			<table>
-				<td> <%= f.label :name %>:
+				<td width="110px"> <%= f.label 'Benutzername:' %>
 				<br/>
 				<br/>
-				<%= f.label :password, 'Passwort' %>:
+				<%= f.label 'Passwort: ' %>
 				<br/>
 				<br/>
-				<%= f.label :password_confirmation, 'Passwort bestätigen' %>: </td>
+				<%= f.label 'Passwort bestätigen: ' %> </td>
 				<td> <%= f.text_field :name, :size => 30 %>
 				<br/>
 				<br/>
@@ -37,6 +36,7 @@
 				<br/>
 				<%= f.password_field :password_confirmation, :size => 30 %> </td>
 			</table>
+			<br />
 			<%= f.submit 'Daten speichern' %>
 		</fieldset>
 	</div>

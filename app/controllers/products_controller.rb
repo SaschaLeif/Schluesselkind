@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
     if filter_gender != nil
       @products = Product.find(:all, :conditions => {:gender => filter_gender})
     else
-      @products = Product.find(:all)
+      @products = Product.find(:all).uniq
     end
 
     #  filter = params[:brand_filter] || nil

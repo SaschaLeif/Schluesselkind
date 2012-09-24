@@ -1,6 +1,17 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#article_gross a {
+  color: black;
+  text-decoration: none;
+}
+
+#article_gross a:hover {
+  color: red;
+  background: none;
+  text-decoration: none;
+}
+
 #article_index_foto img {
   width: 100px;
   height: 150px;
@@ -24,17 +35,6 @@
   font-family: Verdana;
   font-size: 14px;
   color: black;
-}
-
-#article_gross a {
-  color: black;
-  text-decoration: none;
-}
-
-#article_gross a:hover {
-  color: red;
-  background: none;
-  text-decoration: none;
 }
 
 #article_klein {

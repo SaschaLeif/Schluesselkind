@@ -1,3 +1,4 @@
+<br />
 <% if notice %>
 <p id="notice" >
 	<%= notice %>
@@ -10,20 +11,16 @@
 	<%= link_to image_tag(brand.logo_url), brand %>
 	<%#= brand.name %>
 	<%#= raw truncate((brand.info_text), :length => 160) %>
-	<i><%#= link_to "mehr Info",  brand_path(brand) %></i>
+	<%#= link_to "mehr Info",  brand_path(brand) %>
 	<%#= link_to "alle Produkte zeigen", products_path(:brand_filter => brand.id) %>
 </div>
 <% end %>
 
-<br /><br /><br />
-
-<div class="entry" >
-	<div id="gross">
-		<%#= button_to 'Ranking', store_path(:sort_by => 'rating DESC') %>
-		<%#= button_to 'Marke', store_path(:sort_by => 'name') %>
-		<%#= button_to 'Herkunft', store_path(:sort_by => 'origin') %>
-	</div>
-</div>
 <br />
-
-
+<br />
+<br />
+<br />
+<br />
+<%#= button_to 'Ranking', store_path(:sort_by => 'rating DESC') %>
+<%#= button_to 'Marke', store_path(:sort_by => 'name') %>
+<%#= button_to 'Herkunft', store_path(:sort_by => 'origin') %>

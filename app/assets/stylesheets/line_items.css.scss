@@ -1,3 +1,34 @@
 // Place all the styles related to the line_items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#lineitem_gross {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: black;
+}
+
+#lineitem_gross a {
+  color: black;
+  text-decoration: none;
+}
+
+#lineitem_gross a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+#lineitem_klein {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 8px;
+  color: black;
+}
+
+#lineitem_klein a {
+  color: black;
+  text-decoration: none;
+}
+
+#lineitem_klein a:hover {
+  color: red;
+  text-decoration: none;
+}

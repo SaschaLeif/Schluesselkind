@@ -14,7 +14,7 @@
 </div>
 <% end %>
 
-<div id="gross">
+<div id="product_gross">
 	<div class="field">
 		<%= f.label 'Marke:' %>
 		<%= f.collection_select :brand_id, Brand.find(:all, :order => "name"), :id, :name,  { :prompt => 'Hersteller' } %>
@@ -32,13 +32,13 @@
 		<%= raw f.collection_select :color_id, Color.find(:all, :order => "name"), :id, :name,  { :prompt => 'Farbe'} %>
 		<br />
 		<br />
-			<%= f.label 'Geschlecht: ' %>
-			<%= f.select :gender,
-        [
-          ['Mann', 'male'],
-          ['Frau', 'female'],
-          ['Accessoires', 'accessoires']
-        ] %>
+		<%= f.label 'Geschlecht: ' %>
+		<%= f.select :gender,
+      [
+        ['Mann', 'male'],
+        ['Frau', 'female'],
+        ['Accessoires', 'accessoires']
+      ] %>
 		<br />
 		<br />
 		<%= f.label 'Anzahl: ' %>

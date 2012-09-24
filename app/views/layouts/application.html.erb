@@ -8,21 +8,11 @@
 		<%= stylesheet_link_tag 'articles' %>
 		<%= stylesheet_link_tag 'products' %>
 		<%= stylesheet_link_tag 'carts' %>
+		<%= stylesheet_link_tag 'store' %>
 		<%= javascript_include_tag 'application' %>
+		<%= javascript_include_tag "main" %>
 		<%= csrf_meta_tag %>
 	</head>
-
-	<script>
-		function zuklappenGirls() {
-			document.getElementById('girls').style.display = 'none';
-			document.getElementById('schluesselGirl').style.border = 'none';
-		}
-
-		function aufklappenGirl() {
-			document.getElementById('girls').style.display = 'block';
-			document.getElementById('schluesselGirl').style.border = '0px solid darkred';
-		}
-	</script>
 
 	<body>
 
@@ -43,9 +33,7 @@
 
 			<div onMouseOver="aufklappenGirl()" onMouseOut="zuklappenGirls()" id="girls">
 				<p id="dropDownMenuGirls">
-				<p id="dropDownMenuGirls">
 					Shirts
-				</p>
 				<br />
 				<a href="#">Hoodies</a>
 				<br />

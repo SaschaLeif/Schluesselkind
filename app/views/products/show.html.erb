@@ -1,6 +1,6 @@
 <br />
-<div>
-	<p id="gross">
+<div id="product_gross">
+	<p >
 		<h1><%= @product.brand.name %> <%= @product.article.name %></h1>
 
 		<table>
@@ -28,9 +28,10 @@
 			<b>Preis:</b> <%= number_to_currency(@product.product_price, :unit=>'€ ') %>
 			<br />
 			<br />
-			<%= button_to 'in den Warenkorb', line_items_path(:product_id => @product.id) %> <td>
-			<br />
-			<b>Größe:</b> <%= @product.size.name %>
+			<%= button_to 'in den Warenkorb', line_items_path(:product_id => @product.id) %> 
+			
+			<td>
+				<b>Größe:</b> <%= @product.size.name %>
 			<br />
 			<br />
 			<b>Farbe:</b> <%= @product.color.name %>

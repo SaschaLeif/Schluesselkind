@@ -50,7 +50,8 @@ module Schluesselkind
     config.active_record.whitelist_attributes = true
 
     # Enable the asset pipeline
-    config.assets.enabled = false
+    config.assets.enabled = true 
+    # true für Heroku, ansonsten false stellen: legt unter public/assets css und js Dateien an!
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'

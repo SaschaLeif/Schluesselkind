@@ -3,12 +3,6 @@
 	<head>
 		<title>Schlüsselkind</title>
 		<%= stylesheet_link_tag 'application' %>
-		<%= stylesheet_link_tag 'admin' %>
-		<%= stylesheet_link_tag 'brands' %>
-		<%= stylesheet_link_tag 'articles' %>
-		<%= stylesheet_link_tag 'products' %>
-		<%= stylesheet_link_tag 'carts' %>
-		<%= stylesheet_link_tag 'store' %>
 		<%= javascript_include_tag 'application' %>
 		<%= javascript_include_tag "main" %>
 		<%= csrf_meta_tag %>
@@ -27,8 +21,8 @@
 				<%= link_to "Jungs", products_path(:filter_gender => 'male') %>&nbsp;&nbsp;
 				<%= link_to "Accessoires", products_path(:filter_gender => 'accessoires') %>&nbsp;&nbsp;
 				<%= link_to "Marken", brands_path() %>&nbsp;&nbsp;
-				<a href="#">Impressum&nbsp;&nbsp;</a>
-				<a onMouseOver="aufklappenGirl()" onMouseOut="zuklappenGirls()" href="#">Mädels &nbsp;&nbsp;</a>
+				<a href="#">Impressum</a>&nbsp;&nbsp;
+				<a onMouseOver="aufklappenGirl()" onMouseOut="zuklappenGirls()" href="#">Mädels</a>&nbsp;&nbsp;
 			</div>
 
 			<div onMouseOver="aufklappenGirl()" onMouseOut="zuklappenGirls()" id="girls">

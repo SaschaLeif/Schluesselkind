@@ -13,3 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+function zuklappenGirls() {
+	document.getElementById('girls').style.display = 'none';
+}
+function aufklappenGirl() {
+	document.getElementById('girls').style.display = 'block';
+}

@@ -12,7 +12,7 @@
 			<b><%= article.name %></b>
 			<br />
 			<br />
-			<div id="article_klein">
+			<div id="klein">
 				<%= link_to 'editiere', edit_article_path(article) %> |
 				<%= link_to 'lösche', article, method: :delete, data: { confirm: 'Are you sure?' } %>
 			</div>
@@ -21,7 +21,7 @@
 	</table>
 
 	<br />
-	<div id="article_klein">
+	<div id="klein">
 		<%= link_to 'Neuer Artikel', new_article_path %>
 	</div>
 </div>

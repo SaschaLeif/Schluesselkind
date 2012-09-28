@@ -12,23 +12,27 @@
 	</ul>
 </div>
 <% end %>
-<div id="order_gross">
+<div id="gross">
 	<div class="field">
 		<%= f.label 'Name:' %>
+		<br />
 		<%= f.text_field :name %>
 	</div>
 	<br />
 	<div class="field">
 		<%= f.label 'Adresse: ' %>
-		<%= f.text_area :address, :rows => 3, :cols => 22 %>
+		<br />
+		<%= f.text_field :address, :rows => 3, :cols => 22 %>
 	</div>
 	<br />
 	<div class="field">
 		<%= f.label 'Email:' %>
+		<br />
 		<%= f.email_field :email %>
 	</div>
 	<br />
 	<div class="field">
+		Zahlungsart:
 		<%= f.select :pay_type, Order::PAYMENT_TYPES, :prompt => 'Wähle eine Zahlungmethode' %>
 	</div>
 	<br />

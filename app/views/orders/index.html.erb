@@ -2,7 +2,7 @@
 
 <h1>Bestellungen</h1>
 
-<div id="order_gross">
+<div id="gross">
 	<table>
 		<tr align="left">
 			<th>#</th>
@@ -11,10 +11,8 @@
 			<th>Email</th>
 			<th>Zahlungsweise</th>
 			<th></th>
-
 		</tr>
-		<tr height = 20 px></tr>
-
+		
 		<tr>
 			<% @orders.each do |order| %>
 			<td width=40px><%= order.id %></td>
@@ -23,9 +21,9 @@
 			<td width=150px><%= order.email %></td>
 			<td width=80px><%= order.pay_type %></td>
 
-			<td id="order_klein"> <%= link_to 'zeige', order %>
+			<td id="klein"> <%= link_to 'zeige', order %>
 			<%= link_to 'editiere', edit_order_path(order) %>
-			<%= link_to 'lösche', order, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+			<%= link_to 'lösche', order, method: :delete, data: { confirm: 'Wirklich löschen?' } %> </td>
 			<% end %>
 	</table>
 	<br />
@@ -34,6 +32,7 @@
 
 <br />
 
-<div id="order_klein">
+<div id="klein">
 	<%= link_to 'zurück zum Shop', store_path %>
 </div>
+<br />

@@ -4,13 +4,13 @@
 
 <h1> <%= @brand.name %> </h1>
 
-<div id="brand_gross">
+<div id="gross">
 	<%= raw @brand.info_text %>
 </div>
 
 <br />
 
-<div id="brand_klein">
+<div id="klein">
 	<%= link_to 'editiere', edit_brand_path(@brand) %> |
 
 	<%= link_to 'zurück', brands_path %>

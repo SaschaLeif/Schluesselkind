@@ -2,7 +2,7 @@
 <h1>Warenkorbinhalte</h1>
 
 <table>
-	<tr id="lineitem_gross" align="left">
+	<tr id="gross" align="left">
 		<th width="60px">Cart</th>
 		<th>Product</th>
 		<th></th>
@@ -10,11 +10,11 @@
 	</tr>
 
 	<% @line_items.each do |line_item| %>
-	<tr id="lineitem_gross">
+	<tr id="gross">
 		<td width="60px"><%= line_item.cart_id %></td>
 		<td width="100px"><%= line_item.product_id %></td>
 
-		<td id="lineitem_klein"><%= link_to 'Show', line_item %>
+		<td id="klein"><%= link_to 'Show', line_item %>
 		<%= link_to 'Edit', edit_line_item_path(line_item) %>
 		<%= link_to 'Destroy', line_item, :data => {:confirm => 'Bist du sicher?'}, method: :delete %></td>
 	</tr>
@@ -22,6 +22,6 @@
 </table>
 <br />
 
-<div id="lineitem_klein">
+<div id="klein">
 	<%= link_to 'neuer Eintrag im Warenkorb', new_line_item_path %>
 </div>

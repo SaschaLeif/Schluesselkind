@@ -1,57 +1,21 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#article_gross a {
-  color: black;
-  text-decoration: none;
-}
-
-#article_gross a:hover {
-  color: red;
-  background: none;
-  text-decoration: none;
-}
-
 #article_index_foto img {
   width: 100px;
   height: 150px;
   margin-right: 5px;
   margin-bottom: 5px;
 }
-
 #article_index_foto a:hover {
   background: none;
 }
-
 
 #article_show_foto img {
   width: 245px;
   height: 367px;
   margin-right: 5px;
   margin-bottom: 5px;
-}
-
-#article_gross {
-  font-family: Verdana;
-  font-size: 14px;
-  color: black;
-}
-
-#article_klein {
-  font-family: Verdana;
-  font-size: 8px;
-  color: black;
-}
-
-#article_klein a {
-  color: black;
-  text-decoration: none;
-}
-
-#article_klein a:hover {
-  color: red;
-  background: none;
-  text-decoration: none;
 }
 
 /* Marken */

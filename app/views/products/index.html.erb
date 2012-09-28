@@ -8,7 +8,7 @@
 
 <h1>Produkte des Herstellers</h1>
 
-<div id="product_gross">
+<div id="gross">
 	<table>
 		<tr>
 			<%#= select("Grösse", "size_id", Size.all.collect(&:name), :prompt => 'Größe') %>
@@ -42,7 +42,7 @@
 			</td>
 
 			<% if session[:user_id] == 1 %>
-			<td id="product_klein"> <%= link_to 'editiere', edit_product_path(product) %>
+			<td id="klein"> <%= link_to 'editiere', edit_product_path(product) %>
 			<br />
 			<%= link_to 'lösche', product, method: :delete, data: { confirm: 'Are you sure?' } %>
 			<br />

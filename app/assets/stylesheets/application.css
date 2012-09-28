@@ -1,3 +1,4 @@
+//= require_tree .
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -11,22 +12,65 @@
  *= require_self
  *= require_tree .
  */
-//= require_tree .
-#store_logos img {
-	float: left;
-	width: 112px;
-	height: 52px;
-	margin-top: 15px;
-	margin-right: 0px;
-	margin-bottom: 1px;
+
+/*###################################################### general style ######################################### */
+#klein {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 8px;
+	color: black;
 }
+#klein a {
+	color: black;
+	text-decoration: none;
+}
+#klein a:hover {
+	color: red;
+	text-decoration: none;
+}
+
+#gross {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: black;
+}
+#gross a {
+	color: black;
+	text-decoration: none;
+}
+#gross a:hover {
+	color: red;
+	text-decoration: none;
+}
+/*###################################################### product styles ######################################### */
+#product_index_foto img {
+  width: 100px;
+  height: 150px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+#product_index_foto a:hover {
+  background: none;
+}
+
+#product_show_foto img {
+  width: 245px;
+  height: 367px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+#product_show_foto_small img {
+  width: 60px;
+  height: 90px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+/*###################################################### dropdown menu ######################################### */
 #dropDownMenuGirls {
 	position: absolute;
 	top: 182px;
 	left: 251px;
 	display: none;
 }
-
 #dropDownMenuGirls a {
 	color: #008000;
 	position: absolute;
@@ -34,7 +78,6 @@
 	left: 251px;
 	display: none;
 }
-
 #dropDownMenuGirls a:hover {
 	position: absolute;
 	top: 182px;
@@ -50,14 +93,12 @@
 	padding-bottom: 5px;
 	margin-top: 5px;
 }
-
 #dropDownMenu2 a {
 	text-decoration: none;
 	color: white;
 	font-family: Verdana;
 	font-size: 18px;
 }
-
 #dropDownMenu2 p {
 	margin: 0px;
 	padding-right: 30px;
@@ -74,6 +115,7 @@
 	margin-top: 5px;
 }
 
+/*######################################################alles weitere######################################### */
 h1 {
 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 18px;
@@ -86,40 +128,6 @@ h1 {
 	height: 110px;
 	margin-right: 5px;
 	margin-bottom: 5px;
-}
-
-/* kleine Schrift */
-#klein {
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 8px;
-	color: black;
-}
-
-#klein a {
-	color: black;
-	text-decoration: none;
-}
-
-#klein a:hover {
-	color: red;
-	text-decoration: none;
-}
-
-/* große Schrift */
-#gross {
-	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-	font-size: 14px;
-	color: black;
-}
-
-#gross a {
-	color: black;
-	text-decoration: none;
-}
-
-#gross a:hover {
-	color: red;
-	text-decoration: none;
 }
 
 /* Hauptfenster */

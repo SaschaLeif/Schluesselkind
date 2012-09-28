@@ -14,7 +14,7 @@
 </div>
 <% end %>
 
-<div id="product_gross">
+<div id="gross">
 	<div class="field">
 		<%= f.label 'Marke:' %>
 		<%= f.collection_select :brand_id, Brand.find(:all, :order => "name"), :id, :name,  { :prompt => 'Hersteller' } %>

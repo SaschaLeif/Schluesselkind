@@ -13,7 +13,7 @@
 </div>
 <% end %>
 
-<div id="article_gross">
+<div id="gross">
 	<div class="field">
 
 		<%= f.collection_select :name, Article.find(:all, :order => :name), :id, :name,  { :prompt => 'Bezeichnung' } %> oder neue

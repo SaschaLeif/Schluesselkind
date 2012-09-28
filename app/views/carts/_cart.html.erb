@@ -1,32 +1,34 @@
 <div id="side" align="right">
 	<div id="cart">
-			<table>
-				<tr>
-					<% if session[:user_id] %>
-					<%= button_to 'Logout', logout_path, :method => :delete, :data => {:confirm => 'Bist du sicher?'} %>
-					<% else %>
-					<%= button_to 'Login', login_path, :method => :create %>
-					<% end %>
-				</tr>
-				<tr>
-					<div id="cart_klein">
-						<%= link_to 'anmelden', new_user_path %>
-					</div>
-				</tr>
-			</table>
+		<table>
+			<tr>
+				<% if session[:user_id] %>
+				<%= button_to 'Logout', logout_path, :method => :delete, :data => {:confirm => 'Bist du sicher?'} %>
+				<% else %>
+				<%= button_to 'Login', login_path, :method => :create %>
+				<% end %>
+			</tr>
+			<tr>
+				<div id="klein">
+					<%= link_to 'anmelden', new_user_path %>
+				</div>
+			</tr>
+		</table>
 
-		<h2>Warenkorb</h2>
+		<center>
+			<h2>Warenkorb</h2>
+		</center>
 
 		<table>
 			<%= render(cart.line_items) %>
 			<tr class="total_line">
-				<td id="cart_gesamt", colspan="2">Gesamtpreis:</td>
-				<td id="cart_totalprice"><%= number_to_currency(cart.total_price, :unit=>'€ ') %></td>
+				<td id="cart_gesamt", colspan="2" align="right">Gesamtpreis:</td>
+				<td id="cart_totalprice" align="right"><%= number_to_currency(cart.total_price, :unit=>'€ ') %></td>
 			</tr>
 		</table>
 
 		<br/>
 		<%= button_to "Checkout", new_order_path, :method => :get %>
-		<%= button_to 'Warenkorb leeren', cart, :method => :delete, :data => {:confirm => 'Bist du sicher?'} %>
+		<%= button_to 'Warenkorb leeren', cart, :method => :delete, :data => {:confirm => 'Möchtest du wirklich den Warenkorb leeren?'} %>
 	</div>
 </div>

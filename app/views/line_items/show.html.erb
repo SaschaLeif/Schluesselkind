@@ -1,4 +1,4 @@
-<div id="lineitem_gross">
+<div id="gross">
 	<br />
 	<h1>Product:
 	<%= @line_item.product.article.name %></h1>
@@ -15,7 +15,7 @@
 	<%= @line_item.cart_id %>
 </div>
 <br />
-<div id="lineitem_klein">
+<div id="klein">
 	<%= link_to 'editiere', edit_line_item_path(@line_item) %> |
 	<%= link_to 'zurück', line_items_path %>
 </div>

@@ -52,6 +52,7 @@ module Schluesselkind
     # Enable the asset pipeline
     config.assets.enabled = true 
     # true für Heroku, ansonsten false stellen: legt unter public/assets css und js Dateien an!
+    # true -> ansonsten checkt er irgendwie nicht, wo die css/js dateien liegen....
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'

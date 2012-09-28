@@ -5,7 +5,7 @@
 	<% @colors.each do |color| %>
 	<tr>
 		<td> <%= raw color.name %></td>
-		<td id="color_klein"> <%= link_to 'editiere', edit_color_path(color) %>
+		<td id="klein"> <%= link_to 'editiere', edit_color_path(color) %>
 		|
 		<%= link_to 'lösche', color, :data => {:confirm => 'Bist du sicher?'}, method: :delete %></td>
 	</tr>
@@ -13,6 +13,6 @@
 </table>
 
 <br />
-<div id="color_klein">
+<div id="klein">
 	<%= link_to 'Neue Farbe anlegen', new_color_path %>
 </div>

@@ -1,6 +1,6 @@
 <h1>Bestellung #<%= @order.id %></h1>
 
-<table id="order_gross">
+<table id="gross">
 	<tr>
 		<br />
 		<td><b>Name:</b>
@@ -28,7 +28,7 @@
 </table>
 
 <br />
-<div id="order_klein">
+<div id="klein">
 	<%= link_to 'editiere', edit_order_path(@order) %> |
 	<%= link_to 'zurück', orders_path %>
 </div>

@@ -7,20 +7,20 @@
 
 <h1>Kunden</h1>
 
-<table id="user_gross">
+<table id="gross">
 	<% @users.each do |user| %>
 	<tr>
 		<td>#<%= user.id %> </td>
 		<td width="150px"><b>Name:</b> <%= user.name %></td>
 
-		<td id="user_klein"><%= link_to 'zeige', user %>
+		<td id="klein"><%= link_to 'zeige', user %>
 		<%= link_to 'editiere', edit_user_path(user) %>
 		<%= link_to 'lösche', user, :data => {:confirm => 'Bist du sicher?'}, :method => :delete %></td>
 	</tr>
 	<% end %>
 </table>
 <br />
-<div id="user_klein">
+<div id="klein">
 
 	<%= link_to 'neuen Benutzer anlegen', new_user_path %>
 </div>

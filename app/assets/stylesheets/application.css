@@ -12,7 +12,6 @@
  *= require_self
  *= require_tree .
  */
-
 /*###################################################### general style ######################################### */
 #klein {
 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
@@ -42,6 +41,12 @@
 	text-decoration: none;
 }
 /*###################################################### product styles ######################################### */
+#product_show_foto_small img {
+  width: 60px;
+  height: 90px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
 #product_index_foto img {
   width: 100px;
   height: 150px;
@@ -51,18 +56,245 @@
 #product_index_foto a:hover {
   background: none;
 }
-
 #product_show_foto img {
   width: 245px;
   height: 367px;
   margin-right: 5px;
   margin-bottom: 5px;
 }
-#product_show_foto_small img {
-  width: 60px;
-  height: 90px;
+/*###################################################### store styles ######################################### */
+#store_logos img {
+  float: right;
+  width: 112px;
+  height: 52px;
+  margin-top: 0px;
+  margin-right: 5px;
+  margin-bottom: 1px;
+}
+/*###################################################### order styles ######################################### */
+.bestellung fieldset {
+  background: #ddd;
+}
+.bestellung legend {
+  color: #ddd;
+  background: #FF0000;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: small;
+  padding: 0.2em 1em;
+}
+.bestellung label {
+  width: 5em;
+  float: left;
+  padding-top: 0.2em;
+  margin-right: 0.1em;
+}
+.bestellung select, .bestellung textarea, .bestellung input {
+  margin-left: 0.5em;
+}
+.bestellung div {
+  margin: 0.5em 0;
+}
+/*###################################################### cart styles ######################################### */
+#cart_content {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+}
+#cart_content_price {
+  float: right;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+}
+#cart_gesamt {
+  font-size: 8pt;
+  width: 70px;
+  border-top: 2px solid red;
+}
+#cart_totalprice {
+  font-size: 8pt;
+  width: 70px;
+  font-weight: bold;
+  border-top: 2px solid red;
+}
+/*###################################################### brand styles ######################################### */
+#list_line_even {
+  background: none;
+}
+
+#list_line_odd {
+  background: #999;
+}
+
+/* Marken */
+#brands_list h1 {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  text-decoration: underline;
+  color: #000;
+}
+
+#brands_list table {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}
+
+#brands_list table tr td {
+  padding: 5px;
+  vertical-align: top;
+}
+
+#brands_list .list_image {
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 150px;
+  height: 70px;
+}
+
+#brands_list .list_description {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  width: 70%;
+}
+
+#brands_list .list_description dl {
+  margin: 0;
+  width: 450px;
+}
+
+#brands_list .list_description dt {
+  color: #000;
+  font-weight: bold;
+  font-size: 100%;
+}
+
+#brands_list .list_description dd {
+  font-size: 80%;
+  margin: 0;
+}
+
+#brands_list .list_actions {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 80%;
+  text-align: left;
+  padding-left: 0em;
+}
+
+#brands_list .list_actions a {
+  color: black;
+  text-decoration: none;
+}
+
+#brands_list .list_actions a:hover {
+  color: #FF0000;
+  text-decoration: none;
+}
+
+#brands_list .custom_products {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-size: 80%;
+  text-align: left;
+  padding-left: 1em;
+}
+
+#brands_list .list_line_even {
+  background: #ddd;
+}
+
+#brands_list .list_line_odd {
+  background: #999;
+}
+/*###################################################### article styles ######################################### */
+#article_index_foto img {
+  width: 100px;
+  height: 150px;
   margin-right: 5px;
   margin-bottom: 5px;
+}
+#article_index_foto a:hover {
+  background: none;
+}
+
+#article_show_foto img {
+  width: 245px;
+  height: 367px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+/* Marken */
+#brand_list h1 {
+  font-family: Verdana;
+  font-size: 18px;
+  text-decoration: underline;
+  color: #000;
+}
+
+#article_list table {
+  font-family: Verdana;
+  border-collapse: collapse;
+}
+
+#article_list table tr td {
+  padding: 5px;
+  vertical-align: top;
+}
+
+#article_list .list_image {
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 150px;
+  height: 70px;
+}
+
+#article_list .list_description {
+  font-family: Verdana;
+  width: 70%;
+}
+
+#article_list .list_description dl {
+  margin: 0;
+  width: 450px;
+}
+
+#article_list .list_description dt {
+  color: #000;
+  font-weight: bold;
+  font-size: 100%;
+}
+
+#article_list .list_description dd {
+  font-size: 80%;
+  margin: 0;
+}
+
+#article_list .list_actions {
+  font-family: Verdana;
+  font-size: 80%;
+  text-align: left;
+  padding-left: 0em;
+}
+
+#article_list .list_actions a {
+  color: black;
+  text-decoration: none;
+}
+
+#article_list .list_actions a:hover {
+  color: #FF0000;
+  text-decoration: none;
+}
+
+#article_list .custom_products {
+  font-family: Verdana;
+  font-size: 80%;
+  text-align: left;
+  padding-left: 1em;
+}
+
+#article_list .list_line_even {
+  background: #ddd;
+}
+
+#article_list .list_line_odd {
+  background: #999;
 }
 /*###################################################### dropdown menu ######################################### */
 #dropDownMenuGirls {

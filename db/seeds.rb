@@ -395,3 +395,119 @@ Das Innenfutter ist blau-wei&szlig; gestreift und die Tasche l&auml;&szlig;t sic
 <br /><br /> Material: 100% Bio-Baumwolle<br /> Ma&szlig;e: 30 x 36 x 8 cm
 '
 )
+
+# Produkt 9
+Product.create(
+:product_price => 89.90,
+:brand_id => 4, # Reco
+:article_id => 3, # Zipper schwarz
+:size_id => 6, # L
+:color_id => 5, # schwarz
+:quantity => 2,
+:gender => 'male',
+:description => '
+- schwarzer Zipper aus extra dickem Stoff (360 Gramm)<br />
+- aufgeraute Innenseite f&uuml;r gem&uuml;tlichen Tragekomfort<br />
+- doppelte Kapuze mit zwei N&auml;hten und dezentem "recolution"-Stick<br />
+- Kapuzeninnenseite und B&auml;nder in Kontrastfarbe<br />
+- K&auml;ngurutasche vorn<br />
+- breite Rippb&uuml;ndchen an Saum und &Auml;rmeln<br />
+- Logo-Edgelabel am rechten &Auml;rmel<br />
+- YKK-Zipper aus recyceltem Kunststoff<br /><br />
+100% Bio-Baumwolle<br /> 
+100% fair produziert und GOTS-zertifiziert<br /><br /> 
+angebaut und verarbeitet in der T&uuml;rkei
+'
+)
+
+# Produkt 10
+Product.create(
+:product_price => 89.90,
+:brand_id => 4, # Reco
+:article_id => 3, # Zipper schwarz
+:size_id => 7, # XL
+:color_id => 5, # schwarz
+:quantity => 2,
+:gender => 'male',
+:description => '
+- schwarzer Zipper aus extra dickem Stoff (360 Gramm)<br />
+- aufgeraute Innenseite f&uuml;r gem&uuml;tlichen Tragekomfort<br />
+- doppelte Kapuze mit zwei N&auml;hten und dezentem "recolution"-Stick<br />
+- Kapuzeninnenseite und B&auml;nder in Kontrastfarbe<br />
+- K&auml;ngurutasche vorn<br />
+- breite Rippb&uuml;ndchen an Saum und &Auml;rmeln<br />
+- Logo-Edgelabel am rechten &Auml;rmel<br />
+- YKK-Zipper aus recyceltem Kunststoff<br /><br />
+100% Bio-Baumwolle<br /> 
+100% fair produziert und GOTS-zertifiziert<br /><br /> 
+angebaut und verarbeitet in der T&uuml;rkei
+'
+)
+
+# Produkt 11
+Product.create(
+:product_price => 89.90,
+:brand_id => 4, # Recolution
+:article_id => 4, # Zipper gruen
+:size_id => 6, # L
+:color_id => 3, # gruen
+:quantity => 2,
+:gender => 'male',
+:description => '
+- gr&uuml;ner Zipper aus extra dickem Stoff (360 Gramm)
+<br />
+- aufgeraute Innenseite f&uuml;r gem&uuml;tlichen Tragekomfort
+<br />
+- doppelte Kapuze mit zwei N&auml;hten und dezentem "recolution"-Stick
+<br />
+- Kapuzeninnenseite und B&auml;nder in Kontrastfarbe
+<br />
+- K&auml;ngurutasche vorn
+<br />
+- breite Rippb&uuml;ndchen an Saum und &Auml;rmeln
+<br />
+- Logo-Edgelabel am rechten &Auml;rmel
+<br />
+- YKK-Zipper aus recyceltem Kunststoff
+<br /><br /> 
+100% Bio-Baumwolle
+<br /> 
+100% fair produziert und GOTS-zertifiziert
+<br />
+angebaut und verarbeitet in der T&uuml;rkei
+'
+)
+
+# Produkt 12
+Product.create(
+:product_price => 89.90,
+:brand_id => 4, # Recolution
+:article_id => 4, # Zipper gruen
+:size_id => 7, # XL
+:color_id => 3, # gruen
+:quantity => 2,
+:gender => 'male',
+:description => '
+- gr&uuml;ner Zipper aus extra dickem Stoff (360 Gramm)
+<br />
+- aufgeraute Innenseite f&uuml;r gem&uuml;tlichen Tragekomfort
+<br />
+- doppelte Kapuze mit zwei N&auml;hten und dezentem "recolution"-Stick
+<br />
+- Kapuzeninnenseite und B&auml;nder in Kontrastfarbe
+<br />
+- K&auml;ngurutasche vorn
+<br />
+- breite Rippb&uuml;ndchen an Saum und &Auml;rmeln
+<br />
+- Logo-Edgelabel am rechten &Auml;rmel
+<br />
+- YKK-Zipper aus recyceltem Kunststoff
+<br /><br /> 
+100% Bio-Baumwolle
+<br /> 
+100% fair produziert und GOTS-zertifiziert
+<br />
+angebaut und verarbeitet in der T&uuml;rkei
+'
+)

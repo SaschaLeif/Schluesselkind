@@ -1,26 +1,3 @@
 // Place all the styles related to the carts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#cart_content {
-  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-  font-size: 8pt;
-}
-
-#cart_content_price {
-  float: right;
-  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
-  font-size: 8pt;
-}
-
-#cart_gesamt {
-  font-size: 8pt;
-  width: 70px;
-  border-top: 2px solid red;
-}
-
-#cart_totalprice {
-  font-size: 8pt;
-  width: 70px;
-  font-weight: bold;
-  border-top: 2px solid red;
-}

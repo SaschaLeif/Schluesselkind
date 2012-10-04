@@ -1,38 +1,82 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 	<head>
 		<title>Schlüsselkind</title>
 		<%= stylesheet_link_tag 'application' %>
 		<%= javascript_include_tag 'application' %>
-		<%#= javascript_include_tag "main" %>
 		<%= csrf_meta_tag %>
+		<link rel="shortcut icon" href="icon.ico" >
 	</head>
 
 	<body>
 
-		<div id="banner", align="center">
+		<div id="banner">
 			<%= image_tag("sk_logo.jpg") %>
 		</div>
 
 		<div id="menu">
-			<div align="center">
-				<%= link_to "Startseite", store_path() %>&nbsp;&nbsp;
-				<%= link_to "Mädels", products_path(:filter_gender => 'female') %>&nbsp;&nbsp;
-				<%= link_to "Jungs", products_path(:filter_gender => 'male') %>&nbsp;&nbsp;
-				<%= link_to "Accessoires", products_path(:filter_gender => 'accessoires') %>&nbsp;&nbsp;
-				<%= link_to "Marken", brands_path() %>&nbsp;&nbsp;
-				<a href="#">Impressum</a>&nbsp;&nbsp;
-				<a onMouseOver="aufklappenGirl()" onMouseOut="zuklappenGirls()" href="#">Mädels</a>&nbsp;&nbsp;
-			</div>
+			<%= link_to "Startseite", store_path() %>&nbsp;&nbsp;
+			<a onMouseOver="aufklappenGirl()" onMouseOut="zuklappenGirl()" id="schluesselGirl" href="#">Mädels</a>&nbsp;&nbsp;
+			<a onMouseOver="aufklappenBoy()" onMouseOut="zuklappenBoy()" id="schluesselBoy" href="#">Jungs</a>&nbsp;&nbsp;
+			<a onMouseOver="aufklappenAccess()" onMouseOut="zuklappenAccess()" id="schluesselAccess" href="#">Accessoires</a>&nbsp;&nbsp;
+			<a onMouseOver="aufklappenBrand()" onMouseOut="zuklappenBrand()" id="schluesselBrand" href="#">Marken</a>&nbsp;&nbsp;
+			<%#= link_to "Mädels", products_path(:filter_gender => 'female') %>
+			<%#= link_to "Jungs", products_path(:filter_gender => 'male') %>
+			<%#= link_to "Accessoires", products_path(:filter_gender => 'accessoires') %>
+			<%#= link_to "Marken", brands_path() %>
+			<a href="#">Impressum</a>&nbsp;&nbsp;
 
-			<div onMouseOver="aufklappenGirl()" onMouseOut="zuklappenGirls()" id="girls">
-				<p id="dropDownMenuGirls">
-					Shirts
+		</div>
+
+		<div onMouseOver="aufklappenGirl()" onMouseOut="zuklappenGirl()" id="dropDownMenuGirl">
+			<div id="dropDownMenu2" align="center">
 				<br />
-				<a href="#">Hoodies</a>
+				<%= link_to "alle Artikel", products_path(:filter_gender => 'female') %>
 				<br />
-				<a href="#">Wäsche</a>
-				</p>
+				&bull; Shirts
+				<br />
+				&bull; Hoodies
+				<br />
+				&bull; Zipper
+			</div>
+		</div>
+		
+		<div onMouseOver="aufklappenBoy()" onMouseOut="zuklappenBoy()" id="dropDownMenuBoy">
+			<div id="dropDownMenu2" align="center">
+				<br />
+				<%= link_to "alle Artikel", products_path(:filter_gender => 'male') %>
+				<br />
+				&bull; Shirts
+				<br />
+				&bull; Hoodies
+				<br />
+				&bull; Zipper
+			</div>
+		</div>
+		
+		<div onMouseOver="aufklappenAccess()" onMouseOut="zuklappenAccess()" id="dropDownMenuAccess">
+			<div id="dropDownMenu2" align="center">
+				<br />
+				<%= link_to "alle Artikel", products_path(:filter_gender => 'accessoires') %>
+				<br />
+				&bull; Bags
+			</div>
+		</div>
+		
+		<div onMouseOver="aufklappenBrand()" onMouseOut="zuklappenBrand()" id="dropDownMenuBrand">
+			<div id="dropDownMenu2" align="center">
+				<br />
+				&bull; <%= link_to "alle Marken", brands_path() %>
+				<br />
+				&bull; <%= link_to "Bleed Organic Clothing", brand_path(1) %>
+				<br />
+				&bull; <%= link_to "Knowledge Cotton Apparel", brand_path(2) %>
+				<br />
+				&bull; <%= link_to "Pants To Poverty", brand_path(3) %>
+				<br />
+				&bull; <%= link_to "Recolution", brand_path(4) %>
+				<br />
+				&bull; <%= link_to "Thokk Thokk", brand_path(5) %>
 			</div>
 		</div>
 
@@ -49,4 +93,3 @@
 
 	</body>
 </html>
-

@@ -1,0 +1,47 @@
+﻿html{
+	padding:0;
+	margin:0;
+}
+
+/* Here you can edit width and height of the Dropdown Menu */
+div#dropdown_menu {
+	width: 200px;
+	height: 15px;
+	text-align:left;
+	overflow: hidden;
+	border: 0px solid #333;
+	background-color: #101010;
+	margin:0;
+	color: #fff;
+	list-style-type: none;
+	padding-left: 5px;
+}
+
+div#dropdown_menu strong a {
+	display: block;
+	padding: 0;
+	color: #FFFFFF;
+	border-bottom: 0px solid #999;
+	background: #000;
+}
+
+div#dropdown_menu a:hover {
+	color: #FF0000;
+}
+
+div#dropdown_menu a {
+	color: #FC6500;
+	text-decoration:none;
+}
+div#dropdown_menu ul {
+	margin:0;
+	padding:0;
+}
+div#dropdown_menu li {
+	padding-top: 2px;
+	list-style:none;
+	border-bottom: 0px solid #333;
+}
+div#dropdown_menu li a {
+	display:block;
+}

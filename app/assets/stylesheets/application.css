@@ -297,42 +297,63 @@
   background: #999;
 }
 /*###################################################### dropdown menu ######################################### */
-#dropDownMenuGirls {
+#dropDownMenuGirl {
 	position: absolute;
-	top: 182px;
-	left: 251px;
+	width: 100px;
+	top:165px;
+	left:107px;
+	border: 0px solid red;
 	display: none;
 }
-#dropDownMenuGirls a {
-	color: #008000;
+#dropDownMenuBoy {
 	position: absolute;
-	top: 182px;
-	left: 251px;
+	width: 100px;
+	top:165px;
+	left:171px;
+	border: 0px solid red;
 	display: none;
 }
-#dropDownMenuGirls a:hover {
+#dropDownMenuAccess {
 	position: absolute;
-	top: 182px;
-	left: 251px;
+	width: 100px;
+	top:165px;
+	left:231px;
+	border: 0px solid red;
+	display: none;
+}
+#dropDownMenuBrand {
+	position: absolute;
+	width: 220px;
+	top:165px;
+	left:325px;
+	border: 0px solid red;
 	display: none;
 }
 
 #dropDownMenu2 {
-	background: #000000;
+	background-color: black;
 	border: 0px solid black;
 	text-align: left;
+	padding-left: 10px;
 	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-bottom: 10px;
 	margin-top: 5px;
+	border-radius: 10px;
+	border-bottom: 2px solid red;
+	opacity:0.9; /* Opera */
+	filter: alpha(opacity=90); /* IE */
+	-moz-opacity: 0.90; /* Mozilla */
 }
 #dropDownMenu2 a {
 	text-decoration: none;
 	color: white;
-	font-family: Verdana;
-	font-size: 18px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 14px;
 }
+
 #dropDownMenu2 p {
 	margin: 0px;
+	color: white;
 	padding-right: 30px;
 	padding-left: 15px;
 	padding-top: 1px;
@@ -373,6 +394,7 @@ h1 {
 
 /*Logo etc.*/
 #banner {
+	padding-left: 160px;
 	background: #000;
 	padding-top: 15px;
 }
@@ -381,6 +403,7 @@ h1 {
 #menu {
 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 110%;
+	padding-left: 25px;
 	padding-top: 10px;
 	padding-bottom: 15px;
 	background: #000;

@@ -43,6 +43,9 @@ gem 'thin'
 gem 'cucumber'#, '1.2.1'
 gem 'launchy'
 
+# https://github.com/neonlex/mootools-rails
+#gem "mootools-rails"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

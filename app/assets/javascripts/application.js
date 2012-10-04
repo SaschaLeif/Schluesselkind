@@ -12,10 +12,37 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require_self
 //= require_tree .
-function zuklappenGirls() {
-	document.getElementById('girls').style.display = 'none';
+function zuklappenGirl() {
+	document.getElementById('dropDownMenuGirl').style.display = 'none';
+	document.getElementById('schluesselGirl').style.border = '0px solid darkred';
 }
 function aufklappenGirl() {
-	document.getElementById('girls').style.display = 'block';
+	document.getElementById('dropDownMenuGirl').style.display = 'block';
+	document.getElementById('schluesselGirl').style.border = 'none';
+}
+function zuklappenBoy() {
+	document.getElementById('dropDownMenuBoy').style.display = 'none';
+	document.getElementById('schluesselBoy').style.border = '0px solid darkred';
+}
+function aufklappenBoy() {
+	document.getElementById('dropDownMenuBoy').style.display = 'block';
+	document.getElementById('schluesselBoy').style.border = 'none';
+}
+function zuklappenAccess() {
+	document.getElementById('dropDownMenuAccess').style.display = 'none';
+	document.getElementById('schluesselAccess').style.border = '0px solid darkred';
+}
+function aufklappenAccess() {
+	document.getElementById('dropDownMenuAccess').style.display = 'block';
+	document.getElementById('schluesselAccess').style.border = 'none';
+}
+function zuklappenBrand() {
+	document.getElementById('dropDownMenuBrand').style.display = 'none';
+	document.getElementById('schluesselBrand').style.border = '0px solid darkred';
+}
+function aufklappenBrand() {
+	document.getElementById('dropDownMenuBrand').style.display = 'block';
+	document.getElementById('schluesselBrand').style.border = 'none';
 }
